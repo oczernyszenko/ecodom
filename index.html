@@ -272,32 +272,76 @@
     <button type="submit">Отправить заявку</button>
   </form>
 </section>
- <script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.carousel-track');
   const slides = Array.from(track.children);
   const nextButton = document.querySelector('.carousel-btn.next');
   const prevButton = document.querySelector('.carousel-btn.prev');
+  const container = document.querySelector('.carousel-container');
+
+  if (!track || slides.length === 0) return;
 
   let index = 0;
+  let slideWidth = slides[0].getBoundingClientRect().width;
+  let autoplayInterval = null;
+  const AUTOPLAY_DELAY = 5000;
+
+  // Установим одинаковую ширину для всех слайдов (на случай отличий)
+  function setSlidesWidth() {
+    slideWidth = container.getBoundingClientRect().width;
+    slides.forEach(slide => {
+      slide.style.width = slideWidth + 'px';
+    });
+    updateCarousel(); // скорректировать позицию после ресайза
+  }
 
   function updateCarousel() {
-    track.style.transform = 'translateX(' + (-index * 100) + '%)';
+    track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
   }
 
   nextButton.addEventListener('click', () => {
     index = (index + 1) % slides.length;
     updateCarousel();
+    resetAutoplay();
   });
 
   prevButton.addEventListener('click', () => {
     index = (index - 1 + slides.length) % slides.length;
     updateCarousel();
+    resetAutoplay();
   });
 
-  // Автопрокрутка (если нужна)
-  setInterval(() => {
-    index = (index + 1) % slides.length;
-    updateCarousel();
-  }, 5000);
-</script></body>
+  // Автопрокрутка
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayInterval = setInterval(() => {
+      index = (index + 1) % slides.length;
+      updateCarousel();
+    }, AUTOPLAY_DELAY);
+  }
+  function stopAutoplay() {
+    if (autoplayInterval) clearInterval(autoplayInterval);
+    autoplayInterval = null;
+  }
+  function resetAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  // Пауза при наведении (удобно на десктопе)
+  container.addEventListener('mouseenter', stopAutoplay);
+  container.addEventListener('mouseleave', startAutoplay);
+
+  // Пересчёт при изменении размера окна
+  window.addEventListener('resize', () => {
+    setSlidesWidth();
+  });
+
+  // Инициализация
+  setSlidesWidth();
+  startAutoplay();
+});
+</script>
+</body>
 </html>
