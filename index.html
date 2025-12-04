@@ -6,34 +6,7 @@
   <title>Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании</title>
   <meta name="description" content="Узнайте о преимуществах каркасных домов с клееным брусом и сэндвич-панелей Thermochip для разных климатических зон Испании. Энергоэффективность, теплоизоляция, защита от влаги — читайте наш обзор!">
   <style>
-    <script>
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const nextButton = document.querySelector('.carousel-btn.next');
-  const prevButton = document.querySelector('.carousel-btn.prev');
-
-  let index = 0;
-
-  function updateCarousel() {
-    track.style.transform = 'translateX(' + (-index * 100) + '%)';
-  }
-
-  nextButton.addEventListener('click', () => {
-    index = (index + 1) % slides.length;
-    updateCarousel();
-  });
-
-  prevButton.addEventListener('click', () => {
-    index = (index - 1 + slides.length) % slides.length;
-    updateCarousel();
-  });
-
-  // Автопрокрутка (если нужна)
-  setInterval(() => {
-    index = (index + 1) % slides.length;
-    updateCarousel();
-  }, 5000);
-</script>
+   
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -299,6 +272,32 @@
     <button type="submit">Отправить заявку</button>
   </form>
 </section>
+ <script>
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.carousel-btn.next');
+  const prevButton = document.querySelector('.carousel-btn.prev');
 
-</body>
+  let index = 0;
+
+  function updateCarousel() {
+    track.style.transform = 'translateX(' + (-index * 100) + '%)';
+  }
+
+  nextButton.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevButton.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  // Автопрокрутка (если нужна)
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  }, 5000);
+</script></body>
 </html>
