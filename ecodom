@@ -5,27 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании</title>
   <meta name="description" content="Узнайте о преимуществах каркасных домов с клееным брусом и сэндвич-панелей Thermochip для разных климатических зон Испании. Энергоэффективность, теплоизоляция, защита от влаги — читайте наш обзор!">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #007BFF;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 80px 20px 50px; /* учёт навигации */
+    }
+    section:nth-child(even) {
+      background-color: #f0f8ff;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+    a.cta-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    form button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
+<!-- Навигация -->
+<nav>
+  <ul>
+    <li><a href="#hero">Главная</a></li>
+    <li><a href="#timber-frame">Каркасные дома</a></li>
+    <li><a href="#thermochip">Thermochip</a></li>
+    <li><a href="#comparison">Сравнение</a></li>
+    <li><a href="#choice">Выбор</a></li>
+    <li><a href="#contact">Контакты</a></li>
+  </ul>
+</nav>
+
 <!-- Главный экран -->
-<section id="hero" style="text-align:center; padding:50px 20px; background-color:#f5f5f5;">
+<section id="hero" style="text-align:center; background-color:#f5f5f5;">
   <h1>Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании</h1>
   <p>Выберите оптимальный вариант строительства дома: каркасные дома с клееным брусом или сэндвич-панели Thermochip</p>
-  <a href="#contact" style="display:inline-block; padding:10px 20px; background-color:#007BFF; color:white; text-decoration:none; border-radius:5px;">Получить консультацию</a>
-  <br><br>
-  <img src="hero-image.jpg" alt="Современный дом в Испании" style="max-width:100%; height:auto;">
-</section>
-
-<!-- Введение -->
-<section id="introduction" style="padding:50px 20px;">
-  <h2>Введение</h2>
-  <p>Строительство дома в Испании требует учета множества факторов, включая климатические особенности региона и типы строительных материалов. Сегодня мы рассмотрим две популярные технологии строительства: каркасные дома с клееным брусом и сэндвич-панели Thermochip. Оценим их преимущества для разных регионов Испании и выясним, какая из технологий лучше подходит для вашего проекта.</p>
+  <a href="#contact" class="cta-btn">Получить консультацию</a>
+  <img src="hero-image.jpg" alt="Современный дом в Испании">
 </section>
 
 <!-- Каркасная технология -->
-<section id="timber-frame" style="padding:50px 20px; background-color:#f0f8ff;">
+<section id="timber-frame">
   <h2>Каркасная технология с клееным брусом GL-24</h2>
   <p>Каркасное строительство в Испании набирает популярность благодаря прочности, экологичности и хорошей теплоизоляции деревянных конструкций. Клееный брус из шведской ели (GL-24) обладает рядом преимуществ:</p>
   <ul>
@@ -39,13 +121,12 @@
     <li>Горные регионы: Пиренеи, Кастилия-Леон</li>
     <li>Северные и центральные регионы: Галисия, Наварра</li>
   </ul>
-  <img src="timber-frame.jpg" alt="Каркасный дом из клееного бруса" style="max-width:100%; height:auto; margin-top:20px;">
-  <br><br>
-  <a href="#contact" style="display:inline-block; padding:10px 20px; background-color:#28a745; color:white; text-decoration:none; border-radius:5px;">Заказать проект каркасного дома</a>
+  <img src="timber-frame.jpg" alt="Каркасный дом из клееного бруса">
+  <a href="#contact" class="cta-btn">Заказать проект каркасного дома</a>
 </section>
 
 <!-- Сэндвич-панели -->
-<section id="thermochip" style="padding:50px 20px;">
+<section id="thermochip">
   <h2>Сэндвич-панели Thermochip</h2>
   <p>Сэндвич-панели Thermochip — это современный и высокоэффективный материал для строительства, который сочетает в себе отличные теплоизоляционные и гидроизоляционные свойства.</p>
   <ul>
@@ -59,15 +140,14 @@
     <li>Южная и восточная Испания: Коста-Бланка, Коста-дель-Соль</li>
     <li>Прибрежные районы: Валенсия, Барселона</li>
   </ul>
-  <img src="thermochip.jpg" alt="Дом из сэндвич-панелей Thermochip" style="max-width:100%; height:auto; margin-top:20px;">
-  <br><br>
-  <a href="#contact" style="display:inline-block; padding:10px 20px; background-color:#28a745; color:white; text-decoration:none; border-radius:5px;">Заказать проект дома из Thermochip</a>
+  <img src="thermochip.jpg" alt="Дом из сэндвич-панелей Thermochip">
+  <a href="#contact" class="cta-btn">Заказать проект дома из Thermochip</a>
 </section>
 
 <!-- Сравнение технологий -->
-<section id="comparison" style="padding:50px 20px; background-color:#f0f8ff;">
+<section id="comparison">
   <h2>Сравнение технологий</h2>
-  <table border="1" cellspacing="0" cellpadding="10" style="width:100%; border-collapse:collapse;">
+  <table>
     <tr>
       <th>Характеристика</th>
       <th>Каркасная технология (клееный брус)</th>
@@ -99,26 +179,25 @@
       <td>Более доступная стоимость и лёгкость монтажа</td>
     </tr>
   </table>
-  <br>
-  <a href="#contact" style="display:inline-block; padding:10px 20px; background-color:#28a745; color:white; text-decoration:none; border-radius:5px;">Связаться с нами для выбора технологии</a>
+  <a href="#contact" class="cta-btn">Связаться с нами для выбора технологии</a>
 </section>
 
 <!-- Выбор технологии -->
-<section id="choice" style="padding:50px 20px;">
+<section id="choice">
   <h2>Какая технология лучше для вашего проекта?</h2>
   <p>Выбор между каркасным домом и сэндвич-панелями зависит от ваших предпочтений, бюджета и климатических условий региона. Каркасные дома подходят для холодного климата, сэндвич-панели — для жарких и прибрежных районов Испании.</p>
 </section>
 
 <!-- Контакты -->
-<section id="contact" style="padding:50px 20px; background-color:#f5f5f5;">
+<section id="contact" style="background-color:#f5f5f5;">
   <h2>Свяжитесь с нами</h2>
   <p>Телефон: +34 604 158 859<br>Email: olga@a1invest4u.com</p>
-  <form action="#" method="post" style="max-width:400px;">
-    <input type="text" name="name" placeholder="Ваше имя" style="width:100%; padding:10px; margin-bottom:10px;">
-    <input type="email" name="email" placeholder="Email" style="width:100%; padding:10px; margin-bottom:10px;">
-    <input type="tel" name="phone" placeholder="Телефон" style="width:100%; padding:10px; margin-bottom:10px;">
-    <textarea name="message" placeholder="Сообщение" style="width:100%; padding:10px; margin-bottom:10px;"></textarea>
-    <button type="submit" style="padding:10px 20px; background-color:#007BFF; color:white; border:none; border-radius:5px;">Отправить заявку</button>
+  <form action="#" method="post" style="max-width:400px; margin:auto;">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Телефон" required>
+    <textarea name="message" placeholder="Сообщение" required></textarea>
+    <button type="submit">Отправить заявку</button>
   </form>
 </section>
 
