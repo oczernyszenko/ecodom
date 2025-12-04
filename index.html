@@ -263,7 +263,6 @@
     <button class="carousel-btn next">❯</button>
   </div>
 
-<!-- Галерея рабочего процесса -->
 <section id="workflow" style="padding:80px 20px; text-align:center; background-color:#f5f5f5;">
   <h2>Наш рабочий процесс</h2>
   <p>Посмотрите, как мы строим дома шаг за шагом</p>
@@ -275,38 +274,10 @@
     <img src="process4.jpg" alt="Этап 4: Монтаж панелей">
     <img src="process5.jpg" alt="Этап 5: Отделочные работы">
     <img src="process6.jpg" alt="Этап 6: Финальные работы">
-    <img src="process1.jpg" alt="Этап 1: Подготовка участка">
-    <img src="process2.jpg" alt="Этап 2: Фундамент">
-    <img src="process3.jpg" alt="Этап 3: Каркасные работы">
-    <img src="process4.jpg" alt="Этап 4: Монтаж панелей">
-    <img src="process5.jpg" alt="Этап 5: Отделочные работы">
-    <img src="process6.jpg" alt="Этап 6: Финальные работы">
   </div>
 </section>
 
-<style>
-.workflow-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 3-4 в ряд на больших экранах */
-  gap: 15px;
-  max-width: 1200px;
-  margin: 40px auto 0;
-}
-
-.workflow-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.3s;
-}
-
-.workflow-gallery img:hover {
-  transform: scale(1.05);
-}
-</style>
-</section>  
-  
-<!-- Контакты -->
+    <!-- Контакты -->
 <section id="contact" style="background-color:#f5f5f5;">
   <h2>Свяжитесь с нами</h2>
   <p> Отдел продаж </p> <p>Телефон: +34 604 158 859<br>Email: o.czernyszenko@gmail.com </p>
@@ -388,5 +359,24 @@ document.addEventListener('DOMContentLoaded', () => {
   startAutoplay();
 });
 </script>
+.workflow-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+.workflow-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.workflow-gallery img:hover {
+  transform: scale(1.05);
+}
+    
 </body>
 </html>
