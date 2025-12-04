@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании</title>
   <meta name="description" content="Узнайте о преимуществах каркасных домов с клееным брусом и сэндвич-панелей Thermochip для разных климатических зон Испании. Энергоэффективность, теплоизоляция, защита от влаги — читайте наш обзор!">
+  
   <style>
-   
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       scroll-behavior: smooth;
     }
+
     nav {
       position: fixed;
       top: 0;
@@ -35,17 +36,21 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     section {
       padding: 80px 20px 50px; /* учёт навигации */
     }
     section:nth-child(even) {
-      background-color: #e5d9cd }
+      background-color: #e5d9cd;
+    }
     h1, h2, h3 {
       color: #333;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
+      margin-top: 20px;
     }
     table, th, td {
       border: 1px solid #ccc;
@@ -54,11 +59,14 @@
       padding: 10px;
       text-align: left;
     }
+
     img {
       max-width: 100%;
       height: auto;
       margin-top: 20px;
+      border-radius: 12px;
     }
+
     a.cta-btn {
       display: inline-block;
       padding: 10px 20px;
@@ -68,6 +76,7 @@
       border-radius: 5px;
       margin-top: 20px;
     }
+
     form input, form textarea, form button {
       width: 100%;
       padding: 10px;
@@ -82,59 +91,67 @@
       border: none;
       cursor: pointer;
     }
-#projects {
-  padding: 80px 20px 50px;
-  text-align: center;
-}
 
-.carousel-container {
-  position: relative;
-  max-width: 900px;
-  margin: 40px auto;
-  overflow: hidden;
-  border-radius: 12px;
-}
+    /* Карусель */
+    .carousel-container {
+      position: relative;
+      max-width: 900px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 12px;
+    }
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
 
-.carousel-track img {
-  width: 100%;
-  flex-shrink: 0;
-  border-radius: 12px;
-}
+    .carousel-track img {
+      width: 100%;
+      flex-shrink: 0;
+    }
 
-/* Кнопки */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #15978b;
-  border: none;
-  color: white;
-  font-size: 32px;
-  padding: 10px 15px;
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 0.8;
-  z-index: 10;
-  transition: 0.3s;
-}
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #15978b;
+      border: none;
+      color: white;
+      font-size: 32px;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0.8;
+      z-index: 10;
+      transition: 0.3s;
+    }
 
-.carousel-btn:hover {
-  opacity: 1;
-}
+    .carousel-btn:hover {
+      opacity: 1;
+    }
 
-.carousel-btn.prev {
-  left: 15px;
-}
+    .carousel-btn.prev {
+      left: 15px;
+    }
 
-.carousel-btn.next {
-  right: 15px;
-}
-    
+    .carousel-btn.next {
+      right: 15px;
+    }
+
+    /* Галерея рабочего процесса */
+    .workflow-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+    }
+
+    .workflow-gallery img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
   </style>
 </head>
 <body>
@@ -147,6 +164,8 @@
     <li><a href="#thermochip">Thermochip</a></li>
     <li><a href="#comparison">Сравнение</a></li>
     <li><a href="#choice">Выбор</a></li>
+    <li><a href="#projects">Проекты</a></li>
+    <li><a href="#workflow">Рабочий процесс</a></li>
     <li><a href="#contact">Контакты</a></li>
   </ul>
 </nav>
@@ -162,17 +181,12 @@
 <!-- Каркасная технология -->
 <section id="timber-frame">
   <h2>Каркасная технология с клееным брусом GL-24</h2>
-  <p>Каркасное строительство в Испании набирает популярность благодаря прочности, экологичности и хорошей теплоизоляции деревянных конструкций. Клееный брус из шведской ели (GL-24) обладает рядом преимуществ:</p>
+  <p>Каркасное строительство в Испании набирает популярность благодаря прочности, экологичности и хорошей теплоизоляции деревянных конструкций.</p>
   <ul>
     <li>Прочность и долговечность</li>
     <li>Экологичность</li>
     <li>Пожарная безопасность</li>
     <li>Теплоизоляция</li>
-  </ul>
-  <h3>Преимущества для различных регионов Испании:</h3>
-  <ul>
-    <li>Горные регионы: Пиренеи, Кастилия-Леон</li>
-    <li>Северные и центральные регионы: Галисия, Наварра</li>
   </ul>
   <img src="karkasnyjdom.jpg" alt="Каркасный дом из клееного бруса">
   <a href="#contact" class="cta-btn">Заказать проект каркасного дома</a>
@@ -181,17 +195,12 @@
 <!-- Сэндвич-панели -->
 <section id="thermochip">
   <h2>Сэндвич-панели Thermochip</h2>
-  <p>Сэндвич-панели Thermochip — это современный и высокоэффективный материал для строительства, который сочетает в себе отличные теплоизоляционные и гидроизоляционные свойства.</p>
+  <p>Сэндвич-панели Thermochip — это современный и высокоэффективный материал для строительства.</p>
   <ul>
     <li>Энергоэффективность</li>
     <li>Устойчивость к влаге</li>
     <li>Простота монтажа</li>
     <li>Пожарная безопасность</li>
-  </ul>
-  <h3>Преимущества для различных регионов Испании:</h3>
-  <ul>
-    <li>Южная и восточная Испания: Коста-Бланка, Коста-дель-Соль</li>
-    <li>Прибрежные районы: Валенсия, Барселона</li>
   </ul>
   <img src="Thermochip.jpg" alt="Дом из сэндвич-панелей Thermochip">
   <a href="#contact" class="cta-btn">Заказать проект дома из Thermochip</a>
@@ -203,7 +212,7 @@
   <table>
     <tr>
       <th>Характеристика</th>
-      <th>Каркасная технология (клееный брус)</th>
+      <th>Каркасная технология</th>
       <th>Сэндвич-панели Thermochip</th>
     </tr>
     <tr>
@@ -232,55 +241,47 @@
       <td>Более доступная стоимость и лёгкость монтажа</td>
     </tr>
   </table>
-  <a href="#contact" class="cta-btn">Связаться с нами для выбора технологии</a>
 </section>
 
 <!-- Выбор технологии -->
 <section id="choice">
   <h2>Какая технология лучше для вашего проекта?</h2>
-  <p>Выбор между каркасным домом и сэндвич-панелями зависит от ваших предпочтений, бюджета и климатических условий региона. Каркасные дома подходят для холодного климата, сэндвич-панели — для жарких и прибрежных районов Испании.</p>
+  <p>Выбор зависит от ваших предпочтений, бюджета и климатических условий региона.</p>
 </section>
 
-<!--Карусель -->
-  <section id="projects">
-  <h2> Проекты</h2>
-  <p>Посмотрите образцы наших проектов </p>
-
+<!-- Карусель проектов -->
+<section id="projects">
+  <h2>Проекты</h2>
   <div class="carousel-container">
     <button class="carousel-btn prev">❮</button>
-
     <div class="carousel-track">
       <img src="project1.jpg" alt="Проект 1">
       <img src="project2.jpg" alt="Проект 2">
       <img src="project3.jpg" alt="Проект 3">
-      <img src="project4.jpg" alt="Проект 5">
-      <img src="project4.jpg" alt="Проект 4">  
-      <img src="project4.jpg" alt="Проект 4">  
-      <img src="project4.jpg" alt="Проект 4">
       <img src="project4.jpg" alt="Проект 4">
     </div>
-
     <button class="carousel-btn next">❯</button>
   </div>
 </section>
-  <section id="workflow" style="padding:80px 20px; text-align:center; background-color:#f5f5f5;">
+
+<!-- Галерея рабочего процесса -->
+<section id="workflow">
   <h2>Наш рабочий процесс</h2>
   <p>Посмотрите, как мы строим дома шаг за шагом</p>
-
   <div class="workflow-gallery">
-    <img src="process1.jpg" alt="Этап 1: Подготовка участка">
-    <img src="process2.jpg" alt="Этап 2: Фундамент">
-    <img src="process3.jpg" alt="Этап 3: Каркасные работы">
-    <img src="process4.jpg" alt="Этап 4: Монтаж панелей">
-    <img src="process5.jpg" alt="Этап 5: Отделочные работы">
-    <img src="process6.jpg" alt="Этап 6: Финальные работы">
+    <img src="process1.jpg" alt="Этап 1">
+    <img src="process2.jpg" alt="Этап 2">
+    <img src="process3.jpg" alt="Этап 3">
+    <img src="process4.jpg" alt="Этап 4">
+    <img src="process5.jpg" alt="Этап 5">
+    <img src="process6.jpg" alt="Этап 6">
   </div>
 </section>
 
-    <!-- Контакты -->
+<!-- Контакты -->
 <section id="contact" style="background-color:#f5f5f5;">
   <h2>Свяжитесь с нами</h2>
-  <p> Отдел продаж </p> <p>Телефон: +34 604 158 859<br>Email: o.czernyszenko@gmail.com </p>
+  <p>Телефон: +34 604 158 859<br>Email: o.czernyszenko@gmail.com</p>
   <form action="#" method="post" style="max-width:400px; margin:auto;">
     <input type="text" name="name" placeholder="Ваше имя" required>
     <input type="email" name="email" placeholder="Email" required>
@@ -289,6 +290,7 @@
     <button type="submit">Отправить заявку</button>
   </form>
 </section>
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.carousel-track');
@@ -297,86 +299,41 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevButton = document.querySelector('.carousel-btn.prev');
   const container = document.querySelector('.carousel-container');
 
-  if (!track || slides.length === 0) return;
-
   let index = 0;
-  let autoplayInterval = null;
+  const AUTOPLAY_DELAY = 3000;
 
-  // Скорость прокрутки
-  const AUTOPLAY_DELAY = 2000; // быстрее: каждые 2 сек
-  const TRANSITION_SPEED = 0.3; // быстрее анимация
-
-  // Устанавливаем скорость анимации
-  track.style.transition = `transform ${TRANSITION_SPEED}s ease`;
-
-  // Функция обновления слайдов
   function updateCarousel() {
-    const slideWidth = container.clientWidth; // всегда актуальная ширина
+    const slideWidth = container.clientWidth;
     track.style.transform = `translateX(${-index * slideWidth}px)`;
   }
 
-  // Кнопка "вперёд"
   nextButton.addEventListener('click', () => {
     index = (index + 1) % slides.length;
     updateCarousel();
-    resetAutoplay();
   });
 
-  // Кнопка "назад"
   prevButton.addEventListener('click', () => {
     index = (index - 1 + slides.length) % slides.length;
     updateCarousel();
-    resetAutoplay();
   });
 
-  // Автопрокрутка
-  function startAutoplay() {
-    stopAutoplay();
-    autoplayInterval = setInterval(() => {
+  let autoplay = setInterval(() => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  }, AUTOPLAY_DELAY);
+
+  container.addEventListener('mouseenter', () => clearInterval(autoplay));
+  container.addEventListener('mouseleave', () => {
+    autoplay = setInterval(() => {
       index = (index + 1) % slides.length;
       updateCarousel();
     }, AUTOPLAY_DELAY);
-  }
+  });
 
-  function stopAutoplay() {
-    clearInterval(autoplayInterval);
-  }
-
-  function resetAutoplay() {
-    stopAutoplay();
-    startAutoplay();
-  }
-
-  // Пауза при наведении
-  container.addEventListener('mouseenter', stopAutoplay);
-  container.addEventListener('mouseleave', startAutoplay);
-
-  // Корректная работа при изменении размера экрана
   window.addEventListener('resize', updateCarousel);
-
-  // Первый запуск
   updateCarousel();
-  startAutoplay();
 });
 </script>
-.workflow-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-  max-width: 1200px;
-  margin: 40px auto 0;
-}
 
-.workflow-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.3s;
-}
-
-.workflow-gallery img:hover {
-  transform: scale(1.05);
-}
-    
 </body>
 </html>
