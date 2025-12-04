@@ -81,6 +81,59 @@
       border: none;
       cursor: pointer;
     }
+#projects {
+  padding: 80px 20px 50px;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+/* Кнопки */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #15978b;
+  border: none;
+  color: white;
+  font-size: 32px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.8;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.carousel-btn:hover {
+  opacity: 1;
+}
+
+.carousel-btn.prev {
+  left: 15px;
+}
+
+.carousel-btn.next {
+  right: 15px;
+}
+    
   </style>
 </head>
 <body>
@@ -187,6 +240,25 @@
   <p>Выбор между каркасным домом и сэндвич-панелями зависит от ваших предпочтений, бюджета и климатических условий региона. Каркасные дома подходят для холодного климата, сэндвич-панели — для жарких и прибрежных районов Испании.</p>
 </section>
 
+<!--Карусель -->
+  <section id="projects">
+  <h2>Реализованные проекты</h2>
+  <p>Посмотрите наши готовые дома, построенные по современным технологиям.</p>
+
+  <div class="carousel-container">
+    <button class="carousel-btn prev">❮</button>
+
+    <div class="carousel-track">
+      <img src="img/project1.jpg" alt="Проект 1">
+      <img src="img/project2.jpg" alt="Проект 2">
+      <img src="img/project3.jpg" alt="Проект 3">
+      <img src="img/project4.jpg" alt="Проект 4">
+    </div>
+
+    <button class="carousel-btn next">❯</button>
+  </div>
+</section>  
+  
 <!-- Контакты -->
 <section id="contact" style="background-color:#f5f5f5;">
   <h2>Свяжитесь с нами</h2>
