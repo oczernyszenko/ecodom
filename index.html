@@ -283,29 +283,29 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!track || slides.length === 0) return;
 
   let index = 0;
-  let slideWidth = slides[0].getBoundingClientRect().width;
   let autoplayInterval = null;
-  const AUTOPLAY_DELAY = 5000;
 
-  // Установим одинаковую ширину для всех слайдов (на случай отличий)
-  function setSlidesWidth() {
-    slideWidth = container.getBoundingClientRect().width;
-    slides.forEach(slide => {
-      slide.style.width = slideWidth + 'px';
-    });
-    updateCarousel(); // скорректировать позицию после ресайза
-  }
+  // Скорость прокрутки
+  const AUTOPLAY_DELAY = 2000; // быстрее: каждые 2 сек
+  const TRANSITION_SPEED = 0.3; // быстрее анимация
 
+  // Устанавливаем скорость анимации
+  track.style.transition = `transform ${TRANSITION_SPEED}s ease`;
+
+  // Функция обновления слайдов
   function updateCarousel() {
-    track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
+    const slideWidth = container.clientWidth; // всегда актуальная ширина
+    track.style.transform = `translateX(${-index * slideWidth}px)`;
   }
 
+  // Кнопка "вперёд"
   nextButton.addEventListener('click', () => {
     index = (index + 1) % slides.length;
     updateCarousel();
     resetAutoplay();
   });
 
+  // Кнопка "назад"
   prevButton.addEventListener('click', () => {
     index = (index - 1 + slides.length) % slides.length;
     updateCarousel();
@@ -320,26 +320,25 @@ document.addEventListener('DOMContentLoaded', () => {
       updateCarousel();
     }, AUTOPLAY_DELAY);
   }
+
   function stopAutoplay() {
-    if (autoplayInterval) clearInterval(autoplayInterval);
-    autoplayInterval = null;
+    clearInterval(autoplayInterval);
   }
+
   function resetAutoplay() {
     stopAutoplay();
     startAutoplay();
   }
 
-  // Пауза при наведении (удобно на десктопе)
+  // Пауза при наведении
   container.addEventListener('mouseenter', stopAutoplay);
   container.addEventListener('mouseleave', startAutoplay);
 
-  // Пересчёт при изменении размера окна
-  window.addEventListener('resize', () => {
-    setSlidesWidth();
-  });
+  // Корректная работа при изменении размера экрана
+  window.addEventListener('resize', updateCarousel);
 
-  // Инициализация
-  setSlidesWidth();
+  // Первый запуск
+  updateCarousel();
   startAutoplay();
 });
 </script>
