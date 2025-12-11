@@ -436,16 +436,22 @@
 
     /* --- Современное мобильное меню --- */
   
-     /* --- Современное мобильное меню --- */
+ /* --- Современное мобильное меню --- */
 @media (max-width: 960px) {
 
   .nav-inner {
     flex-wrap: wrap;
   }
 
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* Выпадающее меню */
   .nav-links {
     position: absolute;
-    top: 52px;
+    top: 54px;
     left: 0;
     right: 0;
     background: var(--accent);
@@ -453,34 +459,31 @@
     padding: 10px 15px 15px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height .3s ease;
   }
 
   .nav-links.open {
-    max-height: 400px;
+    max-height: 420px;
   }
 
   .nav-links li {
-    margin: 4px 0;
+    margin: 6px 0;
   }
 
-  /* Блок языков — наша правка */
+  /* --- Блок языков — переносим в новую строку, влезает полностью --- */
   .lang-switcher {
-    order: 3;
     width: 100%;
+    order: 4;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 6px;
-    margin-top: 6px;
   }
 
   .lang-switcher button {
-    padding: 5px 10px;
-    font-size: 12px;
-  }
-
-  .nav-toggle {
-    display: block;
+    padding: 6px 14px;
+    font-size: 13px;
   }
 }
 
