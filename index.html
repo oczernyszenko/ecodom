@@ -133,24 +133,29 @@
       gap: 6px;
     }
 
-    .lang-switcher button {
-      border: none;
-      padding: 3px 6px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.15);
-      color: #fff;
-      font-size: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.2s ease, transform 0.1s ease;
-      white-space: nowrap;
-    }
+   .lang-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 110px; /* ограничиваем ширину, чтобы не выезжало вправо */
+}
 
-    .lang-switcher button.active-lang {
-      background: #fff;
-      color: var(--accent);
-      transform: translateY(-1px);
-    }
+.lang-switcher button {
+  border: none;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.lang-switcher button.active-lang {
+  background: #fff;
+  color: var(--accent);
+}
 
     .nav-toggle {
       display: none;
