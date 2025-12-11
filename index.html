@@ -436,7 +436,27 @@
 
     /* --- Современное мобильное меню --- */
     @media (max-width: 960px) {
+      
+@media (max-width: 960px) {
 
+  .nav-inner {
+    flex-wrap: wrap;
+  }
+
+  .lang-switcher {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .lang-switcher button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
       .nav-toggle {
         display: block;
       }
