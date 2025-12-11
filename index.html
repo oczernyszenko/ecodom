@@ -46,19 +46,58 @@
     h1, h2, h3 {
       color: #333;
     }
+/* Адаптивная таблица сравнения */
+#comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
+#comparison th, 
+#comparison td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+/* --- Мобильная версия ---- */
+@media (max-width: 700px) {
+  #comparison table,
+  #comparison thead,
+  #comparison tbody,
+  #comparison th,
+  #comparison td,
+  #comparison tr {
+    display: block;
+  }
+
+  /* Прячем заголовок на мобильных */
+  #comparison thead {
+    display: none;
+  }
+
+  #comparison tr {
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  #comparison td {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+
+  #comparison td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #15978b;
+    margin-right: 10px;
+  }
+
 
     img {
       max-width: 100%;
@@ -234,42 +273,38 @@
   <a href="#contact" class="cta-btn">Заказать проект дома из Thermochip</a>
 </section>
 
-<!-- Сравнение технологий -->
-<section id="comparison">
-  <h2>Сравнение технологий</h2>
-  <table>
-    <tr>
-      <th>Характеристика</th>
-      <th>Каркасная технология</th>
-      <th>Сэндвич-панели Thermochip</th>
-    </tr>
-    <tr>
-      <td>Энергоэффективность</td>
-      <td>Хорошая теплоизоляция, но требует обработки</td>
-      <td>Отличная теплоизоляция, снижает расходы на кондиционирование</td>
-    </tr>
-    <tr>
-      <td>Пожарная безопасность</td>
-      <td>Хорошая, древесина обгорает медленно</td>
-      <td>Хорошая, панели имеют огнеупорные свойства</td>
-    </tr>
-    <tr>
-      <td>Влагоустойчивость</td>
-      <td>Требует обработки для защиты от влаги</td>
-      <td>Отличная защита от влаги, идеальна для прибрежных районов</td>
-    </tr>
-    <tr>
-      <td>Скорость строительства</td>
-      <td>Занимает больше времени на монтаж</td>
-      <td>Быстрая сборка, экономия времени</td>
-    </tr>
-    <tr>
-      <td>Стоимость</td>
-      <td>Дорогая, зависит от качества древесины</td>
-      <td>Более доступная стоимость и лёгкость монтажа</td>
-    </tr>
-  </table>
-</section>
+<table>
+  <tr>
+    <th>Характеристика</th>
+    <th>Каркасная технология</th>
+    <th>Сэндвич-панели Thermochip</th>
+  </tr>
+  <tr>
+    <td data-label="Характеристика">Энергоэффективность</td>
+    <td data-label="Каркасная технология">Хорошая теплоизоляция, но требует обработки</td>
+    <td data-label="Thermochip">Отличная теплоизоляция, снижает расходы на кондиционирование</td>
+  </tr>
+  <tr>
+    <td data-label="Характеристика">Пожарная безопасность</td>
+    <td data-label="Каркасная технология">Хорошая, древесина обгорает медленно</td>
+    <td data-label="Thermochip">Хорошая, панели имеют огнеупорные свойства</td>
+  </tr>
+  <tr>
+    <td data-label="Характеристика">Влагоустойчивость</td>
+    <td data-label="Каркасная технология">Требует обработки для защиты от влаги</td>
+    <td data-label="Thermochip">Отличная защита от влаги, идеальна для прибрежных районов</td>
+  </tr>
+  <tr>
+    <td data-label="Характеристика">Скорость строительства</td>
+    <td data-label="Каркасная технология">Занимает больше времени на монтаж</td>
+    <td data-label="Thermochip">Быстрая сборка, экономия времени</td>
+  </tr>
+  <tr>
+    <td data-label="Характеристика">Стоимость</td>
+    <td data-label="Каркасная технология">Дорогая, зависит от качества древесины</td>
+    <td data-label="Thermochip">Более доступная стоимость и лёгкость монтажа</td>
+  </tr>
+</table>
 
 <!-- Выбор технологии -->
 <section id="choice">
