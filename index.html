@@ -284,13 +284,14 @@
     }
 
     /* Masonry-сетка */
-    .workflow-gallery {
-      column-count: 1;
-      column-gap: 15px;
-      max-width: 1200px;
-      margin: 40px auto 0;
-      padding: 0 15px;
-    }
+  .workflow-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 15px;
+}
 
     .workflow-gallery img {
       width: 100%;
@@ -413,24 +414,7 @@
       transform: translateY(0);
     }
 
-    @media (min-width: 600px) {
-      .workflow-gallery {
-        column-count: 2;
-      }
-    }
-
-    @media (min-width: 900px) {
-      .workflow-gallery {
-        column-count: 3;
-      }
-    }
-
-    @media (min-width: 1300px) {
-      .workflow-gallery {
-        column-count: 4;
-      }
-    }
-
+  
     /* Подсказка над таблицей и языки на мобильных */
     @media (max-width: 900px) {
       .table-scroll-hint {
