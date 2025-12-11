@@ -390,44 +390,7 @@
       transform: translateY(0);
     }
 
-    /* Адаптивная таблица и Masonry */
-    @media (max-width: 700px) {
-      #comparison table,
-      #comparison thead,
-      #comparison tbody,
-      #comparison th,
-      #comparison td,
-      #comparison tr {
-        display: block;
-      }
-
-      #comparison thead {
-        display: none;
-      }
-
-      #comparison tr {
-        margin-bottom: 20px;
-        background: white;
-        border-radius: 12px;
-        padding: 10px;
-        border: 1px solid #ddd;
-      }
-
-      #comparison td {
-        border: none;
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-        padding: 8px 4px;
-      }
-
-      #comparison td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        color: var(--accent);
-        margin-right: 10px;
-      }
-    }
+    
 
     @media (min-width: 600px) {
       .workflow-gallery {
