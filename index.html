@@ -6,6 +6,9 @@
   <title>Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании</title>
   <meta name="description" content="Узнайте о преимуществах каркасных домов с клееным брусом и сэндвич-панелей Thermochip для разных климатических зон Испании. Энергоэффективность, теплоизоляция, защита от влаги — читайте наш обзор!">
 
+  <!-- Favicon-домик -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='%2315978b'%3E%3Cpath d='M32 6L2 28h6v30h16V40h16v18h16V28h6z'/%3E%3C/svg%3E">
+
   <!-- Open Graph -->
   <meta property="og:title" content="Каркасные дома и Thermochip в Испании — сравнение технологий">
   <meta property="og:description" content="Сравнение каркасной технологии и сэндвич-панелей Thermochip для строительства энергоэффективных домов в Испании.">
@@ -132,14 +135,15 @@
 
     .lang-switcher button {
       border: none;
-      padding: 4px 8px;
+      padding: 3px 6px;
       border-radius: 999px;
       background: rgba(255,255,255,0.15);
       color: #fff;
-      font-size: 11px;
+      font-size: 10px;
       cursor: pointer;
       font-weight: bold;
       transition: background 0.2s ease, transform 0.1s ease;
+      white-space: nowrap;
     }
 
     .lang-switcher button.active-lang {
@@ -194,10 +198,11 @@
     #comparison table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      margin-top: 10px;
       background: #fff;
       border-radius: 12px;
       overflow: hidden;
+      min-width: 600px; /* чтобы была причина для прокрутки */
     }
 
     #comparison th,
@@ -212,6 +217,21 @@
       background: #f0f0f0;
     }
 
+    .table-scroll-hint {
+      display: none;
+      font-size: 13px;
+      color: #555;
+      background: rgba(21,151,139,0.08);
+      border-radius: 999px;
+      padding: 6px 12px;
+      width: fit-content;
+      margin: 0 auto 6px auto;
+    }
+
+    .table-scroll-hint span {
+      white-space: nowrap;
+    }
+
     /* Карусель */
     .carousel-container {
       position: relative;
@@ -219,7 +239,7 @@
       margin: 40px auto 0;
       overflow: hidden;
       border-radius: 12px;
-      background: #000;
+      background: none; /* убрали черный фон */
     }
 
     .carousel-track {
@@ -229,7 +249,10 @@
 
     .carousel-track img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       flex-shrink: 0;
+      display: block;
     }
 
     .carousel-btn {
@@ -390,8 +413,6 @@
       transform: translateY(0);
     }
 
-    
-
     @media (min-width: 600px) {
       .workflow-gallery {
         column-count: 2;
@@ -407,6 +428,20 @@
     @media (min-width: 1300px) {
       .workflow-gallery {
         column-count: 4;
+      }
+    }
+
+    /* Подсказка над таблицей и языки на мобильных */
+    @media (max-width: 900px) {
+      .table-scroll-hint {
+        display: block;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .lang-switcher {
+        flex-wrap: wrap;
+        row-gap: 4px;
       }
     }
 
@@ -558,6 +593,10 @@
     <p data-i18n="comparison_text">
       Ниже представлено сравнение ключевых характеристик каркасной технологии и сэндвич-панелей Thermochip для строительства в Испании.
     </p>
+  </div>
+
+  <div class="table-scroll-hint">
+    <span>💡 Прокрутите таблицу →</span>
   </div>
 
   <div class="comparison-wrapper">
@@ -719,6 +758,12 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  // всегда открываем страницу сверху
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+
   /* --- Карусель проектов --- */
   const track = document.querySelector('.carousel-track');
   const slides = Array.from(track.children);
@@ -767,7 +812,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelector('.nav-links');
   const overlay = document.querySelector('.menu-overlay');
 
-  if (navToggle) {
+  if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       overlay.classList.toggle('show', isOpen);
@@ -993,7 +1038,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_cta: 'Отримати консультацію',
 
       timber_title: 'Каркасна технологія з клеєним брусом GL-24',
-      timber_text: 'Каркасне будівництво в Іспанії набирає популярності завдяки міцності, екологічності та гарній теплоізоляції дерев’яних конструкцій.',
+      timber_text: 'Каркасне будівництво в Іспанії набирає популярність завдяки міцності, екологічності та гарній теплоізоляції дерев’яних конструкцій.',
       timber_li1: 'Міцність і довговічність',
       timber_li2: 'Екологічність',
       timber_li3: 'Пожежна безпека',
