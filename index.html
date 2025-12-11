@@ -5,139 +5,224 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании</title>
   <meta name="description" content="Узнайте о преимуществах каркасных домов с клееным брусом и сэндвич-панелей Thermochip для разных климатических зон Испании. Энергоэффективность, теплоизоляция, защита от влаги — читайте наш обзор!">
-  
+
+  <!-- Favicon-домик -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='%2315978b'%3E%3Cpath d='M32 6L2 28h6v30h16V40h16v18h16V28h6z'/%3E%3C/svg%3E">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Каркасные дома и Thermochip в Испании — сравнение технологий">
+  <meta property="og:description" content="Сравнение каркасной технологии и сэндвич-панелей Thermochip для строительства энергоэффективных домов в Испании.">
+  <meta property="og:type" content="website">
+
   <style>
+    :root {
+      --accent: #15978b;
+      --bg-light: #f5f5f5;
+      --bg-alt: #e5d9cd;
+      --text-main: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       scroll-behavior: smooth;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #15978b;
-      padding: 10px 0;
-      z-index: 1000;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 0 15px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
+      color: var(--text-main);
     }
 
     section {
-      padding: 80px 20px 50px; /* учёт навигации */
+      padding: 90px 20px 60px;
+      scroll-margin-top: 80px; /* чтобы якоря не прятались под меню */
     }
-    section:nth-child(even) {
-      background-color: #e5d9cd;
+
+    section:nth-of-type(even) {
+      background-color: var(--bg-alt);
     }
+
     h1, h2, h3 {
-      color: #333;
+      color: var(--text-main);
+      margin-top: 0;
     }
-/* Адаптивная таблица сравнения */
-#comparison table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
 
-#comparison th, 
-#comparison td {
-  border: 1px solid #ccc;
-  padding: 12px;
-  text-align: left;
-}
-
-/* --- Мобильная версия ---- */
-@media (max-width: 700px) {
-  #comparison table,
-  #comparison thead,
-  #comparison tbody,
-  #comparison th,
-  #comparison td,
-  #comparison tr {
-    display: block;
-  }
-
-  /* Прячем заголовок на мобильных */
-  #comparison thead {
-    display: none;
-  }
-
-  #comparison tr {
-    margin-bottom: 20px;
-    background: white;
-    border-radius: 12px;
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
-
-  #comparison td {
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
-  }
-
-  #comparison td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    color: #15978b;
-    margin-right: 10px;
-  }
-
+    p {
+      line-height: 1.5;
+    }
 
     img {
       max-width: 100%;
       height: auto;
       margin-top: 20px;
       border-radius: 12px;
+      display: block;
     }
 
-    a.cta-btn {
+    a {
+      color: var(--accent);
+    }
+
+    .cta-btn {
       display: inline-block;
-      padding: 10px 20px;
-      background-color: #15978b;
+      padding: 12px 24px;
+      background-color: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 20px;
+      font-weight: bold;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #0f7b71;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+      transform: translateY(-1px);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--accent);
+      padding: 8px 15px;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      font-weight: bold;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links li a {
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: opacity 0.2s ease;
     }
 
-    form input, form textarea, form button {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
+    .nav-links li a:hover {
+      opacity: 0.8;
     }
-    form button {
-      background-color: #15978b;
-      color: white;
+
+    .lang-switcher {
+      display: flex;
+      gap: 6px;
+    }
+
+    .lang-switcher button {
       border: none;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      font-size: 11px;
       cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    .lang-switcher button.active-lang {
+      background: #fff;
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .nav-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    #hero {
+      background-color: var(--bg-light);
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    #hero .hero-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    #hero img {
+      margin: 30px auto 0;
+    }
+
+    /* CONTENT SECTIONS */
+    .content-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+
+    /* Сравнение - таблица */
+    #comparison .comparison-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    #comparison table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    #comparison th,
+    #comparison td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    #comparison th {
+      background: #f0f0f0;
     }
 
     /* Карусель */
     .carousel-container {
       position: relative;
       max-width: 900px;
-      margin: 40px auto;
+      margin: 40px auto 0;
       overflow: hidden;
       border-radius: 12px;
+      background: #000;
     }
 
     .carousel-track {
@@ -154,14 +239,14 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: #15978b;
+      background: var(--accent);
       border: none;
       color: white;
-      font-size: 32px;
-      padding: 10px 15px;
+      font-size: 24px;
+      padding: 8px 12px;
       border-radius: 50%;
       cursor: pointer;
-      opacity: 0.8;
+      opacity: 0.85;
       z-index: 10;
       transition: 0.3s;
     }
@@ -177,186 +262,481 @@
     .carousel-btn.next {
       right: 15px;
     }
-/* Адаптивная Masonry-сетка без JS */
-.workflow-gallery {
-  column-count: 1;
-  column-gap: 15px;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 15px;
-}
 
-.workflow-gallery img {
-  width: 100%;
-  margin-bottom: 15px;
-  border-radius: 12px;
-  display: block;
-  transition: transform 0.3s ease;
-}
+    /* Masonry-сетка */
+    .workflow-gallery {
+      column-count: 1;
+      column-gap: 15px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding: 0 15px;
+    }
 
-/* Hover эффект */
-.workflow-gallery img:hover {
-  transform: scale(1.03);
-}
+    .workflow-gallery img {
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* Адаптив */
-@media (min-width: 600px) {
-  .workflow-gallery {
-    column-count: 2;
-  }
-}
+    .workflow-gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
 
-@media (min-width: 900px) {
-  .workflow-gallery {
-    column-count: 3;
-  }
-}
+    /* Видео */
+    #video .video-wrapper {
+      max-width: 900px;
+      margin: 30px auto 0;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
 
-@media (min-width: 1300px) {
-  .workflow-gallery {
-    column-count: 4;
-  }
-}
-    
-    
+    #video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      border: none;
+    }
+
+    /* Форма */
+    #contact {
+      background-color: var(--bg-light);
+    }
+
+    #contact .contact-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      gap: 30px;
+    }
+
+    #contact p {
+      margin-top: 10px;
+    }
+
+    form {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    form input,
+    form textarea,
+    form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    form button {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    form button:hover {
+      background-color: #0f7b71;
+      transform: translateY(-1px);
+    }
+
+    /* Плавающая кнопка WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 26px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+      z-index: 1100;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+    }
+
+    /* Анимация появления блоков */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Адаптивная таблица и Masonry */
+    @media (max-width: 700px) {
+      #comparison table,
+      #comparison thead,
+      #comparison tbody,
+      #comparison th,
+      #comparison td,
+      #comparison tr {
+        display: block;
+      }
+
+      #comparison thead {
+        display: none;
+      }
+
+      #comparison tr {
+        margin-bottom: 20px;
+        background: white;
+        border-radius: 12px;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+
+      #comparison td {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        padding: 8px 4px;
+      }
+
+      #comparison td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--accent);
+        margin-right: 10px;
+      }
+    }
+
+    @media (min-width: 600px) {
+      .workflow-gallery {
+        column-count: 2;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .workflow-gallery {
+        column-count: 3;
+      }
+    }
+
+    @media (min-width: 1300px) {
+      .workflow-gallery {
+        column-count: 4;
+      }
+    }
+
+    /* Мобильное меню */
+    @media (max-width: 960px) {
+      .nav-inner {
+        gap: 10px;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 52px;
+        left: 0;
+        right: 0;
+        background: var(--accent);
+        flex-direction: column;
+        padding: 10px 15px 15px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .nav-links.open {
+        max-height: 400px;
+      }
+
+      .nav-links li {
+        margin: 4px 0;
+      }
+
+      .lang-switcher {
+        margin-left: auto;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
 
+<!-- Плавающий WhatsApp -->
+<a href="https://wa.me/34604158859" class="whatsapp-float" target="_blank" aria-label="Связаться по WhatsApp">
+  🟢
+</a>
+
 <!-- Навигация -->
 <nav>
-  <ul>
-    <li><a href="#hero">Главная</a></li>
-    <li><a href="#timber-frame">Каркасные дома</a></li>
-    <li><a href="#thermochip">Thermochip</a></li>
-    <li><a href="#comparison">Сравнение</a></li>
-    <li><a href="#choice">Выбор</a></li>
-    <li><a href="#projects">Проекты</a></li>
-    <li><a href="#workflow">Рабочий процесс</a></li>
-    <li><a href="#contact">Контакты</a></li>
-  </ul>
+  <div class="nav-inner">
+    <div class="logo" data-i18n="logo">EcoBuild Spain</div>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="#hero" data-i18n="nav_home">Главная</a></li>
+      <li><a href="#timber-frame" data-i18n="nav_timber">Каркасные дома</a></li>
+      <li><a href="#thermochip" data-i18n="nav_thermochip">Thermochip</a></li>
+      <li><a href="#comparison" data-i18n="nav_comparison">Сравнение</a></li>
+      <li><a href="#choice" data-i18n="nav_choice">Выбор</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Проекты</a></li>
+      <li><a href="#workflow" data-i18n="nav_workflow">Процесс</a></li>
+      <li><a href="#video" data-i18n="nav_video">Видео</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Контакты</a></li>
+    </ul>
+
+    <div class="lang-switcher">
+      <button data-lang="ru" class="active-lang">RU</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ua">UA</button>
+      <button data-lang="es">ES</button>
+    </div>
+  </div>
 </nav>
 
 <!-- Главный экран -->
-<section id="hero" style="text-align:center; background-color:#f5f5f5;">
-  <h1>Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании</h1>
-  <p>Выберите оптимальный вариант строительства дома: каркасные дома с клееным брусом или сэндвич-панели Thermochip</p>
-  <a href="#contact" class="cta-btn">Получить консультацию</a>
-  <img src="dom.jpg" alt="Современный дом в Испании">
+<section id="hero" class="fade-in">
+  <div class="hero-inner">
+    <h1 data-i18n="hero_title">Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании</h1>
+    <p data-i18n="hero_subtitle">Выберите оптимальный вариант строительства дома: каркасные дома с клееным брусом или сэндвич-панели Thermochip.</p>
+    <a href="#contact" class="cta-btn" data-i18n="hero_cta">Получить консультацию</a>
+    <img src="dom.jpg" loading="lazy" alt="Современный энергоэффективный дом в Испании">
+  </div>
 </section>
 
 <!-- Каркасная технология -->
-<section id="timber-frame">
-  <h2>Каркасная технология с клееным брусом GL-24</h2>
-  <p>Каркасное строительство в Испании набирает популярность благодаря прочности, экологичности и хорошей теплоизоляции деревянных конструкций.</p>
-  <ul>
-    <li>Прочность и долговечность</li>
-    <li>Экологичность</li>
-    <li>Пожарная безопасность</li>
-    <li>Теплоизоляция</li>
-  </ul>
-  <img src="karkasnyjdom.jpg" alt="Каркасный дом из клееного бруса">
-  <a href="#contact" class="cta-btn">Заказать проект каркасного дома</a>
+<section id="timber-frame" class="fade-in">
+  <div class="content-inner">
+    <h2 data-i18n="timber_title">Каркасная технология с клееным брусом GL-24</h2>
+    <p data-i18n="timber_text">
+      Каркасное строительство в Испании набирает популярность благодаря прочности, экологичности и хорошей теплоизоляции деревянных конструкций.
+    </p>
+    <ul>
+      <li data-i18n="timber_li1">Прочность и долговечность</li>
+      <li data-i18n="timber_li2">Экологичность</li>
+      <li data-i18n="timber_li3">Пожарная безопасность</li>
+      <li data-i18n="timber_li4">Теплоизоляция</li>
+    </ul>
+    <img src="karkasnyjdom.jpg" loading="lazy" alt="Каркасный дом из клееного бруса в Испании">
+    <a href="#contact" class="cta-btn" data-i18n="timber_cta">Заказать проект каркасного дома</a>
+  </div>
 </section>
 
 <!-- Сэндвич-панели -->
-<section id="thermochip">
-  <h2>Сэндвич-панели Thermochip</h2>
-  <p>Сэндвич-панели Thermochip — это современный и высокоэффективный материал для строительства.</p>
-  <ul>
-    <li>Энергоэффективность</li>
-    <li>Устойчивость к влаге</li>
-    <li>Простота монтажа</li>
-    <li>Пожарная безопасность</li>
-  </ul>
-  <img src="Thermochip.jpg" alt="Дом из сэндвич-панелей Thermochip">
-  <a href="#contact" class="cta-btn">Заказать проект дома из Thermochip</a>
+<section id="thermochip" class="fade-in">
+  <div class="content-inner">
+    <h2 data-i18n="thermo_title">Сэндвич-панели Thermochip</h2>
+    <p data-i18n="thermo_text">
+      Сэндвич-панели Thermochip — это современный и высокоэффективный материал для строительства энергоэффективных домов.
+    </p>
+    <ul>
+      <li data-i18n="thermo_li1">Энергоэффективность</li>
+      <li data-i18n="thermo_li2">Устойчивость к влаге</li>
+      <li data-i18n="thermo_li3">Простота монтажа</li>
+      <li data-i18n="thermo_li4">Пожарная безопасность</li>
+    </ul>
+    <img src="Thermochip.jpg" loading="lazy" alt="Дом из сэндвич-панелей Thermochip в Испании">
+    <a href="#contact" class="cta-btn" data-i18n="thermo_cta">Заказать проект дома из Thermochip</a>
+  </div>
 </section>
 
-<table>
-  <tr>
-    <th>Характеристика</th>
-    <th>Каркасная технология</th>
-    <th>Сэндвич-панели Thermochip</th>
-  </tr>
-  <tr>
-    <td data-label="Характеристика">Энергоэффективность</td>
-    <td data-label="Каркасная технология">Хорошая теплоизоляция, но требует обработки</td>
-    <td data-label="Thermochip">Отличная теплоизоляция, снижает расходы на кондиционирование</td>
-  </tr>
-  <tr>
-    <td data-label="Характеристика">Пожарная безопасность</td>
-    <td data-label="Каркасная технология">Хорошая, древесина обгорает медленно</td>
-    <td data-label="Thermochip">Хорошая, панели имеют огнеупорные свойства</td>
-  </tr>
-  <tr>
-    <td data-label="Характеристика">Влагоустойчивость</td>
-    <td data-label="Каркасная технология">Требует обработки для защиты от влаги</td>
-    <td data-label="Thermochip">Отличная защита от влаги, идеальна для прибрежных районов</td>
-  </tr>
-  <tr>
-    <td data-label="Характеристика">Скорость строительства</td>
-    <td data-label="Каркасная технология">Занимает больше времени на монтаж</td>
-    <td data-label="Thermochip">Быстрая сборка, экономия времени</td>
-  </tr>
-  <tr>
-    <td data-label="Характеристика">Стоимость</td>
-    <td data-label="Каркасная технология">Дорогая, зависит от качества древесины</td>
-    <td data-label="Thermochip">Более доступная стоимость и лёгкость монтажа</td>
-  </tr>
-</table>
+<!-- Сравнение -->
+<section id="comparison" class="fade-in">
+  <div class="content-inner">
+    <h2 data-i18n="comparison_title">Сравнение технологий</h2>
+    <p data-i18n="comparison_text">
+      Ниже представлено сравнение ключевых характеристик каркасной технологии и сэндвич-панелей Thermochip для строительства в Испании.
+    </p>
+  </div>
+
+  <div class="comparison-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th data-i18n="table_col_param">Характеристика</th>
+          <th data-i18n="table_col_timber">Каркасная технология</th>
+          <th data-i18n="table_col_thermo">Сэндвич-панели Thermochip</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Характеристика" data-i18n="table_row1_param">Энергоэффективность</td>
+          <td data-label="Каркасная технология" data-i18n="table_row1_timber">
+            Хорошая теплоизоляция, но требует дополнительной обработки и узлов без мостиков холода.
+          </td>
+          <td data-label="Thermochip" data-i18n="table_row1_thermo">
+            Отличная теплоизоляция, снижает расходы на отопление и кондиционирование.
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Характеристика" data-i18n="table_row2_param">Пожарная безопасность</td>
+          <td data-label="Каркасная технология" data-i18n="table_row2_timber">
+            Древесина обгорает медленно, сохраняет несущую способность при правильной обработке.
+          </td>
+          <td data-label="Thermochip" data-i18n="table_row2_thermo">
+            Панели имеют огнеупорные свойства и соответствуют европейским нормам.
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Характеристика" data-i18n="table_row3_param">Влагоустойчивость</td>
+          <td data-label="Каркасная технология" data-i18n="table_row3_timber">
+            Требует тщательной защиты от влаги и правильной пароизоляции.
+          </td>
+          <td data-label="Thermochip" data-i18n="table_row3_thermo">
+            Отличная защита от влаги, подходит для прибрежных районов Испании.
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Характеристика" data-i18n="table_row4_param">Скорость строительства</td>
+          <td data-label="Каркасная технология" data-i18n="table_row4_timber">
+            Монтаж занимает больше времени и требует более высокой квалификации.
+          </td>
+          <td data-label="Thermochip" data-i18n="table_row4_thermo">
+            Быстрая сборка, сокращение сроков строительства.
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Характеристика" data-i18n="table_row5_param">Стоимость</td>
+          <td data-label="Каркасная технология" data-i18n="table_row5_timber">
+            Более высокая стоимость при использовании качественного клееного бруса.
+          </td>
+          <td data-label="Thermochip" data-i18n="table_row5_thermo">
+            Конкурентная стоимость материала и монтажа.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 <!-- Выбор технологии -->
-<section id="choice">
-  <h2>Какая технология лучше для вашего проекта?</h2>
-  <p>Выбор зависит от ваших предпочтений, бюджета и климатических условий региона.</p>
+<section id="choice" class="fade-in">
+  <div class="content-inner">
+    <h2 data-i18n="choice_title">Какая технология лучше для вашего проекта?</h2>
+    <p data-i18n="choice_text1">
+      Выбор зависит от ваших приоритетов: эстетика натурального дерева, скорость строительства, бюджет и особенности участка.
+    </p>
+    <p data-i18n="choice_text2">
+      Каркасная технология больше подойдёт тем, кто ценит натуральные материалы и индивидуальную архитектуру. Thermochip-решения — для тех, кто хочет быстро получить тёплый, энергоэффективный дом с предсказуемым результатом.
+    </p>
+    <p data-i18n="choice_text3">
+      Мы поможем подобрать оптимальную конструкцию с учётом климата региона Испании, ориентации участка и ваших задач.
+    </p>
+  </div>
 </section>
 
 <!-- Карусель проектов -->
-<section id="projects">
-  <h2>Проекты</h2>
+<section id="projects" class="fade-in">
+  <div class="content-inner" style="text-align:center;">
+    <h2 data-i18n="projects_title">Наши проекты</h2>
+    <p data-i18n="projects_text">
+      Примеры реализованных и типовых решений на основе каркасной технологии и сэндвич-панелей Thermochip.
+    </p>
+  </div>
+
   <div class="carousel-container">
-    <button class="carousel-btn prev">❮</button>
+    <button class="carousel-btn prev" aria-label="Предыдущий проект">❮</button>
     <div class="carousel-track">
-      <img src="project1.jpg" alt="Проект 1">
-      <img src="project2.jpg" alt="Проект 2">
-      <img src="project3.jpg" alt="Проект 3">
-      <img src="project4.jpg" alt="Проект 4">
+      <img src="project1.jpg" loading="lazy" alt="Проект каркасного дома в Испании — фасад">
+      <img src="project2.jpg" loading="lazy" alt="Современный дом с плоской крышей в Испании">
+      <img src="project3.jpg" loading="lazy" alt="Одноэтажный дом в средиземноморском стиле">
+      <img src="project4.jpg" loading="lazy" alt="Дом с большими панорамными окнами">
     </div>
-    <button class="carousel-btn next">❯</button>
+    <button class="carousel-btn next" aria-label="Следующий проект">❯</button>
   </div>
 </section>
 
 <!-- Галерея рабочего процесса -->
-<section id="workflow" style="text-align:center; padding:80px 20px; background:#f5f5f5;">
-  <h2>Наш рабочий процесс</h2>
-  <p>Посмотрите, как мы строим дома шаг за шагом</p>
+<section id="workflow" class="fade-in" style="text-align:center; background:var(--bg-light);">
+  <div class="content-inner">
+    <h2 data-i18n="workflow_title">Наш рабочий процесс</h2>
+    <p data-i18n="workflow_text">
+      Посмотрите, как мы шаг за шагом создаём дома: от подготовки участка до финальной отделки.
+    </p>
+  </div>
 
   <div class="workflow-gallery">
-    <img src="process1.jpg" alt="Подготовка участка">
-    <img src="process2.jpg" alt="Фундамент">
-    <img src="process3.jpg" alt="Каркасные работы">
-    <img src="process4.jpg" alt="Монтаж панелей">
-    <img src="process5.jpg" alt="Отделочные работы">
-    <img src="process6.jpg" alt="Финальные работы">
+    <img src="process1.jpg" loading="lazy" alt="Подготовка участка для строительства">
+    <img src="process2.jpg" loading="lazy" alt="Фундаментные работы на участке">
+    <img src="process3.jpg" loading="lazy" alt="Монтаж деревянного каркаса дома">
+    <img src="process4.jpg" loading="lazy" alt="Установка сэндвич-панелей Thermochip">
+    <img src="process5.jpg" loading="lazy" alt="Внутренние отделочные работы в доме">
+    <img src="process6.jpg" loading="lazy" alt="Готовый дом, финальные работы и ландшафт">
+  </div>
+</section>
+
+<!-- Видео рабочего процесса -->
+<section id="video" class="fade-in" style="background:#fff; text-align:center;">
+  <div class="content-inner">
+    <h2 data-i18n="video_title">Видео рабочего процесса</h2>
+    <p data-i18n="video_text">Короткое видео о том, как проходит строительство и сборка дома.</p>
+  </div>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/Qb6D2Tmgaeo?rel=0&modestbranding=1&showinfo=0"
+      title="Рабочий процесс строительства"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
   </div>
 </section>
 
 <!-- Контакты -->
-<section id="contact" style="background-color:#f5f5f5;">
-  <h2>Свяжитесь с нами</h2>
-  <p>Телефон: +34 604 158 859<br>Email: o.czernyszenko@gmail.com</p>
-  <form action="#" method="post" style="max-width:400px; margin:auto;">
-    <input type="text" name="name" placeholder="Ваше имя" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="tel" name="phone" placeholder="Телефон" required>
-    <textarea name="message" placeholder="Сообщение" required></textarea>
-    <button type="submit">Отправить заявку</button>
-  </form>
+<section id="contact" class="fade-in">
+  <div class="contact-inner">
+    <div>
+      <h2 data-i18n="contact_title">Свяжитесь с нами</h2>
+      <p data-i18n="contact_text">
+        Оставьте свои контакты, и мы подберём оптимальное решение под ваш участок и бюджет.
+      </p>
+      <p>
+        <strong data-i18n="contact_phone_label">Телефон:</strong> <a href="tel:+34604158859">+34 604 158 859</a><br>
+        <strong>Email:</strong> <a href="mailto:o.czernyszenko@gmail.com">o.czernyszenko@gmail.com</a>
+      </p>
+    </div>
+
+    <form action="#" method="post">
+      <input type="text" name="name" required data-i18n-placeholder="form_name" placeholder="Ваше имя">
+      <input type="email" name="email" required data-i18n-placeholder="form_email" placeholder="Email">
+      <input type="tel" name="phone" required data-i18n-placeholder="form_phone" placeholder="Телефон">
+      <textarea name="message" required data-i18n-placeholder="form_message" placeholder="Сообщение"></textarea>
+      <button type="submit" data-i18n="form_submit">Отправить заявку</button>
+    </form>
+  </div>
 </section>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  /* --- Карусель проектов --- */
   const track = document.querySelector('.carousel-track');
   const slides = Array.from(track.children);
   const nextButton = document.querySelector('.carousel-btn.next');
@@ -368,34 +748,438 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateCarousel() {
     const slideWidth = container.clientWidth;
-    track.style.transform = `translateX(${-index * slideWidth}px)`;
+    track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
   }
 
-  nextButton.addEventListener('click', () => {
-    index = (index + 1) % slides.length;
-    updateCarousel();
-  });
+  if (nextButton && prevButton && container) {
+    nextButton.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      updateCarousel();
+    });
 
-  prevButton.addEventListener('click', () => {
-    index = (index - 1 + slides.length) % slides.length;
-    updateCarousel();
-  });
+    prevButton.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
 
-  let autoplay = setInterval(() => {
-    index = (index + 1) % slides.length;
-    updateCarousel();
-  }, AUTOPLAY_DELAY);
-
-  container.addEventListener('mouseenter', () => clearInterval(autoplay));
-  container.addEventListener('mouseleave', () => {
-    autoplay = setInterval(() => {
+    let autoplay = setInterval(() => {
       index = (index + 1) % slides.length;
       updateCarousel();
     }, AUTOPLAY_DELAY);
+
+    container.addEventListener('mouseenter', () => clearInterval(autoplay));
+    container.addEventListener('mouseleave', () => {
+      autoplay = setInterval(() => {
+        index = (index + 1) % slides.length;
+        updateCarousel();
+      }, AUTOPLAY_DELAY);
+    });
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+  }
+
+  /* --- Мобильное меню --- */
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+
+  /* --- Анимация появления блоков --- */
+  const fadeElements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  fadeElements.forEach(el => observer.observe(el));
+
+  /* --- Мультиязычность --- */
+  const translations = {
+    ru: {
+      logo: 'EcoBuild Spain',
+      nav_home: 'Главная',
+      nav_timber: 'Каркасные дома',
+      nav_thermochip: 'Thermochip',
+      nav_comparison: 'Сравнение',
+      nav_choice: 'Выбор',
+      nav_projects: 'Проекты',
+      nav_workflow: 'Процесс',
+      nav_video: 'Видео',
+      nav_contact: 'Контакты',
+
+      hero_title: 'Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании',
+      hero_subtitle: 'Выберите оптимальный вариант строительства дома: каркасные дома с клееным брусом или сэндвич-панели Thermochip.',
+      hero_cta: 'Получить консультацию',
+
+      timber_title: 'Каркасная технология с клееным брусом GL-24',
+      timber_text: 'Каркасное строительство в Испании набирает популярность благодаря прочности, экологичности и хорошей теплоизоляции деревянных конструкций.',
+      timber_li1: 'Прочность и долговечность',
+      timber_li2: 'Экологичность',
+      timber_li3: 'Пожарная безопасность',
+      timber_li4: 'Теплоизоляция',
+      timber_cta: 'Заказать проект каркасного дома',
+
+      thermo_title: 'Сэндвич-панели Thermochip',
+      thermo_text: 'Сэндвич-панели Thermochip — это современный и высокоэффективный материал для строительства энергоэффективных домов.',
+      thermo_li1: 'Энергоэффективность',
+      thermo_li2: 'Устойчивость к влаге',
+      thermo_li3: 'Простота монтажа',
+      thermo_li4: 'Пожарная безопасность',
+      thermo_cta: 'Заказать проект дома из Thermochip',
+
+      comparison_title: 'Сравнение технологий',
+      comparison_text: 'Ниже представлено сравнение ключевых характеристик каркасной технологии и сэндвич-панелей Thermochip для строительства в Испании.',
+
+      table_col_param: 'Характеристика',
+      table_col_timber: 'Каркасная технология',
+      table_col_thermo: 'Сэндвич-панели Thermochip',
+
+      table_row1_param: 'Энергоэффективность',
+      table_row1_timber: 'Хорошая теплоизоляция, но требует дополнительной обработки и узлов без мостиков холода.',
+      table_row1_thermo: 'Отличная теплоизоляция, снижает расходы на отопление и кондиционирование.',
+
+      table_row2_param: 'Пожарная безопасность',
+      table_row2_timber: 'Древесина обгорает медленно, сохраняет несущую способность при правильной обработке.',
+      table_row2_thermo: 'Панели имеют огнеупорные свойства и соответствуют европейским нормам.',
+
+      table_row3_param: 'Влагоустойчивость',
+      table_row3_timber: 'Требует тщательной защиты от влаги и правильной пароизоляции.',
+      table_row3_thermo: 'Отличная защита от влаги, подходит для прибрежных районов Испании.',
+
+      table_row4_param: 'Скорость строительства',
+      table_row4_timber: 'Монтаж занимает больше времени и требует более высокой квалификации.',
+      table_row4_thermo: 'Быстрая сборка, сокращение сроков строительства.',
+
+      table_row5_param: 'Стоимость',
+      table_row5_timber: 'Более высокая стоимость при использовании качественного клееного бруса.',
+      table_row5_thermo: 'Конкурентная стоимость материала и монтажа.',
+
+      choice_title: 'Какая технология лучше для вашего проекта?',
+      choice_text1: 'Выбор зависит от ваших приоритетов: эстетика натурального дерева, скорость строительства, бюджет и особенности участка.',
+      choice_text2: 'Каркасная технология больше подойдёт тем, кто ценит натуральные материалы и индивидуальную архитектуру. Thermochip-решения — для тех, кто хочет быстро получить тёплый, энергоэффективный дом с предсказуемым результатом.',
+      choice_text3: 'Мы поможем подобрать оптимальную конструкцию с учётом климата региона Испании, ориентации участка и ваших задач.',
+
+      projects_title: 'Наши проекты',
+      projects_text: 'Примеры реализованных и типовых решений на основе каркасной технологии и сэндвич-панелей Thermochip.',
+
+      workflow_title: 'Наш рабочий процесс',
+      workflow_text: 'Посмотрите, как мы шаг за шагом создаём дома: от подготовки участка до финальной отделки.',
+
+      video_title: 'Видео рабочего процесса',
+      video_text: 'Короткое видео о том, как проходит строительство и сборка дома.',
+
+      contact_title: 'Свяжитесь с нами',
+      contact_text: 'Оставьте свои контакты, и мы подберём оптимальное решение под ваш участок и бюджет.',
+      contact_phone_label: 'Телефон:',
+
+      form_name: 'Ваше имя',
+      form_email: 'Email',
+      form_phone: 'Телефон',
+      form_message: 'Сообщение',
+      form_submit: 'Отправить заявку'
+    },
+
+    en: {
+      logo: 'EcoBuild Spain',
+      nav_home: 'Home',
+      nav_timber: 'Timber frame',
+      nav_thermochip: 'Thermochip',
+      nav_comparison: 'Comparison',
+      nav_choice: 'Choice',
+      nav_projects: 'Projects',
+      nav_workflow: 'Process',
+      nav_video: 'Video',
+      nav_contact: 'Contacts',
+
+      hero_title: 'Comparison of timber frame and sandwich panels for building in Spain',
+      hero_subtitle: 'Choose the best solution for your home: glued laminated timber frame or Thermochip sandwich panels.',
+      hero_cta: 'Get a consultation',
+
+      timber_title: 'Timber frame technology with GL-24 glued laminated timber',
+      timber_text: 'Timber frame construction in Spain is gaining popularity thanks to its strength, eco-friendliness and good thermal performance of wooden structures.',
+      timber_li1: 'Strength and durability',
+      timber_li2: 'Eco-friendly material',
+      timber_li3: 'Fire safety',
+      timber_li4: 'Thermal insulation',
+      timber_cta: 'Request a timber frame design',
+
+      thermo_title: 'Thermochip sandwich panels',
+      thermo_text: 'Thermochip sandwich panels are a modern and highly efficient solution for building energy-efficient homes.',
+      thermo_li1: 'Energy efficiency',
+      thermo_li2: 'Moisture resistance',
+      thermo_li3: 'Easy installation',
+      thermo_li4: 'Fire safety',
+      thermo_cta: 'Request a Thermochip house design',
+
+      comparison_title: 'Technology comparison',
+      comparison_text: 'Below is a comparison of key characteristics of timber frame technology and Thermochip sandwich panels for building in Spain.',
+
+      table_col_param: 'Parameter',
+      table_col_timber: 'Timber frame',
+      table_col_thermo: 'Thermochip panels',
+
+      table_row1_param: 'Energy efficiency',
+      table_row1_timber: 'Good thermal performance, but requires careful detailing to avoid cold bridges.',
+      table_row1_thermo: 'Excellent insulation that reduces heating and cooling costs.',
+
+      table_row2_param: 'Fire safety',
+      table_row2_timber: 'Timber chars slowly and retains bearing capacity when treated correctly.',
+      table_row2_thermo: 'Panels have fire-resistant properties and comply with European standards.',
+
+      table_row3_param: 'Moisture resistance',
+      table_row3_timber: 'Requires proper moisture protection and vapour barrier.',
+      table_row3_thermo: 'Great moisture protection, suitable for coastal areas of Spain.',
+
+      table_row4_param: 'Construction speed',
+      table_row4_timber: 'Takes more time and higher qualification on site.',
+      table_row4_thermo: 'Fast assembly and shorter construction time.',
+
+      table_row5_param: 'Cost',
+      table_row5_timber: 'Higher cost when using high-quality glulam.',
+      table_row5_thermo: 'Competitive material and installation cost.',
+
+      choice_title: 'Which technology is better for your project?',
+      choice_text1: 'The choice depends on your priorities: natural wood aesthetics, construction speed, budget and site conditions.',
+      choice_text2: 'Timber frame is ideal for those who value natural materials and custom architecture. Thermochip solutions are perfect if you need a warm, energy-efficient home quickly, with a predictable result.',
+      choice_text3: 'We will help you choose the best structure for the climate in your region of Spain, site orientation and your goals.',
+
+      projects_title: 'Our projects',
+      projects_text: 'Examples of completed and typical designs based on timber frame and Thermochip sandwich panels.',
+
+      workflow_title: 'Our workflow',
+      workflow_text: 'See how we build homes step by step: from site preparation to final finishes.',
+
+      video_title: 'Construction process video',
+      video_text: 'A short video showing how the house is assembled and built.',
+
+      contact_title: 'Contact us',
+      contact_text: 'Leave your contact details and we will find the best solution for your plot and budget.',
+      contact_phone_label: 'Phone:',
+
+      form_name: 'Your name',
+      form_email: 'Email',
+      form_phone: 'Phone',
+      form_message: 'Message',
+      form_submit: 'Send request'
+    },
+
+    ua: {
+      logo: 'EcoBuild Spain',
+      nav_home: 'Головна',
+      nav_timber: 'Каркасні будинки',
+      nav_thermochip: 'Thermochip',
+      nav_comparison: 'Порівняння',
+      nav_choice: 'Вибір',
+      nav_projects: 'Проєкти',
+      nav_workflow: 'Процес',
+      nav_video: 'Відео',
+      nav_contact: 'Контакти',
+
+      hero_title: 'Порівняння каркасної технології та сендвіч-панелей для будівництва в Іспанії',
+      hero_subtitle: 'Обирайте оптимальний варіант будівництва будинку: каркас із клеєного брусу або сендвіч-панелі Thermochip.',
+      hero_cta: 'Отримати консультацію',
+
+      timber_title: 'Каркасна технологія з клеєним брусом GL-24',
+      timber_text: 'Каркасне будівництво в Іспанії набирає популярності завдяки міцності, екологічності та гарній теплоізоляції дерев’яних конструкцій.',
+      timber_li1: 'Міцність і довговічність',
+      timber_li2: 'Екологічність',
+      timber_li3: 'Пожежна безпека',
+      timber_li4: 'Теплоізоляція',
+      timber_cta: 'Замовити проєкт каркасного будинку',
+
+      thermo_title: 'Сендвіч-панелі Thermochip',
+      thermo_text: 'Сендвіч-панелі Thermochip — сучасний і високоефективний матеріал для будівництва енергоефективних будинків.',
+      thermo_li1: 'Енергоефективність',
+      thermo_li2: 'Стійкість до вологи',
+      thermo_li3: 'Простий монтаж',
+      thermo_li4: 'Пожежна безпека',
+      thermo_cta: 'Замовити проєкт будинку з Thermochip',
+
+      comparison_title: 'Порівняння технологій',
+      comparison_text: 'Нижче наведено порівняння ключових характеристик каркасної технології та сендвіч-панелей Thermochip для будівництва в Іспанії.',
+
+      table_col_param: 'Характеристика',
+      table_col_timber: 'Каркасна технологія',
+      table_col_thermo: 'Сендвіч-панелі Thermochip',
+
+      table_row1_param: 'Енергоефективність',
+      table_row1_timber: 'Гарна теплоізоляція, але потрібні додаткові рішення без містків холоду.',
+      table_row1_thermo: 'Відмінна теплоізоляція, зменшує витрати на опалення та кондиціонування.',
+
+      table_row2_param: 'Пожежна безпека',
+      table_row2_timber: 'Деревина повільно обвуглюється й зберігає несучу здатність при правильній обробці.',
+      table_row2_thermo: 'Панелі мають вогнестійкі властивості та відповідають європейським нормам.',
+
+      table_row3_param: 'Стійкість до вологи',
+      table_row3_timber: 'Потребує надійного захисту від вологи та правильної пароізоляції.',
+      table_row3_thermo: 'Чудовий захист від вологи, підходить для прибережних районів Іспанії.',
+
+      table_row4_param: 'Швидкість будівництва',
+      table_row4_timber: 'Монтаж займає більше часу та вимагає високої кваліфікації.',
+      table_row4_thermo: 'Швидке складання, скорочення строків будівництва.',
+
+      table_row5_param: 'Вартість',
+      table_row5_timber: 'Вища вартість при використанні якісного клеєного брусу.',
+      table_row5_thermo: 'Конкурентна вартість матеріалу та монтажу.',
+
+      choice_title: 'Яка технологія краща для вашого проєкту?',
+      choice_text1: 'Вибір залежить від ваших пріоритетів: естетика натурального дерева, швидкість будівництва, бюджет і особливості ділянки.',
+      choice_text2: 'Каркасна технологія підійде тим, хто цінує натуральні матеріали та індивідуальну архітектуру. Рішення на базі Thermochip — для тих, кому важливо швидко отримати теплий, енергоефективний будинок з передбачуваним результатом.',
+      choice_text3: 'Ми допоможемо підібрати оптимальну конструкцію з урахуванням клімату регіону Іспанії, орієнтації ділянки та ваших задач.',
+
+      projects_title: 'Наші проєкти',
+      projects_text: 'Приклади реалізованих і типових рішень на основі каркасної технології та сендвіч-панелей Thermochip.',
+
+      workflow_title: 'Наш робочий процес',
+      workflow_text: 'Подивіться, як ми крок за кроком будуємо будинки: від підготовки ділянки до фінального оздоблення.',
+
+      video_title: 'Відео робочого процесу',
+      video_text: 'Коротке відео про те, як відбувається будівництво та складання будинку.',
+
+      contact_title: 'Зв’яжіться з нами',
+      contact_text: 'Залиште свої контакти, і ми підберемо оптимальне рішення для вашої ділянки та бюджету.',
+      contact_phone_label: 'Телефон:',
+
+      form_name: "Ваше ім'я",
+      form_email: 'Email',
+      form_phone: 'Телефон',
+      form_message: 'Повідомлення',
+      form_submit: 'Надіслати заявку'
+    },
+
+    es: {
+      logo: 'EcoBuild Spain',
+      nav_home: 'Inicio',
+      nav_timber: 'Estructura de madera',
+      nav_thermochip: 'Thermochip',
+      nav_comparison: 'Comparación',
+      nav_choice: 'Elección',
+      nav_projects: 'Proyectos',
+      nav_workflow: 'Proceso',
+      nav_video: 'Vídeo',
+      nav_contact: 'Contacto',
+
+      hero_title: 'Comparación entre estructura de madera y paneles sándwich para construir en España',
+      hero_subtitle: 'Elija la mejor opción para su vivienda: estructura de madera laminada o paneles sándwich Thermochip.',
+      hero_cta: 'Recibir asesoramiento',
+
+      timber_title: 'Estructura de madera con laminado encolado GL-24',
+      timber_text: 'La construcción con estructura de madera en España gana popularidad por su resistencia, sostenibilidad y buen aislamiento térmico.',
+      timber_li1: 'Resistencia y durabilidad',
+      timber_li2: 'Material ecológico',
+      timber_li3: 'Seguridad contra incendios',
+      timber_li4: 'Aislamiento térmico',
+      timber_cta: 'Solicitar proyecto de casa de madera',
+
+      thermo_title: 'Paneles sándwich Thermochip',
+      thermo_text: 'Los paneles sándwich Thermochip son un material moderno y muy eficiente para construir viviendas energéticamente eficientes.',
+      thermo_li1: 'Eficiencia energética',
+      thermo_li2: 'Resistencia a la humedad',
+      thermo_li3: 'Fácil montaje',
+      thermo_li4: 'Seguridad contra incendios',
+      thermo_cta: 'Solicitar proyecto con Thermochip',
+
+      comparison_title: 'Comparación de tecnologías',
+      comparison_text: 'A continuación mostramos la comparación de las principales características de la estructura de madera y los paneles Thermochip para construir en España.',
+
+      table_col_param: 'Característica',
+      table_col_timber: 'Estructura de madera',
+      table_col_thermo: 'Paneles Thermochip',
+
+      table_row1_param: 'Eficiencia energética',
+      table_row1_timber: 'Buen aislamiento, pero requiere detalles cuidados para evitar puentes térmicos.',
+      table_row1_thermo: 'Excelente aislamiento que reduce los costes de calefacción y aire acondicionado.',
+
+      table_row2_param: 'Seguridad contra incendios',
+      table_row2_timber: 'La madera se carboniza lentamente y mantiene la capacidad portante si se trata correctamente.',
+      table_row2_thermo: 'Los paneles son ignífugos y cumplen las normativas europeas.',
+
+      table_row3_param: 'Resistencia a la humedad',
+      table_row3_timber: 'Necesita buena protección frente a la humedad y correcta barrera de vapor.',
+      table_row3_thermo: 'Muy buena protección frente a la humedad, ideal para zonas costeras de España.',
+
+      table_row4_param: 'Velocidad de construcción',
+      table_row4_timber: 'El montaje requiere más tiempo y mayor cualificación.',
+      table_row4_thermo: 'Montaje rápido y plazos de obra reducidos.',
+
+      table_row5_param: 'Coste',
+      table_row5_timber: 'Coste más elevado usando madera laminada de alta calidad.',
+      table_row5_thermo: 'Coste competitivo de material y montaje.',
+
+      choice_title: '¿Qué tecnología es mejor para su proyecto?',
+      choice_text1: 'La elección depende de sus prioridades: estética de la madera natural, rapidez de construcción, presupuesto y características de la parcela.',
+      choice_text2: 'La estructura de madera es ideal para quienes valoran los materiales naturales y la arquitectura individual. Las soluciones Thermochip son perfectas para quienes quieren una casa cálida y eficiente en poco tiempo, con un resultado previsible.',
+      choice_text3: 'Le ayudamos a elegir la mejor solución teniendo en cuenta el clima de la zona, la orientación de la parcela y sus objetivos.',
+
+      projects_title: 'Nuestros proyectos',
+      projects_text: 'Ejemplos de proyectos realizados y tipologías basadas en estructura de madera y paneles Thermochip.',
+
+      workflow_title: 'Nuestro proceso de trabajo',
+      workflow_text: 'Vea cómo construimos las viviendas paso a paso: desde la preparación del terreno hasta los acabados finales.',
+
+      video_title: 'Vídeo del proceso de construcción',
+      video_text: 'Un breve vídeo sobre cómo se monta y construye la vivienda.',
+
+      contact_title: 'Contacto',
+      contact_text: 'Déjenos sus datos de contacto y le propondremos la mejor solución para su parcela y presupuesto.',
+      contact_phone_label: 'Teléfono:',
+
+      form_name: 'Su nombre',
+      form_email: 'Email',
+      form_phone: 'Teléfono',
+      form_message: 'Mensaje',
+      form_submit: 'Enviar solicitud'
+    }
+  };
+
+  function applyTranslations(lang) {
+    const dict = translations[lang] || translations['ru'];
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) {
+        el.textContent = dict[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key]) {
+        el.setAttribute('placeholder', dict[key]);
+      }
+    });
+  }
+
+  const langButtons = document.querySelectorAll('.lang-switcher button');
+  let currentLang = 'ru';
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      currentLang = lang;
+      langButtons.forEach(b => b.classList.remove('active-lang'));
+      btn.classList.add('active-lang');
+      applyTranslations(lang);
+    });
   });
 
-  window.addEventListener('resize', updateCarousel);
-  updateCarousel();
+  // начальная локаль
+  applyTranslations(currentLang);
 });
 </script>
 
