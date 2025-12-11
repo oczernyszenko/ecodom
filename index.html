@@ -7,12 +7,8 @@
   <meta name="description" content="Узнайте о преимуществах каркасных домов с клееным брусом и сэндвич-панелей Thermochip для разных климатических зон Испании. Энергоэффективность, теплоизоляция, защита от влаги — читайте наш обзор!">
 
   <!-- Favicon-домик -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='%2315978b'%3E%3Cpath d='M32 6L2 28h6v30h16V40h16v18h16V28h6z'/%3E%3C/svg%3E">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Каркасные дома и Thermochip в Испании — сравнение технологий">
-  <meta property="og:description" content="Сравнение каркасной технологии и сэндвич-панелей Thermochip для строительства энергоэффективных домов в Испании.">
-  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='%2315978b'%3E%3Cpath d='M32 6L2 28h6v30h16V40h16v18h16V28h6z'/%3E%3C/svg%3E">
 
   <style>
     :root {
@@ -35,7 +31,7 @@
 
     section {
       padding: 90px 20px 60px;
-      scroll-margin-top: 80px; /* чтобы якоря не прятались под меню */
+      scroll-margin-top: 80px;
     }
 
     section:nth-of-type(even) {
@@ -43,8 +39,8 @@
     }
 
     h1, h2, h3 {
-      color: var(--text-main);
       margin-top: 0;
+      color: var(--text-main);
     }
 
     p {
@@ -81,13 +77,26 @@
       transform: translateY(-1px);
     }
 
-    /* NAV */
+    .content-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+
+    /* ================================
+          НАВИГАЦИЯ + БУРГЕР
+    ================================= */
+
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: var(--accent);
-      padding: 8px 15px;
+      background: var(--accent);
+      padding: 10px 15px;
       z-index: 1000;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
@@ -97,7 +106,6 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       gap: 16px;
     }
 
@@ -105,6 +113,7 @@
       font-weight: bold;
       color: #fff;
       white-space: nowrap;
+      font-size: 18px;
     }
 
     .nav-links {
@@ -114,6 +123,7 @@
       padding: 0;
       gap: 16px;
       flex-wrap: wrap;
+      margin-left: 20px;
     }
 
     .nav-links li a {
@@ -129,44 +139,61 @@
     }
 
     .lang-switcher {
+      margin-left: auto;
       display: flex;
       gap: 6px;
     }
 
-   .lang-switcher {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  max-width: 110px; /* ограничиваем ширину, чтобы не выезжало вправо */
-}
+    .lang-switcher button {
+      border: none;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.25);
+      color: #fff;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      white-space: nowrap;
+    }
 
-.lang-switcher button {
-  border: none;
-  padding: 3px 8px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.25);
-  color: #fff;
-  font-size: 11px;
-  cursor: pointer;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-.lang-switcher button.active-lang {
-  background: #fff;
-  color: var(--accent);
-}
+    .lang-switcher button.active-lang {
+      background: #fff;
+      color: var(--accent);
+    }
 
     .nav-toggle {
       display: none;
       border: none;
       background: transparent;
       color: #fff;
-      font-size: 24px;
+      font-size: 30px;
       cursor: pointer;
+      margin-left: auto;
     }
 
-    /* HERO */
+    /* overlay под меню */
+    .menu-overlay {
+      position: fixed;
+      top: 58px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.45);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 900;
+      transition: opacity .35s ease;
+    }
+
+    .menu-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* ================================
+              ГЛАВНЫЙ ЭКРАН
+    ================================= */
+
     #hero {
       background-color: var(--bg-light);
       text-align: center;
@@ -182,18 +209,10 @@
       margin: 30px auto 0;
     }
 
-    /* CONTENT SECTIONS */
-    .content-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+    /* ================================
+            ТАБЛИЦА СРАВНЕНИЯ
+    ================================= */
 
-    ul {
-      padding-left: 18px;
-      margin-top: 10px;
-    }
-
-    /* Сравнение - таблица */
     #comparison .comparison-wrapper {
       max-width: 1000px;
       margin: 0 auto;
@@ -207,7 +226,7 @@
       background: #fff;
       border-radius: 12px;
       overflow: hidden;
-      min-width: 600px; /* чтобы была причина для прокрутки */
+      min-width: 650px;
     }
 
     #comparison th,
@@ -237,14 +256,17 @@
       white-space: nowrap;
     }
 
-    /* Карусель */
+    /* ================================
+                КАРУСЕЛЬ
+    ================================= */
+
     .carousel-container {
       position: relative;
       max-width: 900px;
       margin: 40px auto 0;
       overflow: hidden;
       border-radius: 12px;
-      background: none; /* убрали черный фон */
+      background: transparent;
     }
 
     .carousel-track {
@@ -254,10 +276,9 @@
 
     .carousel-track img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
       flex-shrink: 0;
       display: block;
+      object-fit: cover;
     }
 
     .carousel-btn {
@@ -288,19 +309,21 @@
       right: 15px;
     }
 
-    /* Masonry-сетка */
-  .workflow-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 40px auto 0;
-  padding: 0 15px;
-}
+    /* ================================
+         ГАЛЕРЕЯ "РАБОЧИЙ ПРОЦЕСС"
+    ================================= */
+
+    .workflow-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding: 0 15px;
+    }
 
     .workflow-gallery img {
       width: 100%;
-      margin-bottom: 15px;
       border-radius: 12px;
       display: block;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -311,7 +334,10 @@
       box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     }
 
-    /* Видео */
+    /* ================================
+                 ВИДЕО
+    ================================= */
+
     #video .video-wrapper {
       max-width: 900px;
       margin: 30px auto 0;
@@ -330,7 +356,10 @@
       border: none;
     }
 
-    /* Форма */
+    /* ================================
+                 КОНТАКТЫ
+    ================================= */
+
     #contact {
       background-color: var(--bg-light);
     }
@@ -340,10 +369,6 @@
       margin: 0 auto;
       display: grid;
       gap: 30px;
-    }
-
-    #contact p {
-      margin-top: 10px;
     }
 
     form {
@@ -359,7 +384,6 @@
       margin-bottom: 10px;
       border-radius: 5px;
       border: 1px solid #ccc;
-      box-sizing: border-box;
       font-family: inherit;
     }
 
@@ -382,7 +406,10 @@
       transform: translateY(-1px);
     }
 
-    /* Плавающая кнопка WhatsApp */
+    /* ================================
+            ПЛАВАЮЩИЙ WHATSAPP
+    ================================= */
+
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -407,7 +434,10 @@
       box-shadow: 0 6px 22px rgba(0,0,0,0.35);
     }
 
-    /* Анимация появления блоков */
+    /* ================================
+              АНИМАЦИЯ ПОЯВЛЕНИЯ
+    ================================= */
+
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -419,88 +449,38 @@
       transform: translateY(0);
     }
 
-  
-    /* Подсказка над таблицей и языки на мобильных */
+    /* Подсказка над таблицей на мобилках */
     @media (max-width: 900px) {
       .table-scroll-hint {
         display: block;
       }
     }
 
-    @media (max-width: 500px) {
-      .lang-switcher {
-        flex-wrap: wrap;
-        row-gap: 4px;
+    /* Мобильное меню (самое главное) */
+    @media (max-width: 960px) {
+      .nav-inner {
+        gap: 10px;
       }
-    }
 
-    /* --- Современное мобильное меню --- */
-  
- /* --- Современное мобильное меню --- */
-@media (max-width: 960px) {
-
-  .nav-inner {
-    flex-wrap: wrap;
-  }
-
-  .nav-toggle {
-    display: block;
-    margin-left: auto;
-  }
-
-  /* Выпадающее меню */
-  .nav-links {
-    position: absolute;
-    top: 54px;
-    left: 0;
-    right: 0;
-    background: var(--accent);
-    flex-direction: column;
-    padding: 10px 15px 15px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .3s ease;
-  }
-
-  .nav-links.open {
-    max-height: 420px;
-  }
-
-  .nav-links li {
-    margin: 6px 0;
-  }
-
-  /* --- Блок языков — переносим в новую строку, влезает полностью --- */
-  .lang-switcher {
-    width: 100%;
-    order: 4;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .lang-switcher button {
-    padding: 6px 14px;
-    font-size: 13px;
-  }
-}
+      .nav-toggle {
+        display: block;
+      }
 
       .nav-links {
         position: fixed;
-        top: 52px;
+        top: 58px;
         left: 0;
         right: 0;
         background: var(--accent);
         flex-direction: column;
         padding: 20px;
-        gap: 10px;
+        gap: 15px;
         max-height: 0;
         overflow: hidden;
         opacity: 0;
         z-index: 1001;
         transition: max-height .35s ease, opacity .35s ease;
+        margin-left: 0;
       }
 
       .nav-links.open {
@@ -508,33 +488,20 @@
         opacity: 1;
       }
 
-      .nav-links li a {
-        font-size: 18px;
-        padding: 6px 0;
-      }
-
-      .menu-overlay {
-        position: fixed;
-        top: 52px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0,0,0,0.45);
-        opacity: 0;
-        pointer-events: none;
-        z-index: 1000;
-        transition: opacity .35s ease;
-      }
-
-      .menu-overlay.show {
-        opacity: 1;
-        pointer-events: all;
-      }
-
       .lang-switcher {
-        margin-left: auto;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 6px;
+      }
+
+      .lang-switcher button {
+        padding: 6px 14px;
+        font-size: 13px;
       }
     }
+
   </style>
 </head>
 <body>
@@ -543,6 +510,9 @@
 <a href="https://wa.me/34604158859" class="whatsapp-float" target="_blank" aria-label="Связаться по WhatsApp">
   🟢
 </a>
+
+<!-- Overlay для меню -->
+<div class="menu-overlay"></div>
 
 <!-- Навигация -->
 <nav>
@@ -572,14 +542,15 @@
   </div>
 </nav>
 
-<!-- overlay для мобильного меню -->
-<div class="menu-overlay"></div>
-
 <!-- Главный экран -->
 <section id="hero" class="fade-in">
   <div class="hero-inner">
-    <h1 data-i18n="hero_title">Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании</h1>
-    <p data-i18n="hero_subtitle">Выберите оптимальный вариант строительства дома: каркасные дома с клееным брусом или сэндвич-панели Thermochip.</p>
+    <h1 data-i18n="hero_title">
+      Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании
+    </h1>
+    <p data-i18n="hero_subtitle">
+      Выберите оптимальный вариант строительства дома: каркасные дома с клееным брусом или сэндвич-панели Thermochip.
+    </p>
     <a href="#contact" class="cta-btn" data-i18n="hero_cta">Получить консультацию</a>
     <img src="dom.jpg" loading="lazy" alt="Современный энергоэффективный дом в Испании">
   </div>
@@ -631,7 +602,7 @@
   </div>
 
   <div class="table-scroll-hint">
-    <span>💡 Прокрутите таблицу →</span>
+    <span>💡 Прокрутите таблицу вправо →</span>
   </div>
 
   <div class="comparison-wrapper">
@@ -645,47 +616,47 @@
       </thead>
       <tbody>
         <tr>
-          <td data-label="Характеристика" data-i18n="table_row1_param">Энергоэффективность</td>
-          <td data-label="Каркасная технология" data-i18n="table_row1_timber">
+          <td data-i18n="table_row1_param">Энергоэффективность</td>
+          <td data-i18n="table_row1_timber">
             Хорошая теплоизоляция, но требует дополнительной обработки и узлов без мостиков холода.
           </td>
-          <td data-label="Thermochip" data-i18n="table_row1_thermo">
+          <td data-i18n="table_row1_thermo">
             Отличная теплоизоляция, снижает расходы на отопление и кондиционирование.
           </td>
         </tr>
         <tr>
-          <td data-label="Характеристика" data-i18n="table_row2_param">Пожарная безопасность</td>
-          <td data-label="Каркасная технология" data-i18n="table_row2_timber">
+          <td data-i18n="table_row2_param">Пожарная безопасность</td>
+          <td data-i18n="table_row2_timber">
             Древесина обгорает медленно, сохраняет несущую способность при правильной обработке.
           </td>
-          <td data-label="Thermochip" data-i18n="table_row2_thermo">
+          <td data-i18n="table_row2_thermo">
             Панели имеют огнеупорные свойства и соответствуют европейским нормам.
           </td>
         </tr>
         <tr>
-          <td data-label="Характеристика" data-i18n="table_row3_param">Влагоустойчивость</td>
-          <td data-label="Каркасная технология" data-i18n="table_row3_timber">
+          <td data-i18n="table_row3_param">Влагоустойчивость</td>
+          <td data-i18n="table_row3_timber">
             Требует тщательной защиты от влаги и правильной пароизоляции.
           </td>
-          <td data-label="Thermochip" data-i18n="table_row3_thermo">
+          <td data-i18n="table_row3_thermo">
             Отличная защита от влаги, подходит для прибрежных районов Испании.
           </td>
         </tr>
         <tr>
-          <td data-label="Характеристика" data-i18n="table_row4_param">Скорость строительства</td>
-          <td data-label="Каркасная технология" data-i18n="table_row4_timber">
+          <td data-i18n="table_row4_param">Скорость строительства</td>
+          <td data-i18n="table_row4_timber">
             Монтаж занимает больше времени и требует более высокой квалификации.
           </td>
-          <td data-label="Thermochip" data-i18n="table_row4_thermo">
+          <td data-i18n="table_row4_thermo">
             Быстрая сборка, сокращение сроков строительства.
           </td>
         </tr>
         <tr>
-          <td data-label="Характеристика" data-i18n="table_row5_param">Стоимость</td>
-          <td data-label="Каркасная технология" data-i18n="table_row5_timber">
+          <td data-i18n="table_row5_param">Стоимость</td>
+          <td data-i18n="table_row5_timber">
             Более высокая стоимость при использовании качественного клееного бруса.
           </td>
-          <td data-label="Thermochip" data-i18n="table_row5_thermo">
+          <td data-i18n="table_row5_thermo">
             Конкурентная стоимость материала и монтажа.
           </td>
         </tr>
@@ -842,28 +813,24 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCarousel();
   }
 
-  /* --- Мобильное меню (новое) --- */
+  /* --- Мобильное меню (бургер + overlay) --- */
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
   const overlay = document.querySelector('.menu-overlay');
 
-  if (navToggle && navLinks) {
+  if (navToggle && navLinks && overlay) {
     navToggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       overlay.classList.toggle('show', isOpen);
       navToggle.textContent = isOpen ? '✕' : '☰';
     });
-  }
 
-  if (overlay) {
     overlay.addEventListener('click', () => {
       navLinks.classList.remove('open');
       overlay.classList.remove('show');
       navToggle.textContent = '☰';
     });
-  }
 
-  if (navLinks) {
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
@@ -1101,7 +1068,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       table_row2_param: 'Пожежна безпека',
       table_row2_timber: 'Деревина повільно обвуглюється й зберігає несучу здатність при правильній обробці.',
-      table_row2_thermo: 'Панелі мають вогнестійкі властивості та відповідають європейським нормам.',
+      table_row2_thermo: 'Панелі мають вогнестійкі властивості та відповідають європейским нормам.',
 
       table_row3_param: 'Стійкість до вологи',
       table_row3_timber: 'Потребує надійного захисту від вологи та правильної пароізоляції.',
