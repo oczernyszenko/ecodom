@@ -447,39 +447,59 @@
       }
     }
 
-    /* Мобильное меню */
+    /* --- Современное мобильное меню --- */
     @media (max-width: 960px) {
-      .nav-inner {
-        gap: 10px;
+
+      .nav-toggle {
+        display: block;
       }
 
       .nav-links {
-        position: absolute;
+        position: fixed;
         top: 52px;
         left: 0;
         right: 0;
         background: var(--accent);
         flex-direction: column;
-        padding: 10px 15px 15px;
+        padding: 20px;
+        gap: 10px;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        opacity: 0;
+        z-index: 1001;
+        transition: max-height .35s ease, opacity .35s ease;
       }
 
       .nav-links.open {
-        max-height: 400px;
+        max-height: 500px;
+        opacity: 1;
       }
 
-      .nav-links li {
-        margin: 4px 0;
+      .nav-links li a {
+        font-size: 18px;
+        padding: 6px 0;
+      }
+
+      .menu-overlay {
+        position: fixed;
+        top: 52px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.45);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1000;
+        transition: opacity .35s ease;
+      }
+
+      .menu-overlay.show {
+        opacity: 1;
+        pointer-events: all;
       }
 
       .lang-switcher {
         margin-left: auto;
-      }
-
-      .nav-toggle {
-        display: block;
       }
     }
   </style>
@@ -518,6 +538,9 @@
     </div>
   </div>
 </nav>
+
+<!-- overlay для мобильного меню -->
+<div class="menu-overlay"></div>
 
 <!-- Главный экран -->
 <section id="hero" class="fade-in">
@@ -776,18 +799,33 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCarousel();
   }
 
-  /* --- Мобильное меню --- */
+  /* --- Мобильное меню (новое) --- */
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
+  const overlay = document.querySelector('.menu-overlay');
 
-  if (navToggle && navLinks) {
+  if (navToggle) {
     navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.toggle('open');
+      overlay.classList.toggle('show', isOpen);
+      navToggle.textContent = isOpen ? '✕' : '☰';
     });
+  }
 
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      overlay.classList.remove('show');
+      navToggle.textContent = '☰';
+    });
+  }
+
+  if (navLinks) {
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
+        overlay.classList.remove('show');
+        navToggle.textContent = '☰';
       });
     });
   }
