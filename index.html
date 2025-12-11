@@ -138,26 +138,47 @@
     .carousel-btn.next {
       right: 15px;
     }
-/* Галерея рабочего процесса */
+/* Адаптивная Masonry-сетка без JS */
 .workflow-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  column-count: 1;
+  column-gap: 15px;
   max-width: 1200px;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .workflow-gallery img {
   width: 100%;
-  height: auto;
+  margin-bottom: 15px;
   border-radius: 12px;
+  display: block;
   transition: transform 0.3s ease;
 }
 
+/* Hover эффект */
 .workflow-gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
+
+/* Адаптив */
+@media (min-width: 600px) {
+  .workflow-gallery {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 900px) {
+  .workflow-gallery {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1300px) {
+  .workflow-gallery {
+    column-count: 4;
+  }
+}
+    
     
   </style>
 </head>
