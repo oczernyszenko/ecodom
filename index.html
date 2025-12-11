@@ -435,14 +435,36 @@
     }
 
     /* --- Современное мобильное меню --- */
-    @media (max-width: 960px) {
-      
+  
+     /* --- Современное мобильное меню --- */
 @media (max-width: 960px) {
 
   .nav-inner {
     flex-wrap: wrap;
   }
 
+  .nav-links {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    right: 0;
+    background: var(--accent);
+    flex-direction: column;
+    padding: 10px 15px 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.open {
+    max-height: 400px;
+  }
+
+  .nav-links li {
+    margin: 4px 0;
+  }
+
+  /* Блок языков — наша правка */
   .lang-switcher {
     order: 3;
     width: 100%;
@@ -456,10 +478,11 @@
     padding: 5px 10px;
     font-size: 12px;
   }
+
+  .nav-toggle {
+    display: block;
+  }
 }
-      .nav-toggle {
-        display: block;
-      }
 
       .nav-links {
         position: fixed;
