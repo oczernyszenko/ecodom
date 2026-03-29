@@ -363,13 +363,14 @@
       border: none;
     }
 
-  /* ================================
-            КРАСИВЫЕ КОНТАКТЫ
+
+    /* ================================
+        КОНТАКТЫ В СТИЛЕ САЙТА
 ================================ */
 
 .contact-section {
   padding: 90px 20px;
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 35%, #06b6d4 100%);
+  background: linear-gradient(135deg, var(--bg-light) 0%, #f8f3ee 50%, var(--bg-alt) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -379,25 +380,25 @@
   content: "";
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.35;
+  filter: blur(70px);
+  opacity: 0.18;
   z-index: 0;
 }
 
 .contact-section::before {
-  width: 280px;
-  height: 280px;
-  background: #38bdf8;
-  top: -60px;
+  width: 260px;
+  height: 260px;
+  background: var(--accent);
+  top: -70px;
   left: -60px;
 }
 
 .contact-section::after {
-  width: 320px;
-  height: 320px;
-  background: #f59e0b;
-  bottom: -100px;
-  right: -80px;
+  width: 280px;
+  height: 280px;
+  background: #d8c2ad;
+  bottom: -90px;
+  right: -70px;
 }
 
 .contact-wrapper {
@@ -408,48 +409,48 @@
 }
 
 .contact-card {
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(21, 151, 139, 0.12);
+  border-radius: 26px;
   padding: 50px 35px;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
 }
 
 .contact-card h2 {
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: var(--accent);
   font-weight: 800;
 }
 
 .contact-description {
   font-size: 1.08rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--text-main);
   max-width: 620px;
-  margin: 0 auto 32px;
+  margin: 0 auto 30px;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin-bottom: 35px;
+  gap: 16px;
+  margin-bottom: 32px;
 }
 
 .contact-item {
-  background: rgba(255, 255, 255, 0.12);
+  background: #ffffff;
+  border: 1px solid rgba(21, 151, 139, 0.12);
   border-radius: 18px;
   padding: 18px 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
 }
 
 .contact-label {
   display: block;
-  font-size: 0.95rem;
-  color: #fde68a;
+  font-size: 0.9rem;
+  color: var(--accent);
   margin-bottom: 8px;
   font-weight: 700;
   text-transform: uppercase;
@@ -457,16 +458,15 @@
 }
 
 .contact-link {
-  color: #ffffff;
-  font-size: 1.15rem;
+  color: var(--text-main);
+  font-size: 1.12rem;
   font-weight: 700;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .contact-link:hover {
-  color: #fde68a;
-  text-shadow: 0 0 12px rgba(253, 230, 138, 0.6);
+  color: var(--accent);
 }
 
 .contact-form {
@@ -482,20 +482,20 @@
   max-width: 100%;
   padding: 16px 18px;
   border-radius: 16px;
-  border: none;
+  border: 1px solid rgba(21, 151, 139, 0.18);
   outline: none;
   font-size: 1rem;
-  background: rgba(255, 255, 255, 0.92);
-  color: #0f172a;
+  background: #ffffff;
+  color: var(--text-main);
   box-sizing: border-box;
-  transition: all 0.3s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
   font-family: inherit;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(253, 224, 71, 0.35);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(21, 151, 139, 0.12);
 }
 
 .contact-form textarea {
@@ -506,20 +506,21 @@
 .contact-form button {
   width: 100%;
   border: none;
-  border-radius: 18px;
-  padding: 18px 24px;
+  border-radius: 16px;
+  padding: 16px 24px;
   font-size: 1rem;
   font-weight: 800;
-  color: #0f172a;
-  background: linear-gradient(135deg, #facc15 0%, #fb923c 100%);
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent) 0%, #0f7b71 100%);
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 12px 30px rgba(251, 146, 60, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-shadow: 0 12px 26px rgba(21, 151, 139, 0.22);
 }
 
 .contact-form button:hover {
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 16px 34px rgba(251, 146, 60, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(21, 151, 139, 0.28);
+  background: linear-gradient(135deg, #18a89b 0%, #0f7b71 100%);
 }
 
 .contact-form button:active {
@@ -545,10 +546,10 @@
   }
 
   .contact-link {
-    font-size: 1.02rem;
+    font-size: 1rem;
     word-break: break-word;
   }
-}    /* ================================
+}  /* ================================
             ПЛАВАЮЩИЙ WHATSAPP
     ================================= */
 
