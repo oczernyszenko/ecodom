@@ -1,1428 +1,1022 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании</title>
-  
-<!-- Общий description -->
-<meta name="description" content="Строительство энергоэффективных домов в Испании: каркасная технология и панели Thermochip. Быстро, безопасно, экологично.">
+  <title>Budowa domów w Hiszpanii | Domy drewniane, szkieletowe i Thermochip | Costa Blanca</title>
+  <meta name="description" content="Budowa domów w Hiszpanii na Costa Blanca: domy drewniane, szkieletowe i Thermochip. Projekty, fundamenty każdej złożoności, remonty pod klucz i wykończenia premium dla klientów z Polski.">
+  <meta name="keywords" content="budowa domów Hiszpania, Costa Blanca, domy drewniane Hiszpania, domy szkieletowe Hiszpania, Thermochip Hiszpania, remonty Hiszpania, wykończenia premium, fundamenty Costa Blanca">
+  <link rel="canonical" href="https://example.com/budowa-domow-hiszpania.html">
 
-<!-- Meta Description (Google) -->
-<meta name="description" content="Строительство энергоэффективных домов в Испании: каркасная технология и панели Thermochip. Быстро, безопасно, долговечно.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Costa Blanca Realty &amp; Construction">
+  <meta property="og:title" content="Budowa domów w Hiszpanii | Domy drewniane, szkieletowe i Thermochip">
+  <meta property="og:description" content="Kompleksowa budowa domów na Costa Blanca: projekty, fundamenty, remonty pod klucz i wykończenia premium. Główne technologie: domy drewniane, szkieletowe i Thermochip.">
+  <meta property="og:image" content="wood-hero.jpg">
+  <meta property="og:image:alt" content="Nowoczesny dom w Hiszpanii na Costa Blanca">
+  <meta property="og:url" content="https://example.com/budowa-domow-hiszpania.html">
 
-  <meta name="description" content="Узнайте о преимуществах каркасных домов с клееным брусом и сэндвич-панелей Thermochip для разных климатических зон Испании. Энергоэффективность, теплоизоляция, защита от влаги — читайте наш обзор!">
-
-  <!-- Favicon-домик -->
-  <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='%2315978b'%3E%3Cpath d='M32 6L2 28h6v30h16V40h16v18h16V28h6z'/%3E%3C/svg%3E">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Budowa domów w Hiszpanii | Costa Blanca Realty &amp; Construction">
+  <meta name="twitter:description" content="Domy drewniane, szkieletowe i Thermochip, remonty, fundamenty i wykończenia premium na Costa Blanca.">
+  <meta name="twitter:image" content="wood-hero.jpg">
 
   <style>
     :root {
-      --accent: #15978b;
-      --bg-light: #f5f5f5;
-      --bg-alt: #e5d9cd;
-      --text-main: #333;
+      --green: #63a64b;
+      --green-dark: #3f7b2c;
+      --green-soft: #f3faf0;
+      --green-pale: #f8fcf6;
+      --sand: #fbf5ec;
+      --text: #1f2933;
+      --text-soft: #5f6b76;
+      --white: #ffffff;
+      --line: rgba(15, 23, 42, 0.08);
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --maxw: 1200px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      scroll-behavior: smooth;
-      color: var(--text-main);
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdf9 100%);
     }
 
-    section {
-      padding: 90px 20px 60px;
-      scroll-margin-top: 80px;
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    h1, h2, h3 { margin: 0 0 14px; line-height: 1.15; }
+    p { margin: 0 0 14px; line-height: 1.72; color: var(--text-soft); }
+    ul { margin: 0; padding-left: 18px; color: var(--text-soft); line-height: 1.72; }
+
+    .container {
+      width: min(var(--maxw), calc(100% - 32px));
+      margin: 0 auto;
     }
 
-    section:nth-of-type(even) {
-      background-color: var(--bg-alt);
+    .section {
+      padding: 84px 0;
+      scroll-margin-top: 90px;
     }
 
-    h1, h2, h3 {
-      margin-top: 0;
-      color: var(--text-main);
+    .section-soft { background: #ffffff; }
+    .section-green { background: linear-gradient(180deg, #ffffff 0%, var(--green-soft) 100%); }
+    .section-sand { background: linear-gradient(180deg, #fffdf9 0%, var(--sand) 100%); }
+
+    .section-title {
+      max-width: 920px;
+      margin: 0 auto 42px;
+      text-align: center;
     }
 
-    p {
-      line-height: 1.5;
+    .section-title h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      color: var(--green-dark);
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 20px;
-      border-radius: 12px;
-      display: block;
-    }
-
-    a {
-      color: var(--accent);
-    }
-
-    .cta-btn {
+    .eyebrow {
       display: inline-block;
-      padding: 12px 24px;
-      background-color: var(--accent);
-      color: #fff;
+      margin-bottom: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.86);
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 800;
+      border: 1px solid rgba(63,123,44,0.12);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 999px;
       text-decoration: none;
-      border-radius: 6px;
-      margin-top: 20px;
-      font-weight: bold;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      font-weight: 800;
+      transition: .25s ease;
+      border: none;
+      cursor: pointer;
     }
 
-    .cta-btn:hover {
-      background-color: #0f7b71;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.16);
-      transform: translateY(-1px);
+    .btn-main {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(99,166,75,0.24);
     }
 
-    .content-inner {
-      max-width: 1000px;
-      margin: 0 auto;
+    .btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(99,166,75,0.30);
     }
 
-    ul {
-      padding-left: 18px;
-      margin-top: 10px;
+    .btn-light {
+      background: #fff;
+      color: var(--green-dark);
+      border: 2px solid rgba(63,123,44,0.16);
+      box-shadow: 0 8px 20px rgba(15,23,42,0.04);
     }
 
-    /* ================================
-          НАВИГАЦИЯ + БУРГЕР
-    ================================= */
+    .btn-light:hover { transform: translateY(-2px); }
 
-    nav {
-      position: fixed;
+    header {
+      position: sticky;
       top: 0;
-      width: 100%;
-      background: var(--accent);
-      padding: 10px 15px;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(15,23,42,0.04);
     }
 
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
+    .header-inner {
+      min-height: 76px;
       display: flex;
       align-items: center;
-      gap: 16px;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .logo {
-      font-weight: bold;
-      color: #fff;
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--green-dark);
+      text-decoration: none;
       white-space: nowrap;
-      font-size: 18px;
     }
 
-    .nav-links {
-      list-style: none;
+    .nav-wrap {
       display: flex;
-      margin: 0;
-      padding: 0;
+      align-items: center;
+      gap: 16px;
+      margin-left: auto;
+    }
+
+    nav {
+      display: flex;
       gap: 16px;
       flex-wrap: wrap;
-      margin-left: 20px;
     }
 
-    .nav-links li a {
-      color: white;
+    nav a {
       text-decoration: none;
-      font-weight: bold;
+      color: var(--text);
+      font-weight: 700;
       font-size: 14px;
-      transition: opacity 0.2s ease;
     }
 
-    .nav-links li a:hover {
-      opacity: 0.8;
-    }
+    nav a:hover { color: var(--green); }
 
     .lang-switcher {
-      margin-left: auto;
       display: flex;
       gap: 6px;
+      flex-wrap: wrap;
     }
 
     .lang-switcher button {
-      border: none;
-      padding: 4px 10px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.25);
-      color: #fff;
+      min-width: 42px;
+      border: 1px solid rgba(15,23,42,0.08);
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-weight: 800;
       font-size: 12px;
       cursor: pointer;
-      font-weight: bold;
-      white-space: nowrap;
+      transition: .2s ease;
     }
 
+    .lang-switcher button[data-lang="pl"] { background: linear-gradient(180deg, #ffffff 50%, #dc143c 50%); color: #111827; }
+    .lang-switcher button[data-lang="es"] { background: linear-gradient(180deg, #c60b1e 25%, #ffc400 25%, #ffc400 75%, #c60b1e 75%); color: #111827; }
+    .lang-switcher button[data-lang="en"] { background: linear-gradient(135deg, #012169 0%, #c8102e 50%, #ffffff 100%); color: #ffffff; }
+    .lang-switcher button[data-lang="ua"] { background: linear-gradient(180deg, #0057b7 50%, #ffd700 50%); color: #111827; }
+    .lang-switcher button[data-lang="ru"] { background: linear-gradient(180deg, #ffffff 33%, #2563eb 33%, #2563eb 66%, #dc2626 66%); color: #111827; }
     .lang-switcher button.active-lang {
-      background: #fff;
-      color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(99,166,75,0.18);
+      transform: translateY(-1px);
     }
 
     .nav-toggle {
       display: none;
       border: none;
       background: transparent;
-      color: #fff;
       font-size: 30px;
+      color: var(--green-dark);
       cursor: pointer;
-      margin-left: auto;
     }
 
-    /* overlay под меню */
     .menu-overlay {
       position: fixed;
-      top: 58px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.45);
+      inset: 76px 0 0 0;
+      background: rgba(0,0,0,0.42);
       opacity: 0;
       pointer-events: none;
+      transition: opacity .25s ease;
       z-index: 900;
-      transition: opacity .35s ease;
     }
 
-    .menu-overlay.show {
-      opacity: 1;
-      pointer-events: all;
+    .menu-overlay.show { opacity: 1; pointer-events: auto; }
+
+    .hero {
+      padding: 42px 0 76px;
+      background: linear-gradient(180deg, var(--green-pale) 0%, #ffffff 100%);
     }
 
-    /* ================================
-              ГЛАВНЫЙ ЭКРАН
-    ================================= */
-
-    #hero {
-      background-color: var(--bg-light);
-      text-align: center;
-      padding-top: 100px;
-    }
-
-    #hero .hero-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    #hero img {
-      margin: 30px auto 0;
-    }
-
-    /* ================================
-            ТАБЛИЦА СРАВНЕНИЯ
-    ================================= */
-
-    #comparison .comparison-wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-      overflow-x: auto;
-    }
-
-    #comparison table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
+    .hero-media {
+      margin-bottom: 26px;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
       background: #fff;
-      border-radius: 12px;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: min(58vw, 540px);
+      object-fit: cover;
+    }
+
+    .hero-content {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      color: var(--green-dark);
+      max-width: 980px;
+      margin-inline: auto;
+    }
+
+    .hero p {
+      color: var(--text-soft);
+      font-size: 18px;
+      max-width: 860px;
+      margin-inline: auto;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 24px;
+    }
+
+    .hero-badges,
+    .grid-3,
+    .seo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 22px;
+    }
+
+    .hero-badges { margin-top: 28px; }
+
+    .badge,
+    .card,
+    .panel,
+    .comparison-box,
+    .contact-box {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .badge { padding: 22px; }
+    .badge strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--green-dark);
+      font-size: 18px;
+    }
+
+    .card {
       overflow: hidden;
-      min-width: 650px;
+      display: flex;
+      flex-direction: column;
     }
 
-    #comparison th,
-    #comparison td {
-      border: 1px solid #ccc;
-      padding: 12px;
-      text-align: left;
-      font-size: 14px;
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
     }
 
-    #comparison th {
-      background: #f0f0f0;
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
     }
 
-    .table-scroll-hint {
-      display: none;
-      font-size: 13px;
-      color: #555;
-      background: rgba(21,151,139,0.08);
+    .card h3,
+    .panel h2,
+    .seo-card h3,
+    .contact-box h2,
+    .project-slide-content h3 { color: var(--green-dark); }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
       border-radius: 999px;
-      padding: 6px 12px;
+      background: rgba(99,166,75,0.12);
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 800;
       width: fit-content;
-      margin: 0 auto 6px auto;
     }
 
-    .table-scroll-hint span {
-      white-space: nowrap;
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
     }
 
-    /* ================================
-                КАРУСЕЛЬ
-    ================================= */
+    .panel { padding: 30px; }
 
-    .carousel-container {
+    .panel-image img {
+      width: 100%;
+      min-height: 420px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    table {
+      width: 100%;
+      min-width: 860px;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    th, td {
+      padding: 16px;
+      border: 1px solid rgba(15,23,42,0.08);
+      text-align: left;
+      vertical-align: top;
+      font-size: 15px;
+    }
+
+    th {
+      background: linear-gradient(135deg, rgba(99,166,75,0.14), #ffffff);
+      color: var(--green-dark);
+    }
+
+    .scroll-hint {
+      display: none;
+      margin: 0 auto 10px;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(99,166,75,0.08);
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    .projects-carousel {
       position: relative;
-      max-width: 900px;
-      margin: 40px auto 0;
+      max-width: 1020px;
+      margin: 0 auto;
       overflow: hidden;
-      border-radius: 12px;
-      background: transparent;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      background: #fff;
+      border: 1px solid var(--line);
     }
 
-    .carousel-track {
+    .projects-track {
       display: flex;
       transition: transform 0.5s ease-in-out;
+      will-change: transform;
     }
 
-    .carousel-track img {
+    .project-slide {
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      align-items: stretch;
+    }
+
+    .project-slide img {
       width: 100%;
-      flex-shrink: 0;
-      display: block;
+      height: 430px;
       object-fit: cover;
+    }
+
+    .project-slide-content {
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(180deg, #ffffff 0%, var(--green-pale) 100%);
     }
 
     .carousel-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: var(--accent);
+      width: 48px;
+      height: 48px;
       border: none;
-      color: white;
-      font-size: 24px;
-      padding: 8px 12px;
       border-radius: 50%;
-      cursor: pointer;
-      opacity: 0.85;
-      z-index: 10;
-      transition: 0.3s;
-    }
-
-    .carousel-btn:hover {
-      opacity: 1;
-    }
-
-    .carousel-btn.prev {
-      left: 15px;
-    }
-
-    .carousel-btn.next {
-      right: 15px;
-    }
-
-    /* ================================
-         ГАЛЕРЕЯ "РАБОЧИЙ ПРОЦЕСС"
-    ================================= */
-
-    .workflow-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 40px auto 0;
-      padding: 0 15px;
-    }
-
-    .workflow-gallery img {
-      width: 100%;
-      border-radius: 12px;
-      display: block;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .workflow-gallery img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    }
-
-    /* ================================
-                 ВИДЕО
-    ================================= */
-
-    #video .video-wrapper {
-      max-width: 900px;
-      margin: 30px auto 0;
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-    }
-
-    #video iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 12px;
-      border: none;
-    }
-
-
-    /* ================================
-        КОНТАКТЫ В СТИЛЕ САЙТА
-================================ */
-
-.contact-section {
-  padding: 90px 20px;
-  background: linear-gradient(135deg, var(--bg-light) 0%, #f8f3ee 50%, var(--bg-alt) 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-section::before,
-.contact-section::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(70px);
-  opacity: 0.18;
-  z-index: 0;
-}
-
-.contact-section::before {
-  width: 260px;
-  height: 260px;
-  background: var(--accent);
-  top: -70px;
-  left: -60px;
-}
-
-.contact-section::after {
-  width: 280px;
-  height: 280px;
-  background: #d8c2ad;
-  bottom: -90px;
-  right: -70px;
-}
-
-.contact-wrapper {
-  max-width: 760px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.contact-card {
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(21, 151, 139, 0.12);
-  border-radius: 26px;
-  padding: 50px 35px;
-  text-align: center;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
-}
-
-.contact-card h2 {
-  font-size: 2.1rem;
-  margin-bottom: 16px;
-  color: var(--accent);
-  font-weight: 800;
-}
-
-.contact-description {
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: var(--text-main);
-  max-width: 620px;
-  margin: 0 auto 30px;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
-.contact-item {
-  background: #ffffff;
-  border: 1px solid rgba(21, 151, 139, 0.12);
-  border-radius: 18px;
-  padding: 18px 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-}
-
-.contact-label {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--accent);
-  margin-bottom: 8px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-}
-
-.contact-link {
-  color: var(--text-main);
-  font-size: 1.12rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.25s ease, transform 0.25s ease;
-}
-
-.contact-link:hover {
-  color: var(--accent);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  max-width: 100%;
-  padding: 16px 18px;
-  border-radius: 16px;
-  border: 1px solid rgba(21, 151, 139, 0.18);
-  outline: none;
-  font-size: 1rem;
-  background: #ffffff;
-  color: var(--text-main);
-  box-sizing: border-box;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
-  font-family: inherit;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(21, 151, 139, 0.12);
-}
-
-.contact-form textarea {
-  min-height: 140px;
-  resize: vertical;
-}
-
-.contact-form button {
-  width: 100%;
-  border: none;
-  border-radius: 16px;
-  padding: 16px 24px;
-  font-size: 1rem;
-  font-weight: 800;
-  color: #fff;
-  background: linear-gradient(135deg, var(--accent) 0%, #0f7b71 100%);
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-  box-shadow: 0 12px 26px rgba(21, 151, 139, 0.22);
-}
-
-.contact-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 32px rgba(21, 151, 139, 0.28);
-  background: linear-gradient(135deg, #18a89b 0%, #0f7b71 100%);
-}
-
-.contact-form button:active {
-  transform: translateY(0);
-}
-
-@media (max-width: 768px) {
-  .contact-section {
-    padding: 70px 15px;
-  }
-
-  .contact-card {
-    padding: 35px 20px;
-    border-radius: 22px;
-  }
-
-  .contact-card h2 {
-    font-size: 1.8rem;
-  }
-
-  .contact-description {
-    font-size: 1rem;
-  }
-
-  .contact-link {
-    font-size: 1rem;
-    word-break: break-word;
-  }
-}  /* ================================
-            ПЛАВАЮЩИЙ WHATSAPP
-    ================================= */
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
+      background: rgba(63,123,44,0.92);
       color: #fff;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 5;
+      box-shadow: 0 10px 24px rgba(63,123,44,0.22);
+    }
+
+    .carousel-btn.prev { left: 16px; }
+    .carousel-btn.next { right: 16px; }
+
+    .carousel-dots {
       display: flex;
-      align-items: center;
       justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(99,166,75,0.25);
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .carousel-dot.active {
+      background: var(--green);
+      transform: scale(1.15);
+    }
+
+    .contact-box {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 36px;
+      text-align: center;
+      background: linear-gradient(180deg, #ffffff 0%, var(--green-pale) 100%);
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 12px;
+      margin: 20px 0 18px;
+    }
+
+    .contact-links a {
       text-decoration: none;
-      font-size: 26px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.3);
-      z-index: 1100;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      font-weight: 800;
+      color: var(--green-dark);
+      font-size: 18px;
     }
 
-    .whatsapp-float:hover {
-      transform: translateY(-2px) scale(1.03);
-      box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+    .contact-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
     }
 
-    /* ================================
-              АНИМАЦИЯ ПОЯВЛЕНИЯ
-    ================================= */
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+    .contact-form {
+      display: grid;
+      gap: 14px;
+      text-align: left;
     }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .contact-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
     }
 
-    /* Подсказка над таблицей на мобилках */
-    @media (max-width: 900px) {
-      .table-scroll-hint {
-        display: block;
-      }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(15,23,42,0.12);
+      background: #ffffff;
+      color: var(--text);
+      outline: none;
+      font-family: inherit;
+      font-size: 15px;
     }
 
-    /* Мобильное меню (самое главное) */
-    @media (max-width: 960px) {
-      .nav-inner {
-        gap: 10px;
-      }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 4px rgba(99,166,75,0.12);
+    }
 
-      .nav-toggle {
-        display: block;
-      }
+    .contact-form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
 
-      .nav-links {
+    footer {
+      background: linear-gradient(180deg, #fbfef9 0%, #edf7e8 100%);
+      border-top: 1px solid rgba(63,123,44,0.12);
+      padding: 34px 0 44px;
+      text-align: center;
+      color: var(--text);
+    }
+
+    footer strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--green-dark);
+      font-size: 18px;
+    }
+
+    @media (max-width: 980px) {
+      .nav-toggle { display: block; }
+      nav {
         position: fixed;
-        top: 58px;
+        top: 76px;
         left: 0;
         right: 0;
-        background: var(--accent);
+        background: #fff;
+        padding: 22px;
         flex-direction: column;
-        padding: 20px;
-        gap: 15px;
+        align-items: flex-start;
+        gap: 14px;
         max-height: 0;
         overflow: hidden;
         opacity: 0;
+        transition: max-height .25s ease, opacity .25s ease;
+        box-shadow: 0 12px 26px rgba(15,23,42,0.08);
         z-index: 1001;
-        transition: max-height .35s ease, opacity .35s ease;
-        margin-left: 0;
       }
-
-      .nav-links.open {
-        max-height: 500px;
-        opacity: 1;
-      }
-
-      .lang-switcher {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-top: 6px;
-      }
-
-      .lang-switcher button {
-        padding: 6px 14px;
-        font-size: 13px;
-      }
+      nav.open { max-height: 520px; opacity: 1; }
     }
 
+    @media (max-width: 920px) {
+      .hero-badges,
+      .grid-3,
+      .seo-grid,
+      .split,
+      .contact-form-grid,
+      .project-slide { grid-template-columns: 1fr; }
+      .project-slide img { height: 280px; }
+      .project-slide-content { padding: 24px; }
+      .scroll-hint { display: block; }
+      .hero p { font-size: 16px; }
+      .hero-media img { height: 300px; }
+    }
   </style>
-  <!-- Open Graph (Facebook, Instagram, WhatsApp, Telegram) -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="EcoBuild Spain">
-<meta property="og:url" content="https://oczernyszenko.github.io/ecodom/">
-<meta property="og:title" content="Современные энергоэффективные дома в Испании — EcoBuild Spain">
-<meta property="og:description" content="Сравнение каркасной технологии и панелей Thermochip. Энергоэффективность, долговечность, скорость строительства.">
-<meta property="og:image" content="https://oczernyszenko.github.io/ecodom/dom.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Современные энергоэффективные дома в Испании — EcoBuild Spain">
-<meta name="twitter:description" content="Каркасная технология и панели Thermochip. Современные дома в Испании.">
-<meta name="twitter:image" content="https://oczernyszenko.github.io/ecodom/dom.jpg">
-
-<!-- Общий description -->
-<meta name="description" content="Строительство энергоэффективных домов в Испании: каркасная технология и панели Thermochip. Быстро, безопасно, экологично.">
-
 </head>
 <body>
+  <div class="menu-overlay"></div>
 
-<!-- Плавающий WhatsApp -->
-<a href="https://wa.me/34604158859" class="whatsapp-float" target="_blank" aria-label="Связаться по WhatsApp">
-  🟢
-</a>
-
-<!-- Overlay для меню -->
-<div class="menu-overlay"></div>
-
-<!-- Навигация -->
-<nav>
-  <div class="nav-inner">
-    <div class="logo" data-i18n="logo">EcoBuild Spain</div>
-
-    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-
-    <ul class="nav-links">
-      <li><a href="#hero" data-i18n="nav_home">Главная</a></li>
-      <li><a href="#timber-frame" data-i18n="nav_timber">Каркасные дома</a></li>
-      <li><a href="#thermochip" data-i18n="nav_thermochip">Thermochip</a></li>
-      <li><a href="#comparison" data-i18n="nav_comparison">Сравнение</a></li>
-      <li><a href="#choice" data-i18n="nav_choice">Выбор</a></li>
-      <li><a href="#projects" data-i18n="nav_projects">Проекты</a></li>
-      <li><a href="#workflow" data-i18n="nav_workflow">Процесс</a></li>
-      <li><a href="#video" data-i18n="nav_video">Видео</a></li>
-      <li><a href="#contact" data-i18n="nav_contact">Контакты</a></li>
-    </ul>
-
-    <div class="lang-switcher">
-      <button data-lang="ru" class="active-lang">RU</button>
-      <button data-lang="en">EN</button>
-      <button data-lang="ua">UA</button>
-      <button data-lang="es">ES</button>
-    </div>
-  </div>
-</nav>
-
-<!-- Главный экран -->
-<section id="hero" class="fade-in">
-  <div class="hero-inner">
-    <h1 data-i18n="hero_title">
-      Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании
-    </h1>
-    <p data-i18n="hero_subtitle">
-      Выберите оптимальный вариант строительства дома: каркасные дома с клееным брусом или сэндвич-панели Thermochip.
-    </p>
-    <a href="#contact" class="cta-btn" data-i18n="hero_cta">Получить консультацию</a>
-    <img src="dom.jpg" loading="lazy" alt="Современный энергоэффективный дом в Испании">
-  </div>
-</section>
-
-<!-- Каркасная технология -->
-<section id="timber-frame" class="fade-in">
-  <div class="content-inner">
-    <h2 data-i18n="timber_title">Каркасная технология с клееным брусом GL-24</h2>
-    <p data-i18n="timber_text">
-      Каркасное строительство в Испании набирает популярность благодаря прочности, экологичности и хорошей теплоизоляции деревянных конструкций.
-    </p>
-    <ul>
-      <li data-i18n="timber_li1">Прочность и долговечность</li>
-      <li data-i18n="timber_li2">Экологичность</li>
-      <li data-i18n="timber_li3">Пожарная безопасность</li>
-      <li data-i18n="timber_li4">Теплоизоляция</li>
-    </ul>
-    <img src="karkasnyjdom.jpg" loading="lazy" alt="Каркасный дом из клееного бруса в Испании">
-    <a href="#contact" class="cta-btn" data-i18n="timber_cta">Заказать проект каркасного дома</a>
-  </div>
-</section>
-
-<!-- Сэндвич-панели -->
-<section id="thermochip" class="fade-in">
-  <div class="content-inner">
-    <h2 data-i18n="thermo_title">Сэндвич-панели Thermochip</h2>
-    <p data-i18n="thermo_text">
-      Сэндвич-панели Thermochip — это современный и высокоэффективный материал для строительства энергоэффективных домов.
-    </p>
-    <ul>
-      <li data-i18n="thermo_li1">Энергоэффективность</li>
-      <li data-i18n="thermo_li2">Устойчивость к влаге</li>
-      <li data-i18n="thermo_li3">Простота монтажа</li>
-      <li data-i18n="thermo_li4">Пожарная безопасность</li>
-    </ul>
-    <img src="Thermochip.jpg" loading="lazy" alt="Дом из сэндвич-панелей Thermochip в Испании">
-    <a href="#contact" class="cta-btn" data-i18n="thermo_cta">Заказать проект дома из Thermochip</a>
-  </div>
-</section>
-
-<!-- Сравнение -->
-<section id="comparison" class="fade-in">
-  <div class="content-inner">
-    <h2 data-i18n="comparison_title">Сравнение технологий</h2>
-    <p data-i18n="comparison_text">
-      Ниже представлено сравнение ключевых характеристик каркасной технологии и сэндвич-панелей Thermochip для строительства в Испании.
-    </p>
-  </div>
-
-  <div class="table-scroll-hint">
-    <span>💡 Прокрутите таблицу вправо →</span>
-  </div>
-
-  <div class="comparison-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th data-i18n="table_col_param">Характеристика</th>
-          <th data-i18n="table_col_timber">Каркасная технология</th>
-          <th data-i18n="table_col_thermo">Сэндвич-панели Thermochip</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-i18n="table_row1_param">Энергоэффективность</td>
-          <td data-i18n="table_row1_timber">
-            Хорошая теплоизоляция, но требует дополнительной обработки и узлов без мостиков холода.
-          </td>
-          <td data-i18n="table_row1_thermo">
-            Отличная теплоизоляция, снижает расходы на отопление и кондиционирование.
-          </td>
-        </tr>
-        <tr>
-          <td data-i18n="table_row2_param">Пожарная безопасность</td>
-          <td data-i18n="table_row2_timber">
-            Древесина обгорает медленно, сохраняет несущую способность при правильной обработке.
-          </td>
-          <td data-i18n="table_row2_thermo">
-            Панели имеют огнеупорные свойства и соответствуют европейским нормам.
-          </td>
-        </tr>
-        <tr>
-          <td data-i18n="table_row3_param">Влагоустойчивость</td>
-          <td data-i18n="table_row3_timber">
-            Требует тщательной защиты от влаги и правильной пароизоляции.
-          </td>
-          <td data-i18n="table_row3_thermo">
-            Отличная защита от влаги, подходит для прибрежных районов Испании.
-          </td>
-        </tr>
-        <tr>
-          <td data-i18n="table_row4_param">Скорость строительства</td>
-          <td data-i18n="table_row4_timber">
-            Монтаж занимает больше времени и требует более высокой квалификации.
-          </td>
-          <td data-i18n="table_row4_thermo">
-            Быстрая сборка, сокращение сроков строительства.
-          </td>
-        </tr>
-        <tr>
-          <td data-i18n="table_row5_param">Стоимость</td>
-          <td data-i18n="table_row5_timber">
-            Более высокая стоимость при использовании качественного клееного бруса.
-          </td>
-          <td data-i18n="table_row5_thermo">
-            Конкурентная стоимость материала и монтажа.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- Выбор технологии -->
-<section id="choice" class="fade-in">
-  <div class="content-inner">
-    <h2 data-i18n="choice_title">Какая технология лучше для вашего проекта?</h2>
-    <p data-i18n="choice_text1">
-      Выбор зависит от ваших приоритетов: эстетика натурального дерева, скорость строительства, бюджет и особенности участка.
-    </p>
-    <p data-i18n="choice_text2">
-      Каркасная технология больше подойдёт тем, кто ценит натуральные материалы и индивидуальную архитектуру. Thermochip-решения — для тех, кто хочет быстро получить тёплый, энергоэффективный дом с предсказуемым результатом.
-    </p>
-    <p data-i18n="choice_text3">
-      Мы поможем подобрать оптимальную конструкцию с учётом климата региона Испании, ориентации участка и ваших задач.
-    </p>
-  </div>
-</section>
-
-<!-- Карусель проектов -->
-<section id="projects" class="fade-in">
-  <div class="content-inner" style="text-align:center;">
-    <h2 data-i18n="projects_title">Наши проекты</h2>
-    <p data-i18n="projects_text">
-      Примеры реализованных и типовых решений на основе каркасной технологии и сэндвич-панелей Thermochip.
-    </p>
-  </div>
-
-  <div class="carousel-container">
-    <button class="carousel-btn prev" aria-label="Предыдущий проект">❮</button>
-    <div class="carousel-track">
-      <img src="project1.jpg" loading="lazy" alt="Проект каркасного дома в Испании — фасад">
-      <img src="project2.jpg" loading="lazy" alt="Современный дом с плоской крышей в Испании">
-      <img src="project3.jpg" loading="lazy" alt="Одноэтажный дом в средиземноморском стиле">
-      <img src="project4.jpg" loading="lazy" alt="Дом с большими панорамными окнами">
-    </div>
-    <button class="carousel-btn next" aria-label="Следующий проект">❯</button>
-  </div>
-</section>
-
-<!-- Галерея рабочего процесса -->
-<section id="workflow" class="fade-in" style="text-align:center; background:var(--bg-light);">
-  <div class="content-inner">
-    <h2 data-i18n="workflow_title">Наш рабочий процесс</h2>
-    <p data-i18n="workflow_text">
-      Посмотрите, как мы шаг за шагом создаём дома: от подготовки участка до финальной отделки.
-    </p>
-  </div>
-
-  <div class="workflow-gallery">
-    <img src="process1.jpg" loading="lazy" alt="Подготовка участка для строительства">
-    <img src="process2.jpg" loading="lazy" alt="Фундаментные работы на участке">
-    <img src="process3.jpg" loading="lazy" alt="Монтаж деревянного каркаса дома">
-    <img src="process4.jpg" loading="lazy" alt="Установка сэндвич-панелей Thermochip">
-    <img src="process5.jpg" loading="lazy" alt="Внутренние отделочные работы в доме">
-    <img src="process6.jpg" loading="lazy" alt="Готовый дом, финальные работы и ландшафт">
-  </div>
-</section>
-
-<!-- Видео рабочего процесса -->
-<section id="video" class="fade-in" style="background:#fff; text-align:center;">
-  <div class="content-inner">
-    <h2 data-i18n="video_title">Видео рабочего процесса</h2>
-    <p data-i18n="video_text">Короткое видео о том, как проходит строительство и сборка дома.</p>
-  </div>
-  <div class="video-wrapper">
-    <iframe 
-      src="https://www.youtube.com/embed/Qb6D2Tmgaeo?rel=0&modestbranding=1&showinfo=0"
-      title="Рабочий процесс строительства"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-<!-- Контакты -->
-<section id="contact" class="contact-section fade-in">
-  <div class="contact-wrapper">
-    <div class="contact-card">
-      <h2 data-i18n="contact_title">Свяжитесь с нами</h2>
-      <p class="contact-description" data-i18n="contact_text">
-        Свяжитесь с отделом продаж, и мы подберём оптимальное решение под ваш участок и бюджет.
-      </p>
-
-      <div class="contact-info">
-        <div class="contact-item">
-          <span class="contact-label" data-i18n="contact_phone_label">Телефон</span>
-          <a href="tel:+34604158859" class="contact-link">+34 604 15 88 59</a>
-        </div>
-
-        <div class="contact-item">
-          <span class="contact-label">Email</span>
-          <a href="mailto:o.czernyszenko@gmail.com" class="contact-link">o.czernyszenko@gmail.com</a>
+  <header>
+    <div class="container header-inner">
+      <a href="#hero" class="logo">Costa Blanca Realty &amp; Construction</a>
+      <div class="nav-wrap">
+        <button class="nav-toggle" aria-label="Menu">☰</button>
+        <nav>
+          <a href="#hero" data-i18n="nav_home">Start</a>
+          <a href="#advantages" data-i18n="nav_advantages">Zalety</a>
+          <a href="#technology" data-i18n="nav_technology">Technologie</a>
+          <a href="#comparison" data-i18n="nav_comparison">Porównanie</a>
+          <a href="#projects" data-i18n="nav_projects">Projekty</a>
+          <a href="#process" data-i18n="nav_process">Proces</a>
+          <a href="#contact" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+        <div class="lang-switcher">
+          <button data-lang="ru">RU</button>
+          <button data-lang="pl" class="active-lang">PL</button>
+          <button data-lang="en">EN</button>
+          <button data-lang="ua">UA</button>
+          <button data-lang="es">ES</button>
         </div>
       </div>
-
-      <form action="#" method="post" class="contact-form">
-        <input
-          type="text"
-          name="name"
-          required
-          data-i18n-placeholder="form_name"
-          placeholder="Ваше имя"
-        >
-
-        <input
-          type="email"
-          name="email"
-          required
-          data-i18n-placeholder="form_email"
-          placeholder="Email"
-        >
-
-        <input
-          type="tel"
-          name="phone"
-          required
-          data-i18n-placeholder="form_phone"
-          placeholder="Телефон"
-        >
-
-        <textarea
-          name="message"
-          required
-          data-i18n-placeholder="form_message"
-          placeholder="Сообщение"
-        ></textarea>
-
-        <button type="submit" data-i18n="form_submit">Отправить заявку</button>
-      </form>
     </div>
-  </div>
-</section>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // всегда открываем страницу сверху
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
+  </header>
+
+  <section class="hero section" id="hero">
+    <div class="container">
+      <div class="hero-media">
+        <img src="wood-hero.jpg" alt="Budowa nowoczesnego domu w Hiszpanii na Costa Blanca">
+      </div>
+      <div class="hero-content">
+        <span class="eyebrow" data-i18n="hero_eyebrow">🇪🇸 Costa Blanca · budowa domów w Hiszpanii</span>
+        <h1 data-i18n="hero_title">Budowa domów w Hiszpanii — drewniane, szkieletowe i Thermochip na Costa Blanca</h1>
+        <p data-i18n="hero_text">Projektujemy i realizujemy domy w Hiszpanii dla klientów z Polski. Pracujemy z różnymi technologiami budowy — drewnianą, szkieletową i Thermochip — dobierając rozwiązanie do działki, budżetu i celu inwestycji.</p>
+        <p data-i18n="hero_text_2">Nasza oferta obejmuje nie tylko budowę domu, ale także fundamenty każdej złożoności, remonty pod klucz oraz premium wykończenie wnętrz. Dzięki temu klient otrzymuje jeden spójny model realizacji na Costa Blanca.</p>
+        <div class="hero-actions">
+          <a class="btn btn-main" href="#contact" data-i18n="hero_btn_1">Zapytaj o projekt</a>
+          <a class="btn btn-light" href="#comparison" data-i18n="hero_btn_2">Porównaj technologie</a>
+        </div>
+        <div class="hero-badges">
+          <div class="badge">
+            <strong data-i18n="badge_1_title">Różne technologie</strong>
+            <span data-i18n="badge_1_text">Budujemy domy drewniane, szkieletowe i Thermochip — dopasowane do inwestycji i stylu życia.</span>
+          </div>
+          <div class="badge">
+            <strong data-i18n="badge_2_title">Kompleksowa realizacja</strong>
+            <span data-i18n="badge_2_text">Od działki i fundamentów po remont, wykończenie premium i przygotowanie domu do użytkowania.</span>
+          </div>
+          <div class="badge">
+            <strong data-i18n="badge_3_title">Costa Blanca</strong>
+            <span data-i18n="badge_3_text">Tworzymy domy dopasowane do klimatu Hiszpanii, rynku premium i oczekiwań klientów z Polski.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="advantages">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="advantages_title">Dlaczego ta oferta działa dla klientów i inwestorów</h2>
+        <p data-i18n="advantages_text">Na Costa Blanca liczy się nie tylko sam dom, ale cały model realizacji. Klient oczekuje wygody, przewidywalności i jakości — dlatego łączymy technologię, budowę, remonty i wykończenie w jedną usługę.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <img src="wood-advantage-1.jpg" alt="Różne technologie budowy domu">
+          <div class="card-body">
+            <div class="chip" data-i18n="adv_chip_1">Technologie</div>
+            <h3 data-i18n="adv_title_1">Wybór najlepszego rozwiązania</h3>
+            <p data-i18n="adv_text_1">Dobieramy technologię do projektu: dom drewniany dla stylu i mikroklimatu, szkieletowy dla elastyczności albo Thermochip dla szybkiej, nowoczesnej realizacji.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="wood-advantage-2.jpg" alt="Kompleksowa budowa domu">
+          <div class="card-body">
+            <div class="chip" data-i18n="adv_chip_2">Pod klucz</div>
+            <h3 data-i18n="adv_title_2">Jeden partner do całej realizacji</h3>
+            <p data-i18n="adv_text_2">Od projektu i fundamentów po remonty, instalacje i premium wnętrza. Taki model jest wygodniejszy i bezpieczniejszy dla klienta zagranicznego.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="wood-advantage-3.jpg" alt="Inwestycja w dom na Costa Blanca">
+          <div class="card-body">
+            <div class="chip" data-i18n="adv_chip_3">Inwestycja</div>
+            <h3 data-i18n="adv_title_3">Silny produkt dla rynku Costa Blanca</h3>
+            <p data-i18n="adv_text_3">Dobrze zaprojektowany i wykończony dom w Hiszpanii pracuje nie tylko jako miejsce do życia, ale także jako atrakcyjny produkt inwestycyjny i premium rental.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-green" id="technology">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="technology_title">Technologie budowy domów w Hiszpanii</h2>
+        <p data-i18n="technology_text">Pracujemy z kilkoma rozwiązaniami, aby dobrać model odpowiedni dla działki, budżetu, terminu realizacji i oczekiwanego standardu domu na Costa Blanca.</p>
+      </div>
+      <div class="split">
+        <div class="panel">
+          <h2 data-i18n="tech_block_title">Co obejmuje realizacja</h2>
+          <ul>
+            <li data-i18n="tech_li_1">analizę działki i dopasowanie projektu do warunków gruntu,</li>
+            <li data-i18n="tech_li_2">dobór technologii: drewnianej, szkieletowej lub Thermochip,</li>
+            <li data-i18n="tech_li_3">fundamenty dowolnej złożoności, instalacje i przygotowanie terenu,</li>
+            <li data-i18n="tech_li_4">budowę domu w standardzie dopasowanym do klienta i inwestycji,</li>
+            <li data-i18n="tech_li_5">remonty pod klucz, premium wykończenie wnętrz i przygotowanie domu do użytkowania lub wynajmu.</li>
+          </ul>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;">
+            <a class="btn btn-main" href="#contact" data-i18n="tech_btn_1">Zapytaj o realizację</a>
+            <a class="btn btn-light" href="#projects" data-i18n="tech_btn_2">Zobacz projekty</a>
+          </div>
+        </div>
+        <div class="panel-image">
+          <img src="wood-technology.jpg" alt="Technologie budowy domów w Hiszpanii">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sand" id="comparison">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="comparison_title">Porównanie: dom drewniany, dom szkieletowy i Thermochip</h2>
+        <p data-i18n="comparison_text">Klient powinien od razu zobaczyć, czym różnią się główne kierunki budowy domu w Hiszpanii i które rozwiązanie najlepiej odpowiada jego celowi.</p>
+      </div>
+      <div class="scroll-hint" data-i18n="scroll_hint">💡 Przesuń tabelę w prawo →</div>
+      <div class="comparison-box">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="table_param">Parametr</th>
+              <th data-i18n="table_wood">Dom drewniany</th>
+              <th data-i18n="table_timber">Dom szkieletowy</th>
+              <th data-i18n="table_thermo">Thermochip</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="row1_param">Charakter produktu</td>
+              <td data-i18n="row1_wood">Naturalny, estetyczny i premium, mocny dla lifestyle i prywatnej rezydencji</td>
+              <td data-i18n="row1_timber">Uniwersalny i elastyczny wybór dla różnych budżetów i układów działki</td>
+              <td data-i18n="row1_thermo">Nowoczesny, energooszczędny system dla szybkiej i przewidywalnej realizacji</td>
+            </tr>
+            <tr>
+              <td data-i18n="row2_param">Komfort i parametry</td>
+              <td data-i18n="row2_wood">Przyjemny mikroklimat i naturalny charakter wnętrza</td>
+              <td data-i18n="row2_timber">Dobra izolacja i szerokie możliwości dopasowania konstrukcji</td>
+              <td data-i18n="row2_thermo">Wysoka efektywność energetyczna i stabilny standard użytkowania</td>
+            </tr>
+            <tr>
+              <td data-i18n="row3_param">Tempo i elastyczność</td>
+              <td data-i18n="row3_wood">Świetny wybór dla klientów ceniących styl i wizerunek domu</td>
+              <td data-i18n="row3_timber">Dobry balans między czasem realizacji, budżetem i funkcjonalnością</td>
+              <td data-i18n="row3_thermo">Najmocniejszy kierunek dla inwestorów szukających szybkości i nowoczesności</td>
+            </tr>
+            <tr>
+              <td data-i18n="row4_param">Najlepsze zastosowanie</td>
+              <td data-i18n="row4_wood">Dom wakacyjny, premium rental, prywatny dom w naturalnym stylu</td>
+              <td data-i18n="row4_timber">Dom całoroczny, inwestycja, działka prywatna</td>
+              <td data-i18n="row4_thermo">Energooszczędny dom z szybkim terminem realizacji</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="projects">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="projects_title">Przykładowe kierunki projektowe</h2>
+        <p data-i18n="projects_text">Kарусель pokazuje różne formaty domu w Hiszpanii — od domu naturalnego i premium po rozwiązania inwestycyjne i nowoczesne układy dla Costa Blanca.</p>
+      </div>
+      <div class="projects-carousel">
+        <button class="carousel-btn prev" aria-label="Previous project">❮</button>
+        <div class="projects-track">
+          <article class="project-slide">
+            <img src="wood-project-1.jpg" alt="Nowoczesny dom w Hiszpanii">
+            <div class="project-slide-content">
+              <div class="chip" data-i18n="proj_chip_1">Drewniany</div>
+              <h3 data-i18n="proj_title_1">Nowoczesny dom w naturalnym stylu</h3>
+              <p data-i18n="proj_text_1">Projekt łączący drewno, duże przeszklenia i układ idealny do życia przez cały rok lub sezonowego użytkowania.</p>
+              <p data-i18n="proj_desc_1">Ten typ domu świetnie sprawdza się na działkach prywatnych na Costa Blanca, gdzie liczy się estetyka, lekkość bryły i komfort codziennego życia.</p>
+            </div>
+          </article>
+          <article class="project-slide">
+            <img src="wood-project-2.jpg" alt="Dom premium Costa Blanca">
+            <div class="project-slide-content">
+              <div class="chip" data-i18n="proj_chip_2">Premium</div>
+              <h3 data-i18n="proj_title_2">Dom premium pod Costa Blanca lifestyle</h3>
+              <p data-i18n="proj_text_2">Wyższy standard, tarasy, strefy relaksu i wykończenie, które dobrze pracuje także pod wynajem krótkoterminowy.</p>
+              <p data-i18n="proj_desc_2">To kierunek dla klientów, którzy chcą połączyć prywatność, jakość, dobre wnętrza i silny efekt wizualny w jednej inwestycji.</p>
+            </div>
+          </article>
+          <article class="project-slide">
+            <img src="wood-project-3.jpg" alt="Dom inwestycyjny Hiszpania">
+            <div class="project-slide-content">
+              <div class="chip" data-i18n="proj_chip_3">Inwestycyjny</div>
+              <h3 data-i18n="proj_title_3">Model inwestycyjny</h3>
+              <p data-i18n="proj_text_3">Dom projektowany z myślą o promocji, wynajmie lub sprzedaży — z mocnym wizerunkiem i dobrym potencjałem rynkowym.</p>
+              <p data-i18n="proj_desc_3">Silny efekt wizualny, wysoki standard i przemyślana technologia sprawiają, że taki dom dobrze przyciąga klientów zainteresowanych wypoczynkiem i inwestycją w Hiszpanii.</p>
+            </div>
+          </article>
+        </div>
+        <button class="carousel-btn next" aria-label="Next project">❯</button>
+      </div>
+      <div class="carousel-dots">
+        <span class="carousel-dot active" data-slide="0"></span>
+        <span class="carousel-dot" data-slide="1"></span>
+        <span class="carousel-dot" data-slide="2"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-green" id="process">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="process_title">Jak wygląda współpraca</h2>
+        <p data-i18n="process_text">Prowadzimy klienta etapami, aby proces zakupu działki, budowy domu, remontu i wykończenia w Hiszpanii był zrozumiały, wygodny i bezpieczny.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <img src="wood-process-1.jpg" alt="Wybór działki i analiza projektu">
+          <div class="card-body">
+            <div class="chip">1</div>
+            <h3 data-i18n="proc_title_1">Wybór działki i analiza</h3>
+            <p data-i18n="proc_text_1">Sprawdzamy lokalizację, potencjał działki, warunki zabudowy i dobór właściwej technologii budowy.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="wood-process-2.jpg" alt="Projekt, technologia i budowa domu">
+          <div class="card-body">
+            <div class="chip">2</div>
+            <h3 data-i18n="proc_title_2">Projekt, technologia i fundamenty</h3>
+            <p data-i18n="proc_text_2">Dobieramy układ, standard, technologię oraz rozwiązania konstrukcyjne i fundamentowe odpowiednie dla inwestycji.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="wood-process-3.jpg" alt="Wykończenie domu pod klucz">
+          <div class="card-body">
+            <div class="chip">3</div>
+            <h3 data-i18n="proc_title_3">Realizacja, remont i premium wnętrza</h3>
+            <p data-i18n="proc_text_3">Kończymy budowę, instalacje, prace wykończeniowe i przygotowanie domu do zamieszkania, wynajmu lub sprzedaży.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sand" id="seo">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="seo_title">Budowa domów w Hiszpanii – SEO i struktura sprzedażowa</h2>
+        <p data-i18n="seo_text">Ta strona została przygotowana jako landing sprzedażowy pod budowę domów w Hiszpanii i na Costa Blanca. Obejmuje kilka technologii, kompleksową realizację, remonty, fundamenty i wykończenia premium, dzięki czemu odpowiada na szersze intencje klientów i lepiej pracuje sprzedażowo.</p>
+      </div>
+      <div class="seo-grid">
+        <div class="card seo-card"><div class="card-body"><h3 data-i18n="seo_card_1_title">Budowa domów Hiszpania</h3><p data-i18n="seo_card_1_text">Projektujemy i realizujemy domy w Hiszpanii dla klientów z Polski, łącząc technologię, wykonanie i prowadzenie inwestycji w jednym modelu współpracy.</p></div></div>
+        <div class="card seo-card"><div class="card-body"><h3 data-i18n="seo_card_2_title">Costa Blanca i różne technologie</h3><p data-i18n="seo_card_2_text">Pracujemy z domami drewnianymi, szkieletowymi i Thermochip, aby dobrać rozwiązanie do lokalizacji, budżetu i celu inwestycyjnego.</p></div></div>
+        <div class="card seo-card"><div class="card-body"><h3 data-i18n="seo_card_3_title">Fundamenty, remonty i premium wnętrza</h3><p data-i18n="seo_card_3_text">Nasza oferta obejmuje także fundamenty dowolnej złożoności, remonty pod klucz oraz wykończenia premium, co zwiększa wygodę klienta i wartość całego projektu.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2 data-i18n="contact_title">Zapytaj o budowę domu w Hiszpanii</h2>
+        <p data-i18n="contact_text">Budujemy domy na Costa Blanca, realizujemy fundamenty, remonty pod klucz i premium wykończenie wnętrz. Skontaktuj się z nami, aby otrzymać ofertę dopasowaną do Twojej działki, budżetu i celu inwestycji.</p>
+        <div class="contact-links">
+          <a href="tel:+34604158859">+34 604 15 88 59</a>
+          <a href="mailto:o.czernyszenko@gmail.com">o.czernyszenko@gmail.com</a>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-main" href="tel:+34604158859" data-i18n="contact_call">Zadzwoń teraz</a>
+          <a class="btn btn-light" href="https://wa.me/34604158859" target="_blank" rel="noopener" data-i18n="contact_whatsapp">Napisz na WhatsApp</a>
+        </div>
+        <form class="contact-form" action="#" method="post">
+          <div class="contact-form-grid">
+            <input type="text" name="name" placeholder="Twoje imię" data-i18n-placeholder="form_name" required>
+            <input type="tel" name="phone" placeholder="Telefon / WhatsApp" data-i18n-placeholder="form_phone" required>
+          </div>
+          <input type="email" name="email" placeholder="Email" data-i18n-placeholder="form_email">
+          <textarea name="message" placeholder="Napisz, jaki dom lub projekt Cię interesuje i czy masz już działkę" data-i18n-placeholder="form_message"></textarea>
+          <button class="btn btn-main" type="submit" data-i18n="form_button">Wyślij zapytanie</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <strong data-i18n="footer_title">Costa Blanca Realty &amp; Construction</strong>
+      <p data-i18n="footer_text">Budowa domów w Hiszpanii na Costa Blanca — technologie drewniane, szkieletowe i Thermochip, fundamenty, remonty pod klucz i premium wykończenia.</p>
+      <p data-i18n="footer_meta">© 2026 | Strona stworzona przez Olga Chernyshenko — specjalista ds. nieruchomości w Polsce i Hiszpanii.</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Costa Blanca Realty & Construction",
+    "areaServed": "Costa Blanca, Spain",
+    "telephone": "+34604158859",
+    "email": "o.czernyszenko@gmail.com",
+    "description": "Budowa domów w Hiszpanii: domy drewniane, szkieletowe i Thermochip, remonty, fundamenty i premium wykończenia.",
+    "serviceType": ["House construction", "Wooden houses", "Timber-frame houses", "Thermochip houses", "Turnkey renovation", "Premium interior finishing", "Complex foundations"]
   }
-  window.scrollTo(0, 0);
+  </script>
 
-  /* --- Карусель проектов --- */
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const nextButton = document.querySelector('.carousel-btn.next');
-  const prevButton = document.querySelector('.carousel-btn.prev');
-  const container = document.querySelector('.carousel-container');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('nav');
+      const overlay = document.querySelector('.menu-overlay');
 
-  let index = 0;
-  const AUTOPLAY_DELAY = 3000;
+      if (navToggle && nav && overlay) {
+        navToggle.addEventListener('click', () => {
+          const isOpen = nav.classList.toggle('open');
+          overlay.classList.toggle('show', isOpen);
+          navToggle.textContent = isOpen ? '✕' : '☰';
+        });
 
-  function updateCarousel() {
-    const slideWidth = container.clientWidth;
-    track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
-  }
+        overlay.addEventListener('click', () => {
+          nav.classList.remove('open');
+          overlay.classList.remove('show');
+          navToggle.textContent = '☰';
+        });
+      }
 
-  if (nextButton && prevButton && container) {
-    nextButton.addEventListener('click', () => {
-      index = (index + 1) % slides.length;
-      updateCarousel();
-    });
+      const translations = {
+        pl: {
+          nav_home:'Start', nav_advantages:'Zalety', nav_technology:'Technologie', nav_comparison:'Porównanie', nav_projects:'Projekty', nav_process:'Proces', nav_contact:'Kontakt',
+          hero_eyebrow:'🇪🇸 Costa Blanca · budowa domów w Hiszpanii', hero_title:'Budowa domów w Hiszpanii — drewniane, szkieletowe i Thermochip na Costa Blanca', hero_text:'Projektujemy i realizujemy domy w Hiszpanii dla klientów z Polski. Pracujemy z różnymi technologiami budowy — drewnianą, szkieletową i Thermochip — dobierając rozwiązanie do działki, budżetu i celu inwestycji.', hero_text_2:'Nasza oferta obejmuje nie tylko budowę domu, ale także fundamenty każdej złożoności, remonty pod klucz oraz premium wykończenie wnętrz. Dzięki temu klient otrzymuje jeden spójny model realizacji na Costa Blanca.', hero_btn_1:'Zapytaj o projekt', hero_btn_2:'Porównaj technologie', badge_1_title:'Różne technologie', badge_1_text:'Budujemy domy drewniane, szkieletowe i Thermochip — dopasowane do inwestycji i stylu życia.', badge_2_title:'Kompleksowa realizacja', badge_2_text:'Od działki i fundamentów po remont, wykończenie premium i przygotowanie domu do użytkowania.', badge_3_title:'Costa Blanca', badge_3_text:'Tworzymy domy dopasowane do klimatu Hiszpanii, rynku premium i oczekiwań klientów z Polski.',
+          advantages_title:'Dlaczego ta oferta działa dla klientów i inwestorów', advantages_text:'Na Costa Blanca liczy się nie tylko sam dom, ale cały model realizacji. Klient oczekuje wygody, przewidywalności i jakości — dlatego łączymy technologię, budowę, remonty i wykończenie w jedną usługę.', adv_chip_1:'Technologie', adv_title_1:'Wybór najlepszego rozwiązania', adv_text_1:'Dobieramy technologię do projektu: dom drewniany dla stylu i mikroklimatu, szkieletowy dla elastyczności albo Thermochip dla szybkiej, nowoczesnej realizacji.', adv_chip_2:'Pod klucz', adv_title_2:'Jeden partner do całej realizacji', adv_text_2:'Od projektu i fundamentów po remonty, instalacje i premium wnętrza. Taki model jest wygodniejszy i bezpieczniejszy dla klienta zagranicznego.', adv_chip_3:'Inwestycja', adv_title_3:'Silny produkt dla rynku Costa Blanca', adv_text_3:'Dobrze zaprojektowany i wykończony dom w Hiszpanii pracuje nie tylko jako miejsce do życia, ale także jako atrakcyjny produkt inwestycyjny i premium rental.',
+          technology_title:'Technologie budowy domów w Hiszpanii', technology_text:'Pracujemy z kilkoma rozwiązaniami, aby dobrać model odpowiedni dla działki, budżetu, terminu realizacji i oczekiwanego standardu domu na Costa Blanca.', tech_block_title:'Co obejmuje realizacja', tech_li_1:'analizę działki i dopasowanie projektu do warunków gruntu,', tech_li_2:'dobór technologii: drewnianej, szkieletowej lub Thermochip,', tech_li_3:'fundamenty dowolnej złożoności, instalacje i przygotowanie terenu,', tech_li_4:'budowę domu w standardzie dopasowanym do klienta i inwestycji,', tech_li_5:'remonty pod klucz, premium wykończenie wnętrz i przygotowanie domu do użytkowania lub wynajmu.', tech_btn_1:'Zapytaj o realizację', tech_btn_2:'Zobacz projekty',
+          comparison_title:'Porównanie: dom drewniany, dom szkieletowy i Thermochip', comparison_text:'Klient powinien od razu zobaczyć, czym różnią się główne kierunki budowy domu w Hiszpanii i które rozwiązanie najlepiej odpowiada jego celowi.', scroll_hint:'💡 Przesuń tabelę w prawo →', table_param:'Parametr', table_wood:'Dom drewniany', table_timber:'Dom szkieletowy', table_thermo:'Thermochip', row1_param:'Charakter produktu', row1_wood:'Naturalny, estetyczny i premium, mocny dla lifestyle i prywatnej rezydencji', row1_timber:'Uniwersalny i elastyczny wybór dla różnych budżetów i układów działki', row1_thermo:'Nowoczesny, energooszczędny system dla szybkiej i przewidywalnej realizacji', row2_param:'Komfort i parametry', row2_wood:'Przyjemny mikroklimat i naturalny charakter wnętrza', row2_timber:'Dobra izolacja i szerokie możliwości dopasowania konstrukcji', row2_thermo:'Wysoka efektywność energetyczna i stabilny standard użytkowania', row3_param:'Tempo i elastyczność', row3_wood:'Świetny wybór dla klientów ceniących styl i wizerunek domu', row3_timber:'Dobry balans między czasem realizacji, budżetem i funkcjonalnością', row3_thermo:'Najmocniejszy kierunek dla inwestorów szukających szybkości i nowoczesności', row4_param:'Najlepsze zastosowanie', row4_wood:'Dom wakacyjny, premium rental, prywatny dom w naturalnym stylu', row4_timber:'Dom całoroczny, inwestycja, działka prywatna', row4_thermo:'Energooszczędny dom z szybkim terminem realizacji',
+          projects_title:'Przykładowe kierunki projektowe', projects_text:'Kарусель pokazuje różne formaty domu w Hiszpanii — od domu naturalnego i premium po rozwiązania inwestycyjne i nowoczesne układy dla Costa Blanca.', proj_chip_1:'Drewniany', proj_title_1:'Nowoczesny dom w naturalnym stylu', proj_text_1:'Projekt łączący drewno, duże przeszklenia i układ idealny do życia przez cały rok lub sezonowego użytkowania.', proj_desc_1:'Ten typ domu świetnie sprawdza się na działkach prywatnych na Costa Blanca, gdzie liczy się estetyka, lekkość bryły i komfort codziennego życia.', proj_chip_2:'Premium', proj_title_2:'Dom premium pod Costa Blanca lifestyle', proj_text_2:'Wyższy standard, tarasy, strefy relaksu i wykończenie, które dobrze pracuje także pod wynajem krótkoterminowy.', proj_desc_2:'To kierunek dla klientów, którzy chcą połączyć prywatność, jakość, dobre wnętrza i silny efekt wizualny w jednej inwestycji.', proj_chip_3:'Inwestycyjny', proj_title_3:'Model inwestycyjny', proj_text_3:'Dom projektowany z myślą o promocji, wynajmie lub sprzedaży — z mocnym wizerunkiem i dobrym potencjałem rynkowym.', proj_desc_3:'Silny efekt wizualny, wysoki standard i przemyślana technologia sprawiają, że taki dom dobrze przyciąga klientów zainteresowanych wypoczynkiem i inwestycją w Hiszpanii.',
+          process_title:'Jak wygląda współpraca', process_text:'Prowadzimy klienta etapami, aby proces zakupu działki, budowy domu, remontu i wykończenia w Hiszpanii był zrozumiały, wygodny i bezpieczny.', proc_title_1:'Wybór działki i analiza', proc_text_1:'Sprawdzamy lokalizację, potencjał działki, warunki zabudowy i dobór właściwej technologii budowy.', proc_title_2:'Projekt, technologia i fundamenty', proc_text_2:'Dobieramy układ, standard, technologię oraz rozwiązania konstrukcyjne i fundamentowe odpowiednie dla inwestycji.', proc_title_3:'Realizacja, remont i premium wnętrza', proc_text_3:'Kończymy budowę, instalacje, prace wykończeniowe i przygotowanie domu do zamieszkania, wynajmu lub sprzedaży.',
+          seo_title:'Budowa domów w Hiszpanii – SEO i struktura sprzedażowa', seo_text:'Ta strona została przygotowana jako landing sprzedażowy pod budowę domów w Hiszpanii i na Costa Blanca. Obejmuje kilka technologii, kompleksową realizację, remonty, fundamenty i wykończenia premium, dzięki czemu odpowiada na szersze intencje klientów i lepiej pracuje sprzedażowo.', seo_card_1_title:'Budowa domów Hiszpania', seo_card_1_text:'Projektujemy i realizujemy domy w Hiszpanii dla klientów z Polski, łącząc technologię, wykonanie i prowadzenie inwestycji w jednym modelu współpracy.', seo_card_2_title:'Costa Blanca i różne technologie', seo_card_2_text:'Pracujemy z domami drewnianymi, szkieletowymi i Thermochip, aby dobrać rozwiązanie do lokalizacji, budżetu i celu inwestycyjnego.', seo_card_3_title:'Fundamenty, remonty i premium wnętrza', seo_card_3_text:'Nasza oferta obejmuje także fundamenty dowolnej złożoności, remonty pod klucz oraz wykończenia premium, co zwiększa wygodę klienta i wartość całego projektu.',
+          contact_title:'Zapytaj o budowę domu w Hiszpanii', contact_text:'Budujemy domy na Costa Blanca, realizujemy fundamenty, remonty pod klucz i premium wykończenie wnętrz. Skontaktuj się z nami, aby otrzymać ofertę dopasowaną do Twojej działki, budżetu i celu inwestycji.', contact_call:'Zadzwoń teraz', contact_whatsapp:'Napisz na WhatsApp', form_name:'Twoje imię', form_phone:'Telefon / WhatsApp', form_email:'Email', form_message:'Napisz, jaki dom lub projekt Cię interesuje i czy masz już działkę', form_button:'Wyślij zapytanie', footer_title:'Costa Blanca Realty & Construction', footer_text:'Budowa domów w Hiszpanii na Costa Blanca — technologie drewniane, szkieletowe i Thermochip, fundamenty, remonty pod klucz i premium wykończenia.', footer_meta:'© 2026 | Strona stworzona przez Olga Chernyshenko — specjalista ds. nieruchomości w Polsce i Hiszpanii.'
+        },
+        ru: {
+          nav_home:'Главная', nav_advantages:'Преимущества', nav_technology:'Технологии', nav_comparison:'Сравнение', nav_projects:'Проекты', nav_process:'Процесс', nav_contact:'Контакты',
+          hero_eyebrow:'🇪🇸 Costa Blanca · строительство домов в Испании', hero_title:'Строительство домов в Испании — деревянные, каркасные и Thermochip на Costa Blanca', hero_text:'Мы проектируем и реализуем дома в Испании для клиентов из Польши. Работаем с разными технологиями строительства — деревянной, каркасной и Thermochip — подбирая решение под участок, бюджет и цель инвестиции.', hero_text_2:'Наша услуга включает не только строительство дома, но и фундаменты любой сложности, ремонты под ключ и премиальную внутреннюю отделку. Благодаря этому клиент получает одну целостную модель реализации на Costa Blanca.', hero_btn_1:'Запросить проект', hero_btn_2:'Сравнить технологии', badge_1_title:'Разные технологии', badge_1_text:'Строим деревянные, каркасные и Thermochip дома — под инвестицию, жизнь и отдых.', badge_2_title:'Комплексная реализация', badge_2_text:'От участка и фундаментов до ремонта, премиальной отделки и подготовки дома к использованию.', badge_3_title:'Costa Blanca', badge_3_text:'Создаём дома, адаптированные под климат Испании, премиальный рынок и ожидания клиентов из Польши.',
+          advantages_title:'Почему это предложение работает для клиентов и инвесторов', advantages_text:'На Costa Blanca важен не только сам дом, а вся модель реализации. Клиенту нужны удобство, предсказуемость и качество — поэтому мы объединяем технологию, строительство, ремонт и отделку в одну услугу.', adv_chip_1:'Технологии', adv_title_1:'Выбор лучшего решения', adv_text_1:'Подбираем технологию под проект: деревянный дом — для стиля и микроклимата, каркасный — для гибкости, Thermochip — для быстрой современной реализации.', adv_chip_2:'Под ключ', adv_title_2:'Один партнёр на весь проект', adv_text_2:'От проекта и фундаментов до ремонта, инженерии и премиальных интерьеров. Такой формат удобнее и безопаснее для иностранного клиента.', adv_chip_3:'Инвестиция', adv_title_3:'Сильный продукт для рынка Costa Blanca', adv_text_3:'Хорошо спроектированный и качественно отделанный дом в Испании работает не только как жильё, но и как инвестиционный продукт и premium rental.',
+          technology_title:'Технологии строительства домов в Испании', technology_text:'Мы работаем с несколькими решениями, чтобы подобрать модель под участок, бюджет, сроки реализации и ожидаемый стандарт дома на Costa Blanca.', tech_block_title:'Что включает реализация', tech_li_1:'анализ участка и адаптацию проекта под условия грунта,', tech_li_2:'подбор технологии: деревянной, каркасной или Thermochip,', tech_li_3:'фундаменты любой сложности, инженерные сети и подготовку участка,', tech_li_4:'строительство дома в стандарте, подходящем клиенту и инвестиции,', tech_li_5:'ремонты под ключ, премиальную внутреннюю отделку и подготовку дома к жизни или аренде.', tech_btn_1:'Запросить реализацию', tech_btn_2:'Смотреть проекты',
+          comparison_title:'Сравнение: деревянный дом, каркасный дом и Thermochip', comparison_text:'Клиент должен сразу понимать, чем отличаются основные направления строительства дома в Испании и какое решение лучше подходит под его задачу.', scroll_hint:'💡 Прокрутите таблицу вправо →', table_param:'Параметр', table_wood:'Деревянный дом', table_timber:'Каркасный дом', table_thermo:'Thermochip', row1_param:'Характер продукта', row1_wood:'Натуральный, эстетичный и премиальный, сильный для lifestyle и частной резиденции', row1_timber:'Универсальный и гибкий выбор для разных бюджетов и типов участков', row1_thermo:'Современная энергоэффективная система для быстрой и предсказуемой реализации', row2_param:'Комфорт и параметры', row2_wood:'Приятный микроклимат и натуральный характер интерьера', row2_timber:'Хорошая изоляция и широкие возможности настройки конструкции', row2_thermo:'Высокая энергоэффективность и стабильный стандарт комфорта', row3_param:'Скорость и гибкость', row3_wood:'Отличный выбор для клиентов, которым важны стиль и образ дома', row3_timber:'Хороший баланс между сроком, бюджетом и функциональностью', row3_thermo:'Сильное направление для инвесторов, которым важны скорость и современность', row4_param:'Лучшее применение', row4_wood:'Дом для отдыха, premium rental, частный дом в натуральном стиле', row4_timber:'Дом для постоянной жизни, инвестиция, частный участок', row4_thermo:'Энергоэффективный дом с быстрым сроком реализации',
+          projects_title:'Примерные проектные направления', projects_text:'Карусель показывает разные форматы дома в Испании — от натурального и премиального до инвестиционного и современного для Costa Blanca.', proj_chip_1:'Деревянный', proj_title_1:'Современный дом в натуральном стиле', proj_text_1:'Проект, который сочетает дерево, большие остекления и планировку для постоянной жизни или сезонного использования.', proj_desc_1:'Такой тип дома отлично работает на частных участках на Costa Blanca, где важны эстетика, лёгкость архитектуры и комфорт повседневной жизни.', proj_chip_2:'Премиум', proj_title_2:'Премиальный дом под Costa Blanca lifestyle', proj_text_2:'Более высокий стандарт, террасы, зоны отдыха и отделка, которая хорошо работает и под краткосрочную аренду.', proj_desc_2:'Это направление для клиентов, которые хотят объединить приватность, качество, сильный интерьер и визуальный эффект в одной инвестиции.', proj_chip_3:'Инвестиционный', proj_title_3:'Инвестиционная модель', proj_text_3:'Дом, спроектированный с расчётом на продвижение, аренду или продажу — с сильным образом и хорошим рыночным потенциалом.', proj_desc_3:'Сильный визуальный эффект, высокий стандарт и продуманная технология делают такой дом привлекательным для клиентов, интересующихся отдыхом и инвестициями в Испании.',
+          process_title:'Как выглядит сотрудничество', process_text:'Мы ведём клиента по этапам, чтобы процесс покупки участка, строительства дома, ремонта и отделки в Испании был понятным, удобным и безопасным.', proc_title_1:'Выбор участка и анализ', proc_text_1:'Проверяем локацию, потенциал участка, условия застройки и подбираем подходящую технологию строительства.', proc_title_2:'Проект, технология и фундаменты', proc_text_2:'Подбираем планировку, стандарт, технологию и конструктивные решения, включая фундаментную часть.', proc_title_3:'Реализация, ремонт и премиальные интерьеры', proc_text_3:'Завершаем строительство, инженерные работы, ремонт и отделку, чтобы дом был готов к жизни, аренде или продаже.',
+          seo_title:'Строительство домов в Испании – SEO и продающая структура', seo_text:'Эта страница подготовлена как продающий лендинг под строительство домов в Испании и на Costa Blanca. Она охватывает несколько технологий, комплексную реализацию, ремонты, фундаменты и премиальную отделку, поэтому отвечает на более широкий спектр запросов клиентов и лучше работает на привлечение лидов.', seo_card_1_title:'Строительство домов Испания', seo_card_1_text:'Мы проектируем и реализуем дома в Испании для клиентов из Польши, объединяя технологию, исполнение и сопровождение инвестиции в одной модели работы.', seo_card_2_title:'Costa Blanca и разные технологии', seo_card_2_text:'Мы работаем с деревянными, каркасными и Thermochip домами, чтобы подобрать решение под локацию, бюджет и инвестиционную цель.', seo_card_3_title:'Фундаменты, ремонты и премиальные интерьеры', seo_card_3_text:'Наша услуга включает также фундаменты любой сложности, ремонты под ключ и премиальную внутреннюю отделку, что увеличивает удобство клиента и ценность всего проекта.',
+          contact_title:'Запросите строительство дома в Испании', contact_text:'Мы строим дома на Costa Blanca, выполняем фундаменты, ремонты под ключ и премиальную внутреннюю отделку. Свяжитесь с нами, чтобы получить предложение под ваш участок, бюджет и инвестиционную задачу.', contact_call:'Позвонить сейчас', contact_whatsapp:'Написать в WhatsApp', form_name:'Ваше имя', form_phone:'Телефон / WhatsApp', form_email:'Email', form_message:'Напишите, какой дом или проект вас интересует и есть ли уже участок', form_button:'Отправить заявку', footer_title:'Costa Blanca Realty & Construction', footer_text:'Строительство домов в Испании на Costa Blanca — деревянные, каркасные и Thermochip технологии, фундаменты, ремонты под ключ и премиальные отделки.', footer_meta:'© 2026 | Страница создана Ольгой Чернышенко — специалистом по недвижимости в Польше и Испании.'
+        },
+        en: {
+          nav_home:'Home', nav_advantages:'Benefits', nav_technology:'Technologies', nav_comparison:'Comparison', nav_projects:'Projects', nav_process:'Process', nav_contact:'Contact',
+          hero_eyebrow:'🇪🇸 Costa Blanca · house construction in Spain', hero_title:'House construction in Spain — wooden, timber-frame and Thermochip homes on Costa Blanca', hero_text:'We design and deliver homes in Spain for clients from Poland. We work with different construction technologies — wooden, timber-frame and Thermochip — selecting the best solution for the plot, budget and investment goal.', hero_text_2:'Our service covers not only house construction, but also foundations of any complexity, turnkey renovations and premium interior finishing. This gives the client one coherent delivery model on Costa Blanca.', hero_btn_1:'Request a project', hero_btn_2:'Compare technologies', badge_1_title:'Different technologies', badge_1_text:'We build wooden, timber-frame and Thermochip homes tailored to investment and lifestyle goals.', badge_2_title:'Integrated delivery', badge_2_text:'From plot and foundations to renovation, premium finishing and preparing the house for use.', badge_3_title:'Costa Blanca', badge_3_text:'We create homes adapted to the Spanish climate, the premium market and the expectations of clients from Poland.',
+          advantages_title:'Why this offer works for clients and investors', advantages_text:'On Costa Blanca, it is not only the house itself that matters, but the full delivery model. Clients want convenience, predictability and quality — which is why we combine technology, construction, renovation and finishing in one service.', adv_chip_1:'Technologies', adv_title_1:'Selecting the best solution', adv_text_1:'We choose the right technology for the project: wooden for style and microclimate, timber-frame for flexibility, Thermochip for fast and modern delivery.', adv_chip_2:'Turnkey', adv_title_2:'One partner for the full project', adv_text_2:'From design and foundations to renovation, installations and premium interiors. This model is more convenient and safer for an international client.', adv_chip_3:'Investment', adv_title_3:'A strong product for the Costa Blanca market', adv_text_3:'A well-designed and well-finished house in Spain works not only as a place to live, but also as an attractive investment product and premium rental.',
+          technology_title:'House-building technologies in Spain', technology_text:'We work with several solutions to select the model best suited to the plot, budget, delivery time and expected standard of the house on Costa Blanca.', tech_block_title:'What the delivery includes', tech_li_1:'plot analysis and adaptation of the project to soil conditions,', tech_li_2:'selection of technology: wooden, timber-frame or Thermochip,', tech_li_3:'foundations of any complexity, installations and site preparation,', tech_li_4:'construction of the home in a standard matched to the client and investment,', tech_li_5:'turnkey renovations, premium interior finishing and preparation of the home for living or rental.', tech_btn_1:'Ask about delivery', tech_btn_2:'See projects',
+          comparison_title:'Comparison: wooden house, timber-frame house and Thermochip', comparison_text:'The client should immediately understand how the main house-building directions in Spain differ and which solution best fits their goal.', scroll_hint:'💡 Scroll the table to the right →', table_param:'Parameter', table_wood:'Wooden house', table_timber:'Timber-frame house', table_thermo:'Thermochip', row1_param:'Product character', row1_wood:'Natural, aesthetic and premium, strong for lifestyle and a private residence', row1_timber:'A universal and flexible choice for different budgets and plot types', row1_thermo:'A modern energy-efficient system for fast and predictable delivery', row2_param:'Comfort and performance', row2_wood:'Pleasant microclimate and natural interior character', row2_timber:'Good insulation and wide possibilities for structural adaptation', row2_thermo:'High energy efficiency and a stable comfort standard', row3_param:'Speed and flexibility', row3_wood:'A great option for clients who value style and the image of the home', row3_timber:'A good balance of timing, budget and functionality', row3_thermo:'A strong direction for investors seeking speed and modernity', row4_param:'Best use', row4_wood:'Holiday home, premium rental, private home with natural style', row4_timber:'Permanent home, investment, private plot', row4_thermo:'Energy-efficient home with fast delivery',
+          projects_title:'Sample project directions', projects_text:'The carousel presents different house formats in Spain — from natural and premium homes to investment and modern layouts for Costa Blanca.', proj_chip_1:'Wooden', proj_title_1:'Contemporary home in a natural style', proj_text_1:'A project combining wood, large glazing and a layout ideal for year-round living or seasonal use.', proj_desc_1:'This type of home works very well on private plots on Costa Blanca, where aesthetics, light architecture and day-to-day comfort matter.', proj_chip_2:'Premium', proj_title_2:'Premium home for the Costa Blanca lifestyle', proj_text_2:'A higher standard, terraces, leisure zones and finishing that also performs well for short-term rental.', proj_desc_2:'This is the direction for clients who want to combine privacy, quality, strong interiors and visual impact in one investment.', proj_chip_3:'Investment', proj_title_3:'Investment model', proj_text_3:'A house designed with promotion, rental or resale in mind — with a strong image and solid market potential.', proj_desc_3:'A strong visual effect, a high standard and well-planned technology make this kind of house attractive to clients interested in holidays and investment in Spain.',
+          process_title:'How the cooperation works', process_text:'We guide the client step by step so that the process of buying a plot, building a home, renovating and finishing in Spain is clear, convenient and secure.', proc_title_1:'Plot selection and analysis', proc_text_1:'We check the location, plot potential, building conditions and choose the most suitable construction technology.', proc_title_2:'Design, technology and foundations', proc_text_2:'We select the layout, standard, technology and structural solutions, including the foundation package.', proc_title_3:'Delivery, renovation and premium interiors', proc_text_3:'We complete construction, installations, renovation and finishing so the house is ready for living, rental or resale.',
+          seo_title:'House construction in Spain – SEO and sales structure', seo_text:'This page has been prepared as a sales landing page for house construction in Spain and on Costa Blanca. It covers multiple technologies, integrated delivery, renovations, foundations and premium finishing, so it answers a broader range of client intents and works better for lead generation.', seo_card_1_title:'House construction Spain', seo_card_1_text:'We design and deliver homes in Spain for clients from Poland, combining technology, execution and investment guidance in one working model.', seo_card_2_title:'Costa Blanca and different technologies', seo_card_2_text:'We work with wooden, timber-frame and Thermochip homes to match the solution to the location, budget and investment goal.', seo_card_3_title:'Foundations, renovations and premium interiors', seo_card_3_text:'Our offer also includes foundations of any complexity, turnkey renovations and premium interior finishing, increasing convenience for the client and the value of the whole project.',
+          contact_title:'Ask about house construction in Spain', contact_text:'We build homes on Costa Blanca, deliver foundations, turnkey renovations and premium interior finishing. Contact us to receive an offer matched to your plot, budget and investment goal.', contact_call:'Call now', contact_whatsapp:'Write on WhatsApp', form_name:'Your name', form_phone:'Phone / WhatsApp', form_email:'Email', form_message:'Tell us what kind of house or project interests you and whether you already have a plot', form_button:'Send enquiry', footer_title:'Costa Blanca Realty & Construction', footer_text:'House construction in Spain on Costa Blanca — wooden, timber-frame and Thermochip technologies, foundations, turnkey renovations and premium finishing.', footer_meta:'© 2026 | Page created by Olga Chernyshenko — property specialist in Poland and Spain.'
+        }
+      };
 
-    prevButton.addEventListener('click', () => {
-      index = (index - 1 + slides.length) % slides.length;
-      updateCarousel();
-    });
+      function applyTranslations(lang) {
+        const dict = translations[lang] || translations.pl;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[key]) el.textContent = dict[key];
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          if (dict[key]) el.setAttribute('placeholder', dict[key]);
+        });
+        document.documentElement.lang = lang;
+      }
 
-    let autoplay = setInterval(() => {
-      index = (index + 1) % slides.length;
-      updateCarousel();
-    }, AUTOPLAY_DELAY);
-
-    container.addEventListener('mouseenter', () => clearInterval(autoplay));
-    container.addEventListener('mouseleave', () => {
-      autoplay = setInterval(() => {
-        index = (index + 1) % slides.length;
-        updateCarousel();
-      }, AUTOPLAY_DELAY);
-    });
-
-    window.addEventListener('resize', updateCarousel);
-    updateCarousel();
-  }
-
-  /* --- Мобильное меню (бургер + overlay) --- */
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  const overlay = document.querySelector('.menu-overlay');
-
-  if (navToggle && navLinks && overlay) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      overlay.classList.toggle('show', isOpen);
-      navToggle.textContent = isOpen ? '✕' : '☰';
-    });
-
-    overlay.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      overlay.classList.remove('show');
-      navToggle.textContent = '☰';
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        overlay.classList.remove('show');
-        navToggle.textContent = '☰';
+      const langButtons = document.querySelectorAll('.lang-switcher button');
+      let currentLang = 'pl';
+      langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentLang = btn.dataset.lang;
+          langButtons.forEach(b => b.classList.remove('active-lang'));
+          btn.classList.add('active-lang');
+          applyTranslations(currentLang);
+        });
       });
-    });
-  }
 
-  /* --- Анимация появления блоков --- */
-  const fadeElements = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+      const track = document.querySelector('.projects-track');
+      const slides = Array.from(document.querySelectorAll('.project-slide'));
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+      const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+      let currentSlide = 0;
+      let autoplay = null;
+
+      function updateCarousel() {
+        if (!track || slides.length === 0) return;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach((dot, index) => dot.classList.toggle('active', index === currentSlide));
       }
-    });
-  }, { threshold: 0.15 });
 
-  fadeElements.forEach(el => observer.observe(el));
-
-  /* --- Мультиязычность --- */
-  const translations = {
-    ru: {
-      logo: 'EcoBuild Spain',
-      nav_home: 'Главная',
-      nav_timber: 'Каркасные дома',
-      nav_thermochip: 'Thermochip',
-      nav_comparison: 'Сравнение',
-      nav_choice: 'Выбор',
-      nav_projects: 'Проекты',
-      nav_workflow: 'Процесс',
-      nav_video: 'Видео',
-      nav_contact: 'Контакты',
-
-      hero_title: 'Сравнение каркасной технологии и сэндвич-панелей для строительства в Испании',
-      hero_subtitle: 'Выберите оптимальный вариант строительства дома: каркасные дома с клееным брусом или сэндвич-панели Thermochip.',
-      hero_cta: 'Получить консультацию',
-
-      timber_title: 'Каркасная технология с клееным брусом GL-24',
-      timber_text: 'Каркасное строительство в Испании набирает популярность благодаря прочности, экологичности и хорошей теплоизоляции деревянных конструкций.',
-      timber_li1: 'Прочность и долговечность',
-      timber_li2: 'Экологичность',
-      timber_li3: 'Пожарная безопасность',
-      timber_li4: 'Теплоизоляция',
-      timber_cta: 'Заказать проект каркасного дома',
-
-      thermo_title: 'Сэндвич-панели Thermochip',
-      thermo_text: 'Сэндвич-панели Thermochip — это современный и высокоэффективный материал для строительства энергоэффективных домов.',
-      thermo_li1: 'Энергоэффективность',
-      thermo_li2: 'Устойчивость к влаге',
-      thermo_li3: 'Простота монтажа',
-      thermo_li4: 'Пожарная безопасность',
-      thermo_cta: 'Заказать проект дома из Thermochip',
-
-      comparison_title: 'Сравнение технологий',
-      comparison_text: 'Ниже представлено сравнение ключевых характеристик каркасной технологии и сэндвич-панелей Thermochip для строительства в Испании.',
-
-      table_col_param: 'Характеристика',
-      table_col_timber: 'Каркасная технология',
-      table_col_thermo: 'Сэндвич-панели Thermochip',
-
-      table_row1_param: 'Энергоэффективность',
-      table_row1_timber: 'Хорошая теплоизоляция, но требует дополнительной обработки и узлов без мостиков холода.',
-      table_row1_thermo: 'Отличная теплоизоляция, снижает расходы на отопление и кондиционирование.',
-
-      table_row2_param: 'Пожарная безопасность',
-      table_row2_timber: 'Древесина обгорает медленно, сохраняет несущую способность при правильной обработке.',
-      table_row2_thermo: 'Панели имеют огнеупорные свойства и соответствуют европейским нормам.',
-
-      table_row3_param: 'Влагоустойчивость',
-      table_row3_timber: 'Требует тщательной защиты от влаги и правильной пароизоляции.',
-      table_row3_thermo: 'Отличная защита от влаги, подходит для прибрежных районов Испании.',
-
-      table_row4_param: 'Скорость строительства',
-      table_row4_timber: 'Монтаж занимает больше времени и требует более высокой квалификации.',
-      table_row4_thermo: 'Быстрая сборка, сокращение сроков строительства.',
-
-      table_row5_param: 'Стоимость',
-      table_row5_timber: 'Более высокая стоимость при использовании качественного клееного бруса.',
-      table_row5_thermo: 'Конкурентная стоимость материала и монтажа.',
-
-      choice_title: 'Какая технология лучше для вашего проекта?',
-      choice_text1: 'Выбор зависит от ваших приоритетов: эстетика натурального дерева, скорость строительства, бюджет и особенности участка.',
-      choice_text2: 'Каркасная технология больше подойдёт тем, кто ценит натуральные материалы и индивидуальную архитектуру. Thermochip-решения — для тех, кто хочет быстро получить тёплый, энергоэффективный дом с предсказуемым результатом.',
-      choice_text3: 'Мы поможем подобрать оптимальную конструкцию с учётом климата региона Испании, ориентации участка и ваших задач.',
-
-      projects_title: 'Наши проекты',
-      projects_text: 'Примеры реализованных и типовых решений на основе каркасной технологии и сэндвич-панелей Thermochip.',
-
-      workflow_title: 'Наш рабочий процесс',
-      workflow_text: 'Посмотрите, как мы шаг за шагом создаём дома: от подготовки участка до финальной отделки.',
-
-      video_title: 'Видео рабочего процесса',
-      video_text: 'Короткое видео о том, как проходит строительство и сборка дома.',
-
-      contact_title: 'Свяжитесь с нами',
-      contact_text: 'Оставьте свои контакты, и мы подберём оптимальное решение под ваш участок и бюджет.',
-      contact_phone_label: 'Телефон:',
-
-      form_name: 'Ваше имя',
-      form_email: 'Email',
-      form_phone: 'Телефон',
-      form_message: 'Сообщение',
-      form_submit: 'Отправить заявку'
-    },
-
-    en: {
-      logo: 'EcoBuild Spain',
-      nav_home: 'Home',
-      nav_timber: 'Timber frame',
-      nav_thermochip: 'Thermochip',
-      nav_comparison: 'Comparison',
-      nav_choice: 'Choice',
-      nav_projects: 'Projects',
-      nav_workflow: 'Process',
-      nav_video: 'Video',
-      nav_contact: 'Contacts',
-
-      hero_title: 'Comparison of timber frame and sandwich panels for building in Spain',
-      hero_subtitle: 'Choose the best solution for your home: glued laminated timber frame or Thermochip sandwich panels.',
-      hero_cta: 'Get a consultation',
-
-      timber_title: 'Timber frame technology with GL-24 glued laminated timber',
-      timber_text: 'Timber frame construction in Spain is gaining popularity thanks to its strength, eco-friendliness and good thermal performance of wooden structures.',
-      timber_li1: 'Strength and durability',
-      timber_li2: 'Eco-friendly material',
-      timber_li3: 'Fire safety',
-      timber_li4: 'Thermal insulation',
-      timber_cta: 'Request a timber frame design',
-
-      thermo_title: 'Thermochip sandwich panels',
-      thermo_text: 'Thermochip sandwich panels are a modern and highly efficient solution for building energy-efficient homes.',
-      thermo_li1: 'Energy efficiency',
-      thermo_li2: 'Moisture resistance',
-      thermo_li3: 'Easy installation',
-      thermo_li4: 'Fire safety',
-      thermo_cta: 'Request a Thermochip house design',
-
-      comparison_title: 'Technology comparison',
-      comparison_text: 'Below is a comparison of key characteristics of timber frame technology and Thermochip sandwich panels for building in Spain.',
-
-      table_col_param: 'Parameter',
-      table_col_timber: 'Timber frame',
-      table_col_thermo: 'Thermochip panels',
-
-      table_row1_param: 'Energy efficiency',
-      table_row1_timber: 'Good thermal performance, but requires careful detailing to avoid cold bridges.',
-      table_row1_thermo: 'Excellent insulation that reduces heating and cooling costs.',
-
-      table_row2_param: 'Fire safety',
-      table_row2_timber: 'Timber chars slowly and retains bearing capacity when treated correctly.',
-      table_row2_thermo: 'Panels have fire-resistant properties and comply with European standards.',
-
-      table_row3_param: 'Moisture resistance',
-      table_row3_timber: 'Requires proper moisture protection and vapour barrier.',
-      table_row3_thermo: 'Great moisture protection, suitable for coastal areas of Spain.',
-
-      table_row4_param: 'Construction speed',
-      table_row4_timber: 'Takes more time and higher qualification on site.',
-      table_row4_thermo: 'Fast assembly and shorter construction time.',
-
-      table_row5_param: 'Cost',
-      table_row5_timber: 'Higher cost when using high-quality glulam.',
-      table_row5_thermo: 'Competitive material and installation cost.',
-
-      choice_title: 'Which technology is better for your project?',
-      choice_text1: 'The choice depends on your priorities: natural wood aesthetics, construction speed, budget and site conditions.',
-      choice_text2: 'Timber frame is ideal for those who value natural materials and custom architecture. Thermochip solutions are perfect if you need a warm, energy-efficient home quickly, with a predictable result.',
-      choice_text3: 'We will help you choose the best structure for the climate in your region of Spain, site orientation and your goals.',
-
-      projects_title: 'Our projects',
-      projects_text: 'Examples of completed and typical designs based on timber frame and Thermochip sandwich panels.',
-
-      workflow_title: 'Our workflow',
-      workflow_text: 'See how we build homes step by step: from site preparation to final finishes.',
-
-      video_title: 'Construction process video',
-      video_text: 'A short video showing how the house is assembled and built.',
-
-      contact_title: 'Contact us',
-      contact_text: 'Leave your contact details and we will find the best solution for your plot and budget.',
-      contact_phone_label: 'Phone:',
-
-      form_name: 'Your name',
-      form_email: 'Email',
-      form_phone: 'Phone',
-      form_message: 'Message',
-      form_submit: 'Send request'
-    },
-
-    ua: {
-      logo: 'EcoBuild Spain',
-      nav_home: 'Головна',
-      nav_timber: 'Каркасні будинки',
-      nav_thermochip: 'Thermochip',
-      nav_comparison: 'Порівняння',
-      nav_choice: 'Вибір',
-      nav_projects: 'Проєкти',
-      nav_workflow: 'Процес',
-      nav_video: 'Відео',
-      nav_contact: 'Контакти',
-
-      hero_title: 'Порівняння каркасної технології та сендвіч-панелей для будівництва в Іспанії',
-      hero_subtitle: 'Обирайте оптимальний варіант будівництва будинку: каркас із клеєного брусу або сендвіч-панелі Thermochip.',
-      hero_cta: 'Отримати консультацію',
-
-      timber_title: 'Каркасна технологія з клеєним брусом GL-24',
-      timber_text: 'Каркасне будівництво в Іспанії набирає популярність завдяки міцності, екологічності та гарній теплоізоляції дерев’яних конструкцій.',
-      timber_li1: 'Міцність і довговічність',
-      timber_li2: 'Екологічність',
-      timber_li3: 'Пожежна безпека',
-      timber_li4: 'Теплоізоляція',
-      timber_cta: 'Замовити проєкт каркасного будинку',
-
-      thermo_title: 'Сендвіч-панелі Thermochip',
-      thermo_text: 'Сендвіч-панелі Thermochip — сучасний і високоефективний матеріал для будівництва енергоефективних будинків.',
-      thermo_li1: 'Енергоефективність',
-      thermo_li2: 'Стійкість до вологи',
-      thermo_li3: 'Простий монтаж',
-      thermo_li4: 'Пожежна безпека',
-      thermo_cta: 'Замовити проєкт будинку з Thermochip',
-
-      comparison_title: 'Порівняння технологій',
-      comparison_text: 'Нижче наведено порівняння ключових характеристик каркасної технології та сендвіч-панелей Thermochip для будівництва в Іспанії.',
-
-      table_col_param: 'Характеристика',
-      table_col_timber: 'Каркасна технологія',
-      table_col_thermo: 'Сендвіч-панелі Thermochip',
-
-      table_row1_param: 'Енергоефективність',
-      table_row1_timber: 'Гарна теплоізоляція, але потрібні додаткові рішення без містків холоду.',
-      table_row1_thermo: 'Відмінна теплоізоляція, зменшує витрати на опалення та кондиціонування.',
-
-      table_row2_param: 'Пожежна безпека',
-      table_row2_timber: 'Деревина повільно обвуглюється й зберігає несучу здатність при правильній обробці.',
-      table_row2_thermo: 'Панелі мають вогнестійкі властивості та відповідають європейским нормам.',
-
-      table_row3_param: 'Стійкість до вологи',
-      table_row3_timber: 'Потребує надійного захисту від вологи та правильної пароізоляції.',
-      table_row3_thermo: 'Чудовий захист від вологи, підходить для прибережних районів Іспанії.',
-
-      table_row4_param: 'Швидкість будівництва',
-      table_row4_timber: 'Монтаж займає більше часу та вимагає високої кваліфікації.',
-      table_row4_thermo: 'Швидке складання, скорочення строків будівництва.',
-
-      table_row5_param: 'Вартість',
-      table_row5_timber: 'Вища вартість при використанні якісного клеєного брусу.',
-      table_row5_thermo: 'Конкурентна вартість матеріалу та монтажу.',
-
-      choice_title: 'Яка технологія краща для вашого проєкту?',
-      choice_text1: 'Вибір залежить від ваших пріоритетів: естетика натурального дерева, швидкість будівництва, бюджет і особливості ділянки.',
-      choice_text2: 'Каркасна технологія підійде тим, хто цінує натуральні матеріали та індивідуальну архітектуру. Рішення на базі Thermochip — для тих, кому важливо швидко отримати теплий, енергоефективний будинок з передбачуваним результатом.',
-      choice_text3: 'Ми допоможемо підібрати оптимальну конструкцію з урахуванням клімату регіону Іспанії, орієнтації ділянки та ваших задач.',
-
-      projects_title: 'Наші проєкти',
-      projects_text: 'Приклади реалізованих і типових рішень на основі каркасної технології та сендвіч-панелей Thermochip.',
-
-      workflow_title: 'Наш робочий процес',
-      workflow_text: 'Подивіться, як ми крок за кроком будуємо будинки: від підготовки ділянки до фінального оздоблення.',
-
-      video_title: 'Відео робочого процесу',
-      video_text: 'Коротке відео про те, як відбувається будівництво та складання будинку.',
-
-      contact_title: 'Зв’яжіться з нами',
-      contact_text: 'Залиште свої контакти, і ми підберемо оптимальне рішення для вашої ділянки та бюджету.',
-      contact_phone_label: 'Телефон:',
-
-      form_name: "Ваше ім'я",
-      form_email: 'Email',
-      form_phone: 'Телефон',
-      form_message: 'Повідомлення',
-      form_submit: 'Надіслати заявку'
-    },
-
-    es: {
-      logo: 'EcoBuild Spain',
-      nav_home: 'Inicio',
-      nav_timber: 'Estructura de madera',
-      nav_thermochip: 'Thermochip',
-      nav_comparison: 'Comparación',
-      nav_choice: 'Elección',
-      nav_projects: 'Proyectos',
-      nav_workflow: 'Proceso',
-      nav_video: 'Vídeo',
-      nav_contact: 'Contacto',
-
-      hero_title: 'Comparación entre estructura de madera y paneles sándwich para construir en España',
-      hero_subtitle: 'Elija la mejor opción para su vivienda: estructura de madera laminada o paneles sándwich Thermochip.',
-      hero_cta: 'Recibir asesoramiento',
-
-      timber_title: 'Estructura de madera con laminado encolado GL-24',
-      timber_text: 'La construcción con estructura de madera en España gana popularidad por su resistencia, sostenibilidad y buen aislamiento térmico.',
-      timber_li1: 'Resistencia y durabilidad',
-      timber_li2: 'Material ecológico',
-      timber_li3: 'Seguridad contra incendios',
-      timber_li4: 'Aislamiento térmico',
-      timber_cta: 'Solicitar proyecto de casa de madera',
-
-      thermo_title: 'Paneles sándwich Thermochip',
-      thermo_text: 'Los paneles sándwich Thermochip son un material moderno y muy eficiente para construir viviendas energéticamente eficientes.',
-      thermo_li1: 'Eficiencia energética',
-      thermo_li2: 'Resistencia a la humedad',
-      thermo_li3: 'Fácil montaje',
-      thermo_li4: 'Seguridad contra incendios',
-      thermo_cta: 'Solicitar proyecto con Thermochip',
-
-      comparison_title: 'Comparación de tecnologías',
-      comparison_text: 'A continuación mostramos la comparación de las principales características de la estructura de madera y los paneles Thermochip para construir en España.',
-
-      table_col_param: 'Característica',
-      table_col_timber: 'Estructura de madera',
-      table_col_thermo: 'Paneles Thermochip',
-
-      table_row1_param: 'Eficiencia energética',
-      table_row1_timber: 'Buen aislamiento, pero requiere detalles cuidados para evitar puentes térmicos.',
-      table_row1_thermo: 'Excelente aislamiento que reduce los costes de calefacción y aire acondicionado.',
-
-      table_row2_param: 'Seguridad contra incendios',
-      table_row2_timber: 'La madera se carboniza lentamente y mantiene la capacidad portante si se trata correctamente.',
-      table_row2_thermo: 'Los paneles son ignífugos y cumplen las normativas europeas.',
-
-      table_row3_param: 'Resistencia a la humedad',
-      table_row3_timber: 'Necesita buena protección frente a la humedad y correcta barrera de vapor.',
-      table_row3_thermo: 'Muy buena protección frente a la humedad, ideal para zonas costeras de España.',
-
-      table_row4_param: 'Velocidad de construcción',
-      table_row4_timber: 'El montaje requiere más tiempo y mayor cualificación.',
-      table_row4_thermo: 'Montaje rápido y plazos de obra reducidos.',
-
-      table_row5_param: 'Coste',
-      table_row5_timber: 'Coste más elevado usando madera laminada de alta calidad.',
-      table_row5_thermo: 'Coste competitivo de material y montaje.',
-
-      choice_title: '¿Qué tecnología es mejor para su proyecto?',
-      choice_text1: 'La elección depende de sus prioridades: estética de la madera natural, rapidez de construcción, presupuesto y características de la parcela.',
-      choice_text2: 'La estructura de madera es ideal para quienes valoran los materiales naturales y la arquitectura individual. Las soluciones Thermochip son perfectas para quienes quieren una casa cálida y eficiente en poco tiempo, con un resultado previsible.',
-      choice_text3: 'Le ayudamos a elegir la mejor solución teniendo en cuenta el clima de la zona, la orientación de la parcela y sus objetivos.',
-
-      projects_title: 'Nuestros proyectos',
-      projects_text: 'Ejemplos de proyectos realizados y tipologías basadas en estructura de madera y paneles Thermochip.',
-
-      workflow_title: 'Nuestro proceso de trabajo',
-      workflow_text: 'Vea cómo construimos las viviendas paso a paso: desde la preparación del terreno hasta los acabados finales.',
-
-      video_title: 'Vídeo del proceso de construcción',
-      video_text: 'Un breve vídeo sobre cómo se monta y construye la vivienda.',
-
-      contact_title: 'Contacto',
-      contact_text: 'Déjenos sus datos de contacto y le propondremos la mejor solución para su parcela y presupuesto.',
-      contact_phone_label: 'Teléfono:',
-
-      form_name: 'Su nombre',
-      form_email: 'Email',
-      form_phone: 'Teléfono',
-      form_message: 'Mensaje',
-      form_submit: 'Enviar solicitud'
-    }
-  };
-
-  function applyTranslations(lang) {
-    const dict = translations[lang] || translations['ru'];
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (dict[key]) {
-        el.textContent = dict[key];
+      function goToSlide(index) {
+        currentSlide = (index + slides.length) % slides.length;
+        updateCarousel();
       }
-    });
 
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-      const key = el.getAttribute('data-i18n-placeholder');
-      if (dict[key]) {
-        el.setAttribute('placeholder', dict[key]);
+      function startAutoplay() {
+        stopAutoplay();
+        autoplay = window.setInterval(() => goToSlide(currentSlide + 1), 4000);
       }
+
+      function stopAutoplay() {
+        if (autoplay) {
+          window.clearInterval(autoplay);
+          autoplay = null;
+        }
+      }
+
+      if (track && slides.length) {
+        prevBtn?.addEventListener('click', () => goToSlide(currentSlide - 1));
+        nextBtn?.addEventListener('click', () => goToSlide(currentSlide + 1));
+        dots.forEach((dot, index) => dot.addEventListener('click', () => goToSlide(index)));
+        const carousel = document.querySelector('.projects-carousel');
+        carousel?.addEventListener('mouseenter', stopAutoplay);
+        carousel?.addEventListener('mouseleave', startAutoplay);
+        updateCarousel();
+        startAutoplay();
+      }
+
+      applyTranslations(currentLang);
     });
-  }
-
-  const langButtons = document.querySelectorAll('.lang-switcher button');
-  let currentLang = 'ru';
-
-  langButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const lang = btn.getAttribute('data-lang');
-      currentLang = lang;
-      langButtons.forEach(b => b.classList.remove('active-lang'));
-      btn.classList.add('active-lang');
-      applyTranslations(lang);
-    });
-  });
-
-  // начальная локаль
-  applyTranslations(currentLang);
-});
-</script>
-
+  </script>
 </body>
 </html>
