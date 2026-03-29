@@ -363,57 +363,192 @@
       border: none;
     }
 
-    /* ================================
-                 КОНТАКТЫ
-    ================================= */
+  /* ================================
+            КРАСИВЫЕ КОНТАКТЫ
+================================ */
 
-    #contact {
-      background-color: var(--bg-light);
-    }
+.contact-section {
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 35%, #06b6d4 100%);
+  position: relative;
+  overflow: hidden;
+}
 
-    #contact .contact-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      gap: 30px;
-    }
+.contact-section::before,
+.contact-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  z-index: 0;
+}
 
-    form {
-      max-width: 400px;
-      width: 100%;
-    }
+.contact-section::before {
+  width: 280px;
+  height: 280px;
+  background: #38bdf8;
+  top: -60px;
+  left: -60px;
+}
 
-    form input,
-    form textarea,
-    form button {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-family: inherit;
-    }
+.contact-section::after {
+  width: 320px;
+  height: 320px;
+  background: #f59e0b;
+  bottom: -100px;
+  right: -80px;
+}
 
-    form textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
+.contact-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
 
-    form button {
-      background-color: var(--accent);
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.2s ease, transform 0.1s ease;
-    }
+.contact-card {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 28px;
+  padding: 50px 35px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
 
-    form button:hover {
-      background-color: #0f7b71;
-      transform: translateY(-1px);
-    }
+.contact-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-weight: 800;
+}
 
-    /* ================================
+.contact-description {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 620px;
+  margin: 0 auto 32px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.contact-item {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 18px 20px;
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.95rem;
+  color: #fde68a;
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.contact-link {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #fde68a;
+  text-shadow: 0 0 12px rgba(253, 230, 138, 0.6);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(253, 224, 71, 0.35);
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  border: none;
+  border-radius: 18px;
+  padding: 18px 24px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f172a;
+  background: linear-gradient(135deg, #facc15 0%, #fb923c 100%);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 12px 30px rgba(251, 146, 60, 0.35);
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 34px rgba(251, 146, 60, 0.45);
+}
+
+.contact-form button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 70px 15px;
+  }
+
+  .contact-card {
+    padding: 35px 20px;
+    border-radius: 22px;
+  }
+
+  .contact-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+  }
+
+  .contact-link {
+    font-size: 1.02rem;
+    word-break: break-word;
+  }
+}    /* ================================
             ПЛАВАЮЩИЙ WHATSAPP
     ================================= */
 
@@ -765,34 +900,63 @@
 </section>
 
 <!-- Контакты -->
-<section id="contact" class="fade-in">
-  <div class="contact-inner" style="text-align: center;">
-    <div>
+<section id="contact" class="contact-section fade-in">
+  <div class="contact-wrapper">
+    <div class="contact-card">
       <h2 data-i18n="contact_title">Свяжитесь с нами</h2>
-      <p data-i18n="contact_text">
+      <p class="contact-description" data-i18n="contact_text">
         Свяжитесь с отделом продаж, и мы подберём оптимальное решение под ваш участок и бюджет.
       </p>
-      <p>
-        <strong data-i18n="contact_phone_label">Телефон:</strong><br>
-        <a href="tel:+34604158859">+34 604 15 88 59</a><br><br>
-        
-        <strong>Email:</strong><br>
-        <a href="mailto:o.czernyszenko@gmail.com">o.czernyszenko@gmail.com</a>
-      </p>    
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-label" data-i18n="contact_phone_label">Телефон</span>
+          <a href="tel:+34604158859" class="contact-link">+34 604 15 88 59</a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:o.czernyszenko@gmail.com" class="contact-link">o.czernyszenko@gmail.com</a>
+        </div>
+      </div>
+
+      <form action="#" method="post" class="contact-form">
+        <input
+          type="text"
+          name="name"
+          required
+          data-i18n-placeholder="form_name"
+          placeholder="Ваше имя"
+        >
+
+        <input
+          type="email"
+          name="email"
+          required
+          data-i18n-placeholder="form_email"
+          placeholder="Email"
+        >
+
+        <input
+          type="tel"
+          name="phone"
+          required
+          data-i18n-placeholder="form_phone"
+          placeholder="Телефон"
+        >
+
+        <textarea
+          name="message"
+          required
+          data-i18n-placeholder="form_message"
+          placeholder="Сообщение"
+        ></textarea>
+
+        <button type="submit" data-i18n="form_submit">Отправить заявку</button>
+      </form>
     </div>
   </div>
-</section>  
-  
-    <form action="#" method="post">
-      <input type="text" name="name" required data-i18n-placeholder="form_name" placeholder="Ваше имя">
-      <input type="email" name="email" required data-i18n-placeholder="form_email" placeholder="Email">
-      <input type="tel" name="phone" required data-i18n-placeholder="form_phone" placeholder="Телефон">
-      <textarea name="message" required data-i18n-placeholder="form_message" placeholder="Сообщение"></textarea>
-      <button type="submit" data-i18n="form_submit">Отправить заявку</button>
-    </form>
-  </div>
 </section>
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   // всегда открываем страницу сверху
